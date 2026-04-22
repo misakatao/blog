@@ -1,0 +1,11 @@
+baseURL                = "https://misakatao.com/"
+defaultContentLanguage = "zh-cn"
+hasCJKLanguage         = true
+theme                  = "hugo-theme-stack"
+
+[pagination]
+    pagerSize = 10
+
+[permalinks]
+    post = "/p/:slug/"
+    page = "/:slug/"
