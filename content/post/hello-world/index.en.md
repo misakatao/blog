@@ -3,6 +3,7 @@ title: "Hello, World"
 description: "My first blog post"
 date: 2026-04-22
 slug: hello-world
+image: "cover.svg"
 categories:
     - Essay
 tags:
