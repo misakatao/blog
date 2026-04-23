@@ -4,7 +4,7 @@ slug: search
 layout: search
 menu:
     main:
-        name: "Search"
+        name: "搜索"
         weight: 40
         params:
             icon: search

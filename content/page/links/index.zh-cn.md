@@ -1,9 +1,9 @@
 ---
-title: "Links"
+title: "友链"
 slug: links
 menu:
     main:
-        name: "Links"
+        name: "友链"
         weight: 50
         params:
             icon: link
