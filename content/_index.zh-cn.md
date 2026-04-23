@@ -1,8 +1,8 @@
 ---
-title: "Home"
+title: "首页"
 menu:
     main:
-        name: "Home"
+        name: "首页"
         weight: 10
         params:
             icon: home
