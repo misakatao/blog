@@ -1,0 +1,68 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="160" y1="40" x2="1440" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FCE7F3"/>
+      <stop offset="0.42" stop-color="#E0F2FE"/>
+      <stop offset="1" stop-color="#DDD6FE"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#F6F0FF" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#1E293B"/>
+      <stop offset="1" stop-color="#334155"/>
+    </linearGradient>
+    <filter id="soft" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="30" flood-color="#64748B" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" rx="0" fill="url(#bg)"/>
+
+  <circle cx="1320" cy="110" r="86" fill="#F9A8D4" fill-opacity="0.35"/>
+  <circle cx="146" cy="150" r="70" fill="#93C5FD" fill-opacity="0.35"/>
+  <circle cx="1380" cy="760" r="100" fill="#C4B5FD" fill-opacity="0.28"/>
+
+  <g filter="url(#soft)">
+    <rect x="110" y="120" width="1380" height="660" rx="36" fill="url(#panel)"/>
+  </g>
+
+  <g transform="translate(180,190)">
+    <rect x="0" y="0" width="660" height="390" rx="28" fill="url(#screen)"/>
+    <rect x="28" y="28" width="604" height="334" rx="18" fill="#0F172A"/>
+    <rect x="58" y="70" width="274" height="26" rx="13" fill="#38BDF8" fill-opacity="0.95"/>
+    <rect x="58" y="118" width="360" height="18" rx="9" fill="#F9A8D4" fill-opacity="0.85"/>
+    <rect x="58" y="154" width="298" height="18" rx="9" fill="#C4B5FD" fill-opacity="0.8"/>
+    <rect x="58" y="210" width="230" height="16" rx="8" fill="#E2E8F0" fill-opacity="0.9"/>
+    <rect x="58" y="242" width="396" height="16" rx="8" fill="#E2E8F0" fill-opacity="0.82"/>
+    <rect x="58" y="274" width="318" height="16" rx="8" fill="#E2E8F0" fill-opacity="0.72"/>
+    <circle cx="584" cy="328" r="18" fill="#22C55E" fill-opacity="0.95"/>
+    <path d="M240 390H420L466 456H194L240 390Z" fill="#CBD5E1"/>
+    <rect x="138" y="456" width="384" height="18" rx="9" fill="#94A3B8"/>
+  </g>
+
+  <g transform="translate(980,210)">
+    <circle cx="150" cy="120" r="98" fill="#FFE4EC"/>
+    <path d="M84 232C78 168 102 104 152 88C212 68 270 132 262 212L84 232Z" fill="#7C5A9E"/>
+    <path d="M138 120C160 90 206 90 228 118C242 136 246 164 242 194C232 254 188 318 150 318C112 318 70 254 60 194C54 160 62 138 78 120C96 100 116 98 138 120Z" fill="#F8D7D7"/>
+    <circle cx="118" cy="178" r="10" fill="#2D1B3D"/>
+    <circle cx="184" cy="178" r="10" fill="#2D1B3D"/>
+    <path d="M136 216C146 224 154 224 164 216" stroke="#B75C7A" stroke-width="8" stroke-linecap="round"/>
+    <path d="M88 152C104 132 122 128 138 138" stroke="#5C4378" stroke-width="10" stroke-linecap="round"/>
+    <path d="M164 138C180 128 198 132 214 152" stroke="#5C4378" stroke-width="10" stroke-linecap="round"/>
+    <path d="M64 114C84 52 136 20 190 40C238 58 272 108 266 148C244 124 214 102 184 96C148 88 102 92 64 114Z" fill="#8D68B0"/>
+    <path d="M102 318C116 286 138 270 150 270C162 270 184 286 198 318H102Z" fill="#B794C8"/>
+    <circle cx="82" cy="208" r="16" fill="#F6B8C7" fill-opacity="0.62"/>
+    <circle cx="218" cy="208" r="16" fill="#F6B8C7" fill-opacity="0.62"/>
+  </g>
+
+  <g transform="translate(1030,620)">
+    <path d="M0 38C18 0 56 -6 74 24C86 2 122 0 134 28C144 52 130 80 96 104C56 84 18 68 0 38Z" fill="#F9A8D4"/>
+    <path d="M140 20C152 -2 182 -2 194 20C202 34 198 56 176 76C150 62 134 42 140 20Z" fill="#C4B5FD"/>
+    <path d="M218 36C234 6 270 4 286 30C294 48 288 72 262 94C232 78 212 56 218 36Z" fill="#93C5FD"/>
+  </g>
+
+  <text x="130" y="126" fill="#5B4673" font-family="Avenir, Helvetica, Arial, sans-serif" font-size="66" font-weight="800">macOS ARM64 Dev Setup</text>
+  <text x="132" y="186" fill="#7C6C8F" font-family="Avenir, Helvetica, Arial, sans-serif" font-size="28">A pastel anime-inspired desk illustration for development environment notes.</text>
+</svg>

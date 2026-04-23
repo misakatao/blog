@@ -3,6 +3,7 @@ title: "你好，世界"
 description: "我的第一篇博客文章"
 date: 2026-04-22
 slug: hello-world
+image: "cover.svg"
 categories:
     - 随笔
 tags:

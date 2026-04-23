@@ -1,0 +1,62 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#89CFF0"/>
+      <stop offset="0.55" stop-color="#C8E7FF"/>
+      <stop offset="1" stop-color="#FFE8F3"/>
+    </linearGradient>
+    <linearGradient id="mountain" x1="800" y1="320" x2="800" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B9DC3"/>
+      <stop offset="1" stop-color="#4C5D86"/>
+    </linearGradient>
+    <linearGradient id="hill" x1="800" y1="620" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9ED7B8"/>
+      <stop offset="1" stop-color="#5FA27F"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#5E6D91" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1240" cy="180" r="74" fill="#FFF5C2" opacity="0.95"/>
+
+  <g opacity="0.95">
+    <ellipse cx="290" cy="170" rx="110" ry="34" fill="white"/>
+    <ellipse cx="372" cy="168" rx="78" ry="26" fill="white"/>
+    <ellipse cx="1060" cy="130" rx="120" ry="36" fill="white"/>
+    <ellipse cx="1160" cy="136" rx="92" ry="28" fill="white"/>
+  </g>
+
+  <path d="M350 610L760 250L1120 610H350Z" fill="url(#mountain)" filter="url(#shadow)"/>
+  <path d="M625 430L760 250L885 430H625Z" fill="#F8FBFF"/>
+  <path d="M220 670C420 600 620 585 820 650C1040 722 1270 718 1600 620V900H0V690C88 708 156 700 220 670Z" fill="url(#hill)"/>
+  <path d="M0 760C220 700 380 702 560 748C760 798 980 800 1210 736C1365 694 1495 696 1600 720V900H0V760Z" fill="#7CC39A" opacity="0.82"/>
+
+  <g transform="translate(118,350)">
+    <path d="M0 290C32 236 82 204 144 196C196 190 244 212 280 250C316 286 332 332 326 382H0V290Z" fill="#715F8F"/>
+    <rect x="32" y="382" width="246" height="176" rx="10" fill="#F7F0F7"/>
+    <rect x="104" y="432" width="68" height="126" fill="#E9C3D7"/>
+    <rect x="50" y="420" width="38" height="64" rx="6" fill="#D9B3C5"/>
+    <rect x="224" y="420" width="38" height="64" rx="6" fill="#D9B3C5"/>
+    <path d="M0 558H318" stroke="#5B4A75" stroke-width="14" stroke-linecap="round"/>
+  </g>
+
+  <g opacity="0.92">
+    <g transform="translate(1160,500)">
+      <path d="M0 70C24 0 94 -10 116 52C126 14 182 10 190 64C198 112 162 144 112 170C62 144 16 114 0 70Z" fill="#FFCADF"/>
+      <circle cx="112" cy="86" r="12" fill="#FFD9E8"/>
+    </g>
+    <g transform="translate(1050,610) scale(0.72)">
+      <path d="M0 70C24 0 94 -10 116 52C126 14 182 10 190 64C198 112 162 144 112 170C62 144 16 114 0 70Z" fill="#FFD6E8"/>
+      <circle cx="112" cy="86" r="12" fill="#FFE7F1"/>
+    </g>
+    <g transform="translate(1320,650) scale(0.6)">
+      <path d="M0 70C24 0 94 -10 116 52C126 14 182 10 190 64C198 112 162 144 112 170C62 144 16 114 0 70Z" fill="#FFC1DA"/>
+      <circle cx="112" cy="86" r="12" fill="#FFE3EF"/>
+    </g>
+  </g>
+
+  <text x="112" y="126" fill="#FFFFFF" fill-opacity="0.92" font-family="Avenir, Helvetica, Arial, sans-serif" font-size="72" font-weight="700">Hello, World</text>
+  <text x="118" y="192" fill="#FFFFFF" fill-opacity="0.88" font-family="Avenir, Helvetica, Arial, sans-serif" font-size="30">A soft anime-style spring landscape for the first post.</text>
+</svg>
