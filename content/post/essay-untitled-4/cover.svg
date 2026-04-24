@@ -1,0 +1,117 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="warmBg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF0E6"/>
+      <stop offset="0.4" stop-color="#FFCBA4"/>
+      <stop offset="0.75" stop-color="#F4A0B0"/>
+      <stop offset="1" stop-color="#E8809A"/>
+    </linearGradient>
+    <radialGradient id="warmLight" cx="800" cy="350" r="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDE7" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#FFCBA4" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="steamBlur"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="dropGlow"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#warmBg)"/>
+  <circle cx="800" cy="350" r="350" fill="url(#warmLight)"/>
+
+  <!-- Steam wisps -->
+  <g opacity="0.22" filter="url(#steamBlur)">
+    <path d="M680 600C685 560 675 530 680 500C685 470 695 450 690 420" stroke="white" stroke-width="18" stroke-linecap="round" fill="none"/>
+    <path d="M760 620C768 575 755 545 762 510C769 475 782 452 776 418" stroke="white" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <path d="M840 610C845 568 835 538 840 505C845 472 856 450 850 416" stroke="white" stroke-width="16" stroke-linecap="round" fill="none"/>
+    <path d="M920 600C928 558 915 528 922 495C929 462 942 440 936 406" stroke="white" stroke-width="12" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Floor -->
+  <path d="M0 780C400 760 900 768 1600 780V900H0Z" fill="#E8809A" opacity="0.5"/>
+  <path d="M0 840C400 820 900 828 1600 840V900H0Z" fill="#D4607A" opacity="0.4"/>
+
+  <!-- Anime girl sitting on edge (bath towel wrapped) -->
+  <g transform="translate(680, 220)">
+    <!-- Towel/body wrap -->
+    <path d="M60 230C35 235 12 255 4 295L-10 460H250L236 295C228 255 205 235 180 230Z" fill="#FFFDE7"/>
+    <!-- Towel fold detail -->
+    <path d="M60 230C55 250 52 275 55 300" stroke="#F0D080" stroke-width="2" opacity="0.6"/>
+    <path d="M180 230C185 250 188 275 185 300" stroke="#F0D080" stroke-width="2" opacity="0.6"/>
+    <!-- Towel top edge -->
+    <path d="M60 230C80 220 160 220 180 230" stroke="#F0D080" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Neck -->
+    <rect x="95" y="200" width="50" height="35" rx="8" fill="#FDDBB4"/>
+
+    <!-- Head -->
+    <ellipse cx="120" cy="168" rx="72" ry="78" fill="#FDDBB4"/>
+
+    <!-- Hair (long, slightly damp) -->
+    <path d="M52 128C40 92 44 56 62 32C80 8 108 -2 128 0C148 2 166 16 176 38C186 60 184 86 178 110L170 138C158 168 150 198 146 230C142 262 140 294 144 326C148 358 154 390 162 422C132 398 110 360 96 322C82 284 74 246 70 210C66 174 70 140 74 118Z" fill="#C47A50"/>
+    <path d="M52 128C44 100 50 72 66 52C82 32 104 22 124 24C144 26 160 40 168 62C176 84 172 108 166 128Z" fill="#C47A50"/>
+    <path d="M52 128C42 148 40 170 44 192C48 214 58 232 68 244" stroke="#C47A50" stroke-width="14" stroke-linecap="round"/>
+    <!-- Hair highlight (warm) -->
+    <path d="M72 46C84 34 100 28 114 32" stroke="#E8A870" stroke-width="3.5" stroke-linecap="round" opacity="0.6"/>
+    <path d="M80 60C90 50 104 46 116 50" stroke="#E8A870" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+
+    <!-- Eyes (soft, warm) -->
+    <ellipse cx="96" cy="166" rx="17" ry="19" fill="#1A0A2E"/>
+    <ellipse cx="144" cy="166" rx="17" ry="19" fill="#1A0A2E"/>
+    <ellipse cx="96" cy="167" rx="13" ry="15" fill="#8B4513"/>
+    <ellipse cx="144" cy="167" rx="13" ry="15" fill="#8B4513"/>
+    <ellipse cx="96" cy="169" rx="8" ry="9" fill="#5C2A0A"/>
+    <ellipse cx="144" cy="169" rx="8" ry="9" fill="#5C2A0A"/>
+    <circle cx="102" cy="160" r="5" fill="white"/>
+    <circle cx="150" cy="160" r="5" fill="white"/>
+    <circle cx="104" cy="162" r="2.5" fill="white" opacity="0.7"/>
+    <!-- Eyelashes -->
+    <path d="M79 155C83 149 90 146 96 148" stroke="#1A0A2E" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M161 148C167 146 174 149 178 155" stroke="#1A0A2E" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Nose -->
+    <path d="M114 184C117 188 123 188 126 184" stroke="#D4956A" stroke-width="1.8" stroke-linecap="round"/>
+    <!-- Mouth (gentle smile) -->
+    <path d="M104 198C112 205 128 205 136 198" stroke="#D4956A" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    <!-- Blush (warm, prominent) -->
+    <ellipse cx="76" cy="182" rx="16" ry="9" fill="#FFB3C6" opacity="0.45"/>
+    <ellipse cx="164" cy="182" rx="16" ry="9" fill="#FFB3C6" opacity="0.45"/>
+
+    <!-- Water droplets on face/hair -->
+    <circle cx="58" cy="195" r="3" fill="#A8D8EA" opacity="0.7"/>
+    <circle cx="184" cy="188" r="2.5" fill="#A8D8EA" opacity="0.65"/>
+    <circle cx="72" cy="240" r="2" fill="#A8D8EA" opacity="0.6"/>
+
+    <!-- Arms (one holding towel, one relaxed) -->
+    <path d="M4 300C-18 312 -30 332 -24 354" stroke="#FDDBB4" stroke-width="20" stroke-linecap="round"/>
+    <path d="M236 300C258 312 270 332 264 354" stroke="#FDDBB4" stroke-width="20" stroke-linecap="round"/>
+
+    <!-- Legs (bare, sitting) -->
+    <path d="M30 460C10 490 -5 530 0 560" stroke="#FDDBB4" stroke-width="28" stroke-linecap="round"/>
+    <path d="M210 460C230 490 245 530 240 560" stroke="#FDDBB4" stroke-width="28" stroke-linecap="round"/>
+    <!-- Feet -->
+    <ellipse cx="2" cy="568" rx="28" ry="14" fill="#FDDBB4"/>
+    <ellipse cx="238" cy="568" rx="28" ry="14" fill="#FDDBB4"/>
+    <!-- Water droplets on feet -->
+    <circle cx="-8" cy="558" r="3" fill="#A8D8EA" opacity="0.65"/>
+    <circle cx="12" cy="572" r="2.5" fill="#A8D8EA" opacity="0.6"/>
+    <circle cx="248" cy="560" r="3" fill="#A8D8EA" opacity="0.65"/>
+  </g>
+
+  <!-- Floating water droplets around scene -->
+  <g fill="#A8D8EA">
+    <circle cx="400" cy="500" r="4" opacity="0.5"/>
+    <circle cx="380" cy="520" r="2.5" opacity="0.4"/>
+    <circle cx="1200" cy="480" r="4" opacity="0.5"/>
+    <circle cx="1220" cy="510" r="2.5" opacity="0.4"/>
+    <circle cx="500" cy="650" r="3" opacity="0.45"/>
+    <circle cx="1100" cy="620" r="3" opacity="0.45"/>
+  </g>
+
+  <!-- Bokeh circles (warm) -->
+  <circle cx="200" cy="300" r="50" fill="#FFE066" opacity="0.1" filter="url(#dropGlow)"/>
+  <circle cx="1400" cy="280" r="60" fill="#FFE066" opacity="0.1" filter="url(#dropGlow)"/>
+  <circle cx="300" cy="650" r="35" fill="#FFB3C6" opacity="0.12" filter="url(#dropGlow)"/>
+  <circle cx="1300" cy="620" r="40" fill="#FFB3C6" opacity="0.12" filter="url(#dropGlow)"/>
+
+  <!-- Title -->
+  <text x="112" y="126" fill="#5C2A0A" fill-opacity="0.88" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="80" font-weight="700">无题（四）</text>
+  <text x="118" y="192" fill="#5C2A0A" fill-opacity="0.72" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="28">那一刻，我觉得毛巾比我幸福</text>
+</svg>

@@ -1,0 +1,144 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="purpleBg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D0520"/>
+      <stop offset="0.35" stop-color="#2D1B69"/>
+      <stop offset="0.7" stop-color="#7B5EA7"/>
+      <stop offset="1" stop-color="#C9B8E8"/>
+    </linearGradient>
+    <radialGradient id="purpleGlow" cx="800" cy="420" r="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C9B8E8" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#2D1B69" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="legGlow" cx="800" cy="600" r="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8D5F5" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#7B5EA7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="bokehBlur"><feGaussianBlur stdDeviation="14"/></filter>
+    <filter id="softGlow2"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#purpleBg)"/>
+  <circle cx="800" cy="420" r="320" fill="url(#purpleGlow)"/>
+  <circle cx="800" cy="600" r="200" fill="url(#legGlow)"/>
+
+  <!-- Stars -->
+  <circle cx="150" cy="60" r="2" fill="white" opacity="0.6"/>
+  <circle cx="380" cy="40" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="620" cy="25" r="2" fill="white" opacity="0.55"/>
+  <circle cx="900" cy="50" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="1150" cy="35" r="2" fill="white" opacity="0.5"/>
+  <circle cx="1420" cy="70" r="1.5" fill="white" opacity="0.55"/>
+  <circle cx="280" cy="110" r="1.5" fill="white" opacity="0.4"/>
+  <circle cx="1320" cy="95" r="1.5" fill="white" opacity="0.4"/>
+  <circle cx="500" cy="80" r="1" fill="white" opacity="0.35"/>
+  <circle cx="1100" cy="75" r="1" fill="white" opacity="0.35"/>
+
+  <!-- Bokeh circles (purple/lavender) -->
+  <circle cx="150" cy="280" r="60" fill="#C9B8E8" opacity="0.1" filter="url(#bokehBlur)"/>
+  <circle cx="1450" cy="250" r="70" fill="#C9B8E8" opacity="0.1" filter="url(#bokehBlur)"/>
+  <circle cx="250" cy="600" r="45" fill="#9B7FD4" opacity="0.12" filter="url(#bokehBlur)"/>
+  <circle cx="1350" cy="580" r="50" fill="#9B7FD4" opacity="0.12" filter="url(#bokehBlur)"/>
+  <circle cx="600" cy="150" r="35" fill="#E8D5F5" opacity="0.08" filter="url(#bokehBlur)"/>
+  <circle cx="1000" cy="130" r="40" fill="#E8D5F5" opacity="0.08" filter="url(#bokehBlur)"/>
+
+  <!-- Floor/bed surface -->
+  <path d="M0 760C400 740 900 748 1600 760V900H0Z" fill="#1A0A3C" opacity="0.8"/>
+  <path d="M0 820C400 800 900 808 1600 820V900H0Z" fill="#0D0520" opacity="0.7"/>
+
+  <!-- Anime girl sitting elegantly -->
+  <g transform="translate(660, 180)">
+    <!-- Skirt/dress (elegant, dark purple) -->
+    <path d="M70 240C42 245 18 268 8 310L-8 500H288L272 310C262 268 238 245 210 240Z" fill="#2D1B69"/>
+    <!-- Dress highlight -->
+    <path d="M70 240C62 265 58 295 62 325" stroke="#5B3FA0" stroke-width="2.5" opacity="0.5"/>
+    <path d="M210 240C218 265 222 295 218 325" stroke="#5B3FA0" stroke-width="2.5" opacity="0.5"/>
+    <!-- Dress shimmer -->
+    <path d="M100 260C120 255 160 255 180 260" stroke="#7B5EA7" stroke-width="1.5" opacity="0.4"/>
+
+    <!-- Neck -->
+    <rect x="110" y="208" width="60" height="38" rx="8" fill="#FDDBB4"/>
+
+    <!-- Head -->
+    <ellipse cx="140" cy="172" rx="80" ry="86" fill="#FDDBB4"/>
+
+    <!-- Hair (long, elegant, dark) -->
+    <path d="M64 130C52 94 56 58 74 34C92 10 120 0 142 2C164 4 184 18 194 42C204 66 200 94 194 118L184 148C170 180 162 212 158 246C154 280 152 314 156 348C160 382 166 416 174 450C140 424 116 384 100 344C84 304 76 264 72 226C68 188 72 152 76 130Z" fill="#1A0A3C"/>
+    <path d="M64 130C56 102 62 72 78 50C94 28 118 18 140 20C162 22 180 38 188 62C196 86 192 112 186 132Z" fill="#1A0A3C"/>
+    <path d="M64 130C54 152 52 176 56 200C60 224 70 244 82 258" stroke="#1A0A3C" stroke-width="16" stroke-linecap="round"/>
+    <!-- Hair highlight (purple sheen) -->
+    <path d="M84 48C96 36 114 28 130 32" stroke="#5B3FA0" stroke-width="4" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 64C102 54 118 48 132 52" stroke="#5B3FA0" stroke-width="2.5" stroke-linecap="round" opacity="0.38"/>
+
+    <!-- Eyes (large, expressive, purple-tinted) -->
+    <ellipse cx="112" cy="170" rx="19" ry="21" fill="#1A0A2E"/>
+    <ellipse cx="168" cy="170" rx="19" ry="21" fill="#1A0A2E"/>
+    <ellipse cx="112" cy="171" rx="15" ry="17" fill="#6B3FA0"/>
+    <ellipse cx="168" cy="171" rx="15" ry="17" fill="#6B3FA0"/>
+    <ellipse cx="112" cy="173" rx="9" ry="10" fill="#3D1A6E"/>
+    <ellipse cx="168" cy="173" rx="9" ry="10" fill="#3D1A6E"/>
+    <circle cx="119" cy="163" r="6" fill="white"/>
+    <circle cx="175" cy="163" r="6" fill="white"/>
+    <circle cx="121" cy="165" r="3" fill="white" opacity="0.7"/>
+    <!-- Eyelashes -->
+    <path d="M93 158C97 152 105 148 112 150" stroke="#1A0A2E" stroke-width="3" stroke-linecap="round"/>
+    <path d="M187 150C194 148 202 152 206 158" stroke="#1A0A2E" stroke-width="3" stroke-linecap="round"/>
+    <!-- Lower lashes -->
+    <path d="M96 184C100 188 106 190 112 188" stroke="#1A0A2E" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <path d="M168 188C174 190 180 188 184 184" stroke="#1A0A2E" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+    <!-- Nose -->
+    <path d="M134 190C137 194 143 194 146 190" stroke="#D4956A" stroke-width="2" stroke-linecap="round"/>
+    <!-- Mouth (soft, slightly parted) -->
+    <path d="M122 206C130 213 150 213 158 206" stroke="#D4956A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <!-- Blush (soft purple-pink) -->
+    <ellipse cx="90" cy="188" rx="18" ry="10" fill="#C9B8E8" opacity="0.35"/>
+    <ellipse cx="190" cy="188" rx="18" ry="10" fill="#C9B8E8" opacity="0.35"/>
+
+    <!-- Arms (elegant pose, one resting) -->
+    <path d="M8 320C-16 334 -30 358 -24 382" stroke="#FDDBB4" stroke-width="22" stroke-linecap="round"/>
+    <path d="M272 320C296 334 310 358 304 382" stroke="#FDDBB4" stroke-width="22" stroke-linecap="round"/>
+    <!-- Hand resting on knee -->
+    <ellipse cx="-22" cy="388" rx="18" ry="12" fill="#FDDBB4"/>
+
+    <!-- Legs (with stockings effect) -->
+    <!-- Left leg -->
+    <path d="M40 500C20 540 10 590 14 630" stroke="#D4B8A0" stroke-width="36" stroke-linecap="round"/>
+    <!-- Stocking texture on left leg -->
+    <path d="M40 500C20 540 10 590 14 630" stroke="#C9A888" stroke-width="34" stroke-linecap="round" opacity="0.4"/>
+    <!-- Right leg -->
+    <path d="M240 500C260 540 270 590 266 630" stroke="#D4B8A0" stroke-width="36" stroke-linecap="round"/>
+    <path d="M240 500C260 540 270 590 266 630" stroke="#C9A888" stroke-width="34" stroke-linecap="round" opacity="0.4"/>
+
+    <!-- Stocking top band (left) -->
+    <ellipse cx="27" cy="502" rx="20" ry="8" fill="#1A0A3C" opacity="0.6"/>
+    <!-- Stocking top band (right) -->
+    <ellipse cx="253" cy="502" rx="20" ry="8" fill="#1A0A3C" opacity="0.6"/>
+
+    <!-- Feet with stockings -->
+    <ellipse cx="14" cy="638" rx="32" ry="16" fill="#D4B8A0"/>
+    <ellipse cx="266" cy="638" rx="32" ry="16" fill="#D4B8A0"/>
+    <!-- Stocking sheen on feet -->
+    <ellipse cx="14" cy="634" rx="20" ry="8" fill="#E8D5C0" opacity="0.5"/>
+    <ellipse cx="266" cy="634" rx="20" ry="8" fill="#E8D5C0" opacity="0.5"/>
+  </g>
+
+  <!-- Floating sparkles/light particles -->
+  <g fill="#E8D5F5" opacity="0.6">
+    <circle cx="350" cy="380" r="3"/>
+    <circle cx="380" cy="360" r="2"/>
+    <circle cx="1250" cy="370" r="3"/>
+    <circle cx="1220" cy="390" r="2"/>
+    <circle cx="420" cy="550" r="2.5"/>
+    <circle cx="1180" cy="540" r="2.5"/>
+  </g>
+  <g fill="#C9B8E8" opacity="0.4" filter="url(#softGlow2)">
+    <circle cx="350" cy="380" r="6"/>
+    <circle cx="1250" cy="370" r="6"/>
+    <circle cx="420" cy="550" r="5"/>
+    <circle cx="1180" cy="540" r="5"/>
+  </g>
+
+  <!-- Title -->
+  <text x="112" y="126" fill="#FFFFFF" fill-opacity="0.95" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="80" font-weight="700">无题（三）</text>
+  <text x="118" y="192" fill="#E8D5F5" fill-opacity="0.82" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="28">隔着一层丝袜，比直接摸腿更让人心痒</text>
+</svg>
