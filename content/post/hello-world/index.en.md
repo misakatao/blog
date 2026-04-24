@@ -1,7 +1,7 @@
 ---
 title: "Hello, World"
 description: "My first blog post"
-date: 2026-04-22
+date: 2025-12-22T08:00:00+08:00
 slug: hello-world
 image: "cover.svg"
 categories:
