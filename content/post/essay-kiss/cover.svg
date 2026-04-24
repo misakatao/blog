@@ -1,0 +1,149 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A0533"/>
+      <stop offset="0.4" stop-color="#7B2D8B"/>
+      <stop offset="0.7" stop-color="#FF6B9D"/>
+      <stop offset="1" stop-color="#FFB347"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="800" cy="480" r="280" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE066" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#FF6B9D" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="12"/></filter>
+    <filter id="softglow"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="800" cy="480" r="280" fill="url(#sunGlow)"/>
+  <circle cx="800" cy="480" r="80" fill="#FFE066" opacity="0.18" filter="url(#glow)"/>
+
+  <!-- Stars -->
+  <circle cx="180" cy="70" r="2" fill="white" opacity="0.7"/>
+  <circle cx="420" cy="45" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="680" cy="28" r="2" fill="white" opacity="0.6"/>
+  <circle cx="950" cy="55" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="1200" cy="38" r="2" fill="white" opacity="0.5"/>
+  <circle cx="1450" cy="80" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="320" cy="120" r="1.5" fill="white" opacity="0.4"/>
+  <circle cx="1280" cy="100" r="1.5" fill="white" opacity="0.4"/>
+
+  <!-- Bokeh -->
+  <circle cx="120" cy="320" r="45" fill="#FF6B9D" opacity="0.12" filter="url(#glow)"/>
+  <circle cx="1480" cy="280" r="55" fill="#FFB347" opacity="0.12" filter="url(#glow)"/>
+  <circle cx="280" cy="620" r="30" fill="#FF6B9D" opacity="0.1" filter="url(#glow)"/>
+  <circle cx="1320" cy="580" r="38" fill="#FFB347" opacity="0.1" filter="url(#glow)"/>
+
+  <!-- Ground -->
+  <path d="M0 720C350 690 800 700 1600 720V900H0Z" fill="#1A0533" opacity="0.85"/>
+  <path d="M0 780C400 755 900 760 1600 780V900H0Z" fill="#0D0020" opacity="0.7"/>
+
+  <!-- Cherry blossom petals -->
+  <g opacity="0.75">
+    <ellipse cx="260" cy="190" rx="9" ry="5" fill="#FFB3C6" transform="rotate(30 260 190)"/>
+    <ellipse cx="420" cy="140" rx="7" ry="4" fill="#FFB3C6" transform="rotate(-20 420 140)"/>
+    <ellipse cx="580" cy="230" rx="9" ry="5" fill="#FFB3C6" transform="rotate(50 580 230)"/>
+    <ellipse cx="980" cy="170" rx="8" ry="5" fill="#FFB3C6" transform="rotate(-35 980 170)"/>
+    <ellipse cx="1180" cy="210" rx="7" ry="4" fill="#FFB3C6" transform="rotate(15 1180 210)"/>
+    <ellipse cx="1380" cy="155" rx="9" ry="5" fill="#FFB3C6" transform="rotate(-50 1380 155)"/>
+    <ellipse cx="180" cy="420" rx="6" ry="4" fill="#FFB3C6" transform="rotate(65 180 420)"/>
+    <ellipse cx="1420" cy="400" rx="7" ry="4" fill="#FFB3C6" transform="rotate(-18 1420 400)"/>
+    <ellipse cx="700" cy="120" rx="8" ry="4" fill="#FFB3C6" transform="rotate(40 700 120)"/>
+    <ellipse cx="1050" cy="260" rx="6" ry="4" fill="#FFB3C6" transform="rotate(-28 1050 260)"/>
+  </g>
+
+  <!-- Character 1: Girl (left, facing right) -->
+  <g transform="translate(420, 260)">
+    <!-- Dress -->
+    <path d="M55 210C30 215 8 235 0 275L-15 430H155L140 275C132 235 110 215 85 210Z" fill="#4A1942"/>
+    <!-- Dress highlight -->
+    <path d="M55 210C45 230 40 260 42 290" stroke="#7B3A6E" stroke-width="2" opacity="0.5"/>
+    <!-- Neck -->
+    <rect x="58" y="182" width="22" height="32" rx="4" fill="#FDDBB4"/>
+    <!-- Head -->
+    <ellipse cx="69" cy="152" rx="56" ry="62" fill="#FDDBB4"/>
+    <!-- Hair back -->
+    <path d="M18 115C8 82 12 48 28 26C44 4 68 -2 86 2C104 6 118 18 126 36C134 54 132 76 126 98L118 130C108 155 102 180 98 210C94 240 92 270 95 300C98 330 102 360 108 390C85 368 68 335 57 302C46 269 40 236 38 204C36 172 40 142 44 122Z" fill="#2D1B4E"/>
+    <!-- Hair front/top -->
+    <path d="M18 115C12 88 18 62 34 44C50 26 70 18 86 20C102 22 116 34 122 52C128 70 124 92 118 110Z" fill="#2D1B4E"/>
+    <!-- Hair side strands -->
+    <path d="M18 115C10 130 8 150 12 170C16 190 24 205 32 215" stroke="#2D1B4E" stroke-width="10" stroke-linecap="round"/>
+    <!-- Hair highlight -->
+    <path d="M42 38C50 28 64 22 76 26" stroke="#6B4FA0" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+    <!-- Eyes -->
+    <ellipse cx="50" cy="150" rx="15" ry="17" fill="#1A0A2E"/>
+    <ellipse cx="88" cy="150" rx="15" ry="17" fill="#1A0A2E"/>
+    <ellipse cx="50" cy="150" rx="11" ry="13" fill="#8B5CF6"/>
+    <ellipse cx="88" cy="150" rx="11" ry="13" fill="#8B5CF6"/>
+    <ellipse cx="50" cy="152" rx="7" ry="8" fill="#5B2D8E"/>
+    <ellipse cx="88" cy="152" rx="7" ry="8" fill="#5B2D8E"/>
+    <circle cx="55" cy="144" r="4.5" fill="white"/>
+    <circle cx="93" cy="144" r="4.5" fill="white"/>
+    <circle cx="57" cy="146" r="2" fill="white" opacity="0.7"/>
+    <!-- Eyelashes top -->
+    <path d="M35 140C38 135 44 132 50 134" stroke="#1A0A2E" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M103 134C109 132 115 135 118 140" stroke="#1A0A2E" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Nose -->
+    <path d="M65 166C67 169 71 169 73 166" stroke="#D4956A" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Mouth (soft smile) -->
+    <path d="M57 178C63 184 75 184 81 178" stroke="#D4956A" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <!-- Blush -->
+    <ellipse cx="36" cy="167" rx="13" ry="7" fill="#FFB3C6" opacity="0.38"/>
+    <ellipse cx="102" cy="167" rx="13" ry="7" fill="#FFB3C6" opacity="0.38"/>
+    <!-- Arms -->
+    <path d="M8 230C-14 242 -26 262 -20 284" stroke="#FDDBB4" stroke-width="18" stroke-linecap="round"/>
+    <path d="M130 230C152 242 164 262 158 284" stroke="#FDDBB4" stroke-width="18" stroke-linecap="round"/>
+    <!-- Hand reaching right -->
+    <circle cx="-18" cy="288" r="12" fill="#FDDBB4"/>
+  </g>
+
+  <!-- Character 2: Boy (right, facing left) -->
+  <g transform="translate(1020, 260)">
+    <!-- Shirt/jacket -->
+    <path d="M55 210C30 215 8 235 0 275L-15 430H155L140 275C132 235 110 215 85 210Z" fill="#1A3A6E"/>
+    <!-- Neck -->
+    <rect x="58" y="182" width="22" height="32" rx="4" fill="#FDDBB4"/>
+    <!-- Head -->
+    <ellipse cx="69" cy="152" rx="56" ry="62" fill="#FDDBB4"/>
+    <!-- Hair (short, anime style) -->
+    <path d="M14 118C8 88 14 60 30 40C46 20 68 12 86 14C104 16 118 28 126 48C134 68 130 90 124 110L116 128C106 118 88 112 68 112C48 112 28 118 14 118Z" fill="#1A2E4A"/>
+    <path d="M14 118C6 100 10 76 22 58" stroke="#1A2E4A" stroke-width="10" stroke-linecap="round"/>
+    <path d="M124 110C132 92 128 68 116 50" stroke="#1A2E4A" stroke-width="10" stroke-linecap="round"/>
+    <!-- Hair highlight -->
+    <path d="M38 44C48 34 62 28 74 32" stroke="#3A5FA0" stroke-width="3" stroke-linecap="round" opacity="0.55"/>
+    <!-- Eyes -->
+    <ellipse cx="50" cy="150" rx="15" ry="17" fill="#1A0A2E"/>
+    <ellipse cx="88" cy="150" rx="15" ry="17" fill="#1A0A2E"/>
+    <ellipse cx="50" cy="150" rx="11" ry="13" fill="#2A5FA0"/>
+    <ellipse cx="88" cy="150" rx="11" ry="13" fill="#2A5FA0"/>
+    <ellipse cx="50" cy="152" rx="7" ry="8" fill="#1A3A6E"/>
+    <ellipse cx="88" cy="152" rx="7" ry="8" fill="#1A3A6E"/>
+    <circle cx="55" cy="144" r="4.5" fill="white"/>
+    <circle cx="93" cy="144" r="4.5" fill="white"/>
+    <!-- Eyelashes -->
+    <path d="M35 140C38 135 44 132 50 134" stroke="#1A0A2E" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M103 134C109 132 115 135 118 140" stroke="#1A0A2E" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Nose -->
+    <path d="M65 166C67 169 71 169 73 166" stroke="#D4956A" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Mouth -->
+    <path d="M57 178C63 184 75 184 81 178" stroke="#D4956A" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <!-- Blush -->
+    <ellipse cx="36" cy="167" rx="13" ry="7" fill="#FFB3C6" opacity="0.35"/>
+    <ellipse cx="102" cy="167" rx="13" ry="7" fill="#FFB3C6" opacity="0.35"/>
+    <!-- Arms -->
+    <path d="M8 230C-14 242 -26 262 -20 284" stroke="#FDDBB4" stroke-width="18" stroke-linecap="round"/>
+    <path d="M130 230C152 242 164 262 158 284" stroke="#FDDBB4" stroke-width="18" stroke-linecap="round"/>
+    <!-- Hand reaching left -->
+    <circle cx="-18" cy="288" r="12" fill="#FDDBB4"/>
+  </g>
+
+  <!-- Hands almost touching in center -->
+  <circle cx="800" cy="548" r="10" fill="#FDDBB4" opacity="0.9"/>
+
+  <!-- Heart -->
+  <path d="M800 460 C800 452 808 446 816 450 C820 444 830 444 830 454 C830 466 816 478 800 490 C784 478 770 466 770 454 C770 444 780 444 784 450 C792 446 800 452 800 460Z" fill="#FF6B9D" opacity="0.85"/>
+
+  <!-- Title -->
+  <text x="112" y="126" fill="#FFFFFF" fill-opacity="0.95" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="80" font-weight="700">亲嘴</text>
+  <text x="118" y="192" fill="#FFFFFF" fill-opacity="0.82" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="28">她跟我亲嘴，多亲一会就湿了</text>
+</svg>

@@ -1,5 +1,5 @@
 ---
-title: "macOS ARM64 开发环境搭建指南：Homebrew、Ruby、Python、Node.js"
+title: "macOS ARM64 开发环境搭建指南"
 description: "在 macOS Apple Silicon 上从零搭建开发环境，将 Homebrew 安装到用户目录，并通过 rbenv、pyenv、nvm 管理多版本运行时"
 date: 2026-04-22
 slug: macos-dev-env-setup

@@ -1,0 +1,17 @@
+body {
+    color: var(--body-text-color);
+}
+
+.sidebar header .site-name {
+    display: none;
+}
+
+[data-scheme="dark"] {
+    .article-content {
+        color: var(--card-text-color-main);
+    }
+
+    svg {
+        color: inherit;
+    }
+}
