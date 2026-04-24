@@ -8,7 +8,7 @@ favicon        = "img/favicon.png"
 [sidebar]
     compact = false
     emoji   = "🌸"
-    avatar  = "img/avatar.svg"
+    avatar  = "img/avatar.png"
 
 [article]
     math        = false

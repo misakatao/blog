@@ -1,7 +1,7 @@
 ---
 title: "无题（二）"
 description: "那双白棉袜裹过她的脚，棉布的纹理里藏着她的路"
-date: 2026-04-24
+date: 2026-04-24T11:00:00+08:00
 slug: essay-untitled-2
 image: "cover.svg"
 categories:
