@@ -1,7 +1,7 @@
 ---
 title: "杭州的雨"
 description: "雨下得正好，不早不晚"
-date: 2026-04-24
+date: 2026-04-22T10:00:00+08:00
 slug: essay-hangzhou-rain
 image: "cover.svg"
 categories:

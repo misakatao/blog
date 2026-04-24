@@ -1,7 +1,7 @@
 ---
 title: "你好，世界"
 description: "我的第一篇博客文章"
-date: 2026-04-22
+date: 2025-12-22T08:00:00+08:00
 slug: hello-world
 image: "cover.svg"
 categories:
