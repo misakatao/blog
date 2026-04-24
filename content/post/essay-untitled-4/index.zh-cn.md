@@ -1,7 +1,7 @@
 ---
 title: "无题（四）"
 description: "那一刻，我觉得毛巾比我幸福"
-date: 2026-04-24
+date: 2026-04-24T13:00:00+08:00
 slug: essay-untitled-4
 image: "cover.svg"
 categories:
