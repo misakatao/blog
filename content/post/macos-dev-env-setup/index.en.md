@@ -1,7 +1,7 @@
 ---
 title: "macOS ARM64 Dev Environment Setup: Homebrew, Ruby, Python, Node.js"
 description: "Set up a complete development environment on macOS Apple Silicon with Homebrew in the user directory, plus rbenv, pyenv, and nvm for multi-version runtime management"
-date: 2026-04-22T09:00:00+08:00
+date: 2026-03-28T09:00:00+08:00
 slug: macos-dev-env-setup
 image: "cover.svg"
 categories:
