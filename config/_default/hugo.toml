@@ -1,11 +1,14 @@
 baseURL                = "https://misakatao.com/"
+title                  = "Misaka Tao's Blog"
 defaultContentLanguage = "zh-cn"
 hasCJKLanguage         = true
+enableRobotsTXT        = true
+enableEmoji            = true
 theme                  = "hugo-theme-stack"
 
 [pagination]
     pagerSize = 10
 
 [permalinks]
-    post = "/p/:slug/"
+    post = "/posts/:year/:month/:slug/"
     page = "/:slug/"

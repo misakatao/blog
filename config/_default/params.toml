@@ -2,12 +2,17 @@ mainSections   = ["post"]
 rssFullContent = true
 favicon        = "img/favicon.png"
 
+ShowReadingTime     = true
+ShowCodeCopyButtons = true
+ShowPostNavLinks    = true
+ShowBreadCrumbs     = true
+
 [footer]
-    since = 2026
+    since = 2016
 
 [sidebar]
     compact = false
-    emoji   = "🌸"
+    emoji   = "☕️"
     avatar  = "img/avatar.png"
 
 [article]
