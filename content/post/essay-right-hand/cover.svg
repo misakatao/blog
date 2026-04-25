@@ -1,0 +1,45 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="warmBg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2C1810"/>
+      <stop offset="0.5" stop-color="#3A2218"/>
+      <stop offset="1" stop-color="#1A0E08"/>
+    </linearGradient>
+    <filter id="softGlow"><feGaussianBlur stdDeviation="10"/></filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#warmBg)"/>
+
+  <!-- Warm ambient glow -->
+  <circle cx="800" cy="450" r="400" fill="#D4956A" opacity="0.06" filter="url(#softGlow)"/>
+  <circle cx="600" cy="500" r="250" fill="#E8A878" opacity="0.04" filter="url(#softGlow)"/>
+
+  <!-- Right hand silhouette reaching -->
+  <g transform="translate(750, 340)" opacity="0.2">
+    <path d="M0 200C10 180 20 100 30 60C35 40 40 20 38 0C36 -10 30 -15 25 -10C20 0 22 30 20 60
+             L15 60C18 30 15 -20 10 -40C5 -50 -2 -48 0 -35C3 -15 8 20 10 60
+             L5 60C5 25 -2 -30 -8 -45C-14 -55 -20 -50 -18 -38C-14 -18 -2 25 0 60
+             L-5 60C-8 30 -18 -15 -24 -30C-30 -40 -36 -36 -33 -25C-28 -8 -12 35 -10 60
+             L-15 60C-20 40 -35 10 -42 0C-48 -8 -52 -2 -48 8C-42 22 -25 50 -20 70
+             C-10 100 -5 150 0 200Z" fill="#D4A88A"/>
+  </g>
+
+  <!-- Left hand silhouette, still, distant -->
+  <g transform="translate(400, 550)" opacity="0.08">
+    <path d="M0 100C5 80 10 40 12 20C14 10 12 0 8 5C5 12 5 40 4 60
+             L0 60C2 35 0 5 -3 -5C-6 -10 -10 -6 -8 2C-5 15 -1 40 0 60
+             L-4 60C-5 35 -10 5 -14 -3C-17 -8 -20 -4 -18 4C-15 16 -8 40 -6 60
+             L-10 60C-12 40 -20 15 -24 8C-27 2 -30 6 -28 12C-24 24 -14 50 -12 70
+             C-8 85 -4 95 0 100Z" fill="#D4A88A"/>
+  </g>
+
+  <!-- Subtle texture lines -->
+  <g stroke="#D4956A" stroke-width="0.5" opacity="0.08">
+    <line x1="200" y1="300" x2="1400" y2="300"/>
+    <line x1="200" y1="600" x2="1400" y2="600"/>
+  </g>
+
+  <!-- Title -->
+  <text x="112" y="126" fill="#E8C9A0" fill-opacity="0.90" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="72" font-weight="700">我的右手像一头驴</text>
+  <text x="118" y="188" fill="#E8C9A0" fill-opacity="0.55" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="26">它什么都记得，而我的左手呢？左手至今还是处</text>
+</svg>
