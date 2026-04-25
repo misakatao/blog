@@ -1,0 +1,15 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8F5E9"/>
+      <stop offset="0.5" stop-color="#C8E6C9"/>
+      <stop offset="1" stop-color="#A5D6A7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="150" cy="300" r="230" fill="#43A047" fill-opacity="0.3"/>
+  <circle cx="1450" cy="600" r="250" fill="#66BB6A" fill-opacity="0.25"/>
+  <circle cx="800" cy="50" r="170" fill="#2E7D32" fill-opacity="0.2"/>
+  <rect x="200" y="280" width="1200" height="340" rx="32" fill="#FFFFFF" fill-opacity="0.85"/>
+  <text x="800" y="470" text-anchor="middle" fill="#1B5E20" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif" font-size="72" font-weight="700">地图与定位</text>
+</svg>

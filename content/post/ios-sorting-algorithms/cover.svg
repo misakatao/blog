@@ -1,0 +1,15 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E0F2F1"/>
+      <stop offset="0.5" stop-color="#B2DFDB"/>
+      <stop offset="1" stop-color="#80CBC4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="400" cy="150" r="190" fill="#0097A7" fill-opacity="0.3"/>
+  <circle cx="1200" cy="750" r="240" fill="#00838F" fill-opacity="0.25"/>
+  <circle cx="100" cy="800" r="160" fill="#006064" fill-opacity="0.2"/>
+  <rect x="200" y="280" width="1200" height="340" rx="32" fill="#FFFFFF" fill-opacity="0.85"/>
+  <text x="800" y="470" text-anchor="middle" fill="#004D40" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif" font-size="72" font-weight="700">排序算法</text>
+</svg>
