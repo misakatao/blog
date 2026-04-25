@@ -1,0 +1,63 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="caveSky" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A1A2E"/>
+      <stop offset="0.4" stop-color="#16213E"/>
+      <stop offset="0.7" stop-color="#0F3460"/>
+      <stop offset="1" stop-color="#1A1A2E"/>
+    </linearGradient>
+    <radialGradient id="caveLight" cx="800" cy="400" r="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5B8FA8" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#1A1A2E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="water" x1="800" y1="650" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2A6A8A" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#1A3A5C" stop-opacity="0.8"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="6"/></filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#caveSky)"/>
+  <circle cx="800" cy="400" r="500" fill="url(#caveLight)"/>
+
+  <!-- Cave walls -->
+  <path d="M0 0L0 900L300 900C250 750 200 600 280 450C360 300 500 200 650 180C700 175 740 178 780 190L800 196L820 190C860 178 900 175 950 180C1100 200 1240 300 1320 450C1400 600 1350 750 1300 900L1600 900L1600 0Z" fill="#0D0D1A" opacity="0.95"/>
+
+  <!-- Cave opening highlight -->
+  <ellipse cx="800" cy="400" rx="220" ry="320" fill="#16213E" opacity="0.6"/>
+  <ellipse cx="800" cy="400" rx="160" ry="260" fill="#1B3A5C" opacity="0.3"/>
+
+  <!-- Stalactites -->
+  <path d="M620 180L635 280L650 180Z" fill="#2A2A4A" opacity="0.7"/>
+  <path d="M720 175L730 250L740 175Z" fill="#2A2A4A" opacity="0.6"/>
+  <path d="M860 175L870 260L880 175Z" fill="#2A2A4A" opacity="0.7"/>
+  <path d="M950 180L960 270L970 180Z" fill="#2A2A4A" opacity="0.6"/>
+
+  <!-- Water at bottom -->
+  <path d="M300 700C450 680 650 670 800 675C950 680 1150 690 1300 700L1300 900L300 900Z" fill="url(#water)"/>
+
+  <!-- Water ripples -->
+  <ellipse cx="700" cy="720" rx="60" ry="6" stroke="#5B8FA8" stroke-width="1" fill="none" opacity="0.3"/>
+  <ellipse cx="900" cy="740" rx="80" ry="7" stroke="#5B8FA8" stroke-width="0.8" fill="none" opacity="0.25"/>
+  <ellipse cx="800" cy="760" rx="120" ry="10" stroke="#5B8FA8" stroke-width="0.6" fill="none" opacity="0.2"/>
+
+  <!-- Grass at cave entrance -->
+  <g stroke="#3A5A3A" stroke-width="2" opacity="0.5">
+    <path d="M580 190C575 160 570 140 565 120" fill="none"/>
+    <path d="M600 185C598 155 600 135 595 110" fill="none"/>
+    <path d="M1000 185C1002 155 1000 135 1005 110" fill="none"/>
+    <path d="M1020 190C1025 160 1030 140 1035 120" fill="none"/>
+  </g>
+
+  <!-- Subtle light particles -->
+  <g fill="#A8D8EA" opacity="0.4" filter="url(#glow)">
+    <circle cx="750" cy="350" r="3"/>
+    <circle cx="850" cy="300" r="2"/>
+    <circle cx="780" cy="450" r="2.5"/>
+    <circle cx="830" cy="500" r="2"/>
+  </g>
+
+  <!-- Title -->
+  <text x="112" y="126" fill="#FFFFFF" fill-opacity="0.95" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="80" font-weight="700">游风水洞有感</text>
+  <text x="118" y="192" fill="#FFFFFF" fill-opacity="0.80" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="28">鞋子是干的，裤子是湿的</text>
+</svg>
