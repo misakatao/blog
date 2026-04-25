@@ -1,0 +1,72 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rainSky" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4A5568"/>
+      <stop offset="0.5" stop-color="#2D3748"/>
+      <stop offset="1" stop-color="#1A202C"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="800" y1="750" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2D3748"/>
+      <stop offset="1" stop-color="#1A202C"/>
+    </linearGradient>
+    <filter id="softGlow"><feGaussianBlur stdDeviation="10"/></filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#rainSky)"/>
+
+  <!-- Wet ground -->
+  <rect x="0" y="750" width="1600" height="150" fill="url(#ground)" opacity="0.8"/>
+
+  <!-- Rain streaks -->
+  <g stroke="#8BA4B8" stroke-width="1" opacity="0.15">
+    <line x1="150" y1="0" x2="140" y2="900"/>
+    <line x1="320" y1="0" x2="310" y2="900"/>
+    <line x1="480" y1="0" x2="470" y2="900"/>
+    <line x1="650" y1="0" x2="640" y2="900"/>
+    <line x1="830" y1="0" x2="820" y2="900"/>
+    <line x1="1000" y1="0" x2="990" y2="900"/>
+    <line x1="1180" y1="0" x2="1170" y2="900"/>
+    <line x1="1350" y1="0" x2="1340" y2="900"/>
+    <line x1="240" y1="0" x2="230" y2="900"/>
+    <line x1="560" y1="0" x2="550" y2="900"/>
+    <line x1="900" y1="0" x2="890" y2="900"/>
+    <line x1="1100" y1="0" x2="1090" y2="900"/>
+    <line x1="1450" y1="0" x2="1440" y2="900"/>
+  </g>
+
+  <!-- Umbrella leaning against wall corner -->
+  <g transform="translate(1150, 480)">
+    <!-- Wall corner -->
+    <line x1="80" y1="-100" x2="80" y2="270" stroke="#4A5568" stroke-width="3" opacity="0.4"/>
+    <!-- Umbrella handle -->
+    <line x1="0" y1="0" x2="30" y2="260" stroke="#6B7280" stroke-width="4"/>
+    <!-- Umbrella hook -->
+    <path d="M30 260C30 275 20 280 12 275" stroke="#6B7280" stroke-width="4" fill="none"/>
+    <!-- Umbrella canopy folded -->
+    <path d="M-5 0C-15 -10 -10 -30 0 -20C5 -15 8 -5 -5 0Z" fill="#5A6A7A" opacity="0.6"/>
+    <!-- Water drip -->
+    <circle cx="14" cy="282" r="2.5" fill="#8BA4B8" opacity="0.4"/>
+    <circle cx="16" cy="296" r="2" fill="#8BA4B8" opacity="0.25"/>
+  </g>
+
+  <!-- Hotel window warm light -->
+  <g opacity="0.3">
+    <rect x="350" y="380" width="80" height="100" rx="3" fill="#F5C87A" opacity="0.5"/>
+    <rect x="360" y="390" width="30" height="40" rx="1" fill="#F5D89A" opacity="0.6"/>
+    <rect x="395" y="390" width="30" height="40" rx="1" fill="#F5D89A" opacity="0.5"/>
+    <rect x="360" y="440" width="30" height="30" rx="1" fill="#F5D89A" opacity="0.4"/>
+    <rect x="395" y="440" width="30" height="30" rx="1" fill="#F5D89A" opacity="0.45"/>
+  </g>
+  <circle cx="390" cy="430" r="80" fill="#F5C87A" opacity="0.04" filter="url(#softGlow)"/>
+
+  <!-- Puddle reflections -->
+  <g opacity="0.1">
+    <ellipse cx="400" cy="810" rx="60" ry="8" fill="#F5C87A"/>
+    <ellipse cx="800" cy="830" rx="80" ry="6" fill="#8BA4B8"/>
+    <ellipse cx="1200" cy="820" rx="50" ry="5" fill="#8BA4B8"/>
+  </g>
+
+  <!-- Title -->
+  <text x="112" y="126" fill="#C4D0DC" fill-opacity="0.90" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="80" font-weight="700">回忆</text>
+  <text x="118" y="188" fill="#C4D0DC" fill-opacity="0.55" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="26">伞靠在墙角，滴了一夜的水，像当年的我和她一样，慢慢地干</text>
+</svg>
