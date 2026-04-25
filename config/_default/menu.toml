@@ -4,4 +4,32 @@
     url        = "https://github.com/misakatao"
 
     [social.params]
-        icon = "brand-github"
+        icon   = "brand-github"
+        newTab = true
+
+[[social]]
+    identifier = "leetcode"
+    name       = "力扣"
+    url        = "https://leetcode.cn/u/misakatao/"
+
+    [social.params]
+        icon   = "brand-leetcode"
+        newTab = true
+
+[[social]]
+    identifier = "jianshu"
+    name       = "简书"
+    url        = "https://www.jianshu.com/u/98a0127b88fa"
+
+    [social.params]
+        icon   = "brand-jianshu"
+        newTab = true
+
+[[social]]
+    identifier = "juejin"
+    name       = "掘金"
+    url        = "https://juejin.cn/user/940837683331502"
+
+    [social.params]
+        icon   = "brand-juejin"
+        newTab = true
