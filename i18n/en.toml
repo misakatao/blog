@@ -53,6 +53,11 @@ darkMode   = "Dark Mode"
     builtWith  = "Built with {{ .Generator }}"
     designedBy = "Theme {{ .Theme }} designed by {{ .DesignedBy }}"
 
+[busuanzi]
+    sitePV = "Total visits "
+    siteUV = "Total visitors "
+    pagePV = "views"
+
 [cookies]
     title             = "Cookie Consent"
     text              = "We use cookies to enhance your browsing experience and analyze site traffic."

@@ -44,6 +44,11 @@ darkMode   = "暗色模式"
     builtWith  = "使用 {{ .Generator }} 构建"
     designedBy = "主题 {{ .Theme }} 由 {{ .DesignedBy }} 设计"
 
+[busuanzi]
+    sitePV = "本站总访问量 "
+    siteUV = "本站总访客数 "
+    pagePV = "次阅读"
+
 [cookies]
     title             = "Cookie 同意"
     text              = "我们使用 Cookie 来增强您的浏览体验并分析网站流量。"
