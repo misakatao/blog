@@ -22,6 +22,10 @@ darkMode   = "Dark Mode"
         one   = "{{ .Count }} minute read"
         other = "{{ .Count }} minutes read"
 
+    [article.codeblock]
+        copy   = "Copy"
+        copied = "Copied!"
+
     [article.alert]
         note      = "Note"
         tip       = "Tip"

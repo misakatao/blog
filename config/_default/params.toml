@@ -34,4 +34,20 @@ ShowBreadCrumbs     = true
     default = "auto"
 
 [comments]
-    enabled = false
+    enabled = true
+    provider = "giscus"
+
+    [comments.giscus]
+        repo             = "misakatao/blog"
+        repoID           = "R_kgDOSJkMlA"
+        category         = "Announcements"
+        categoryID       = "DIC_kwDOSJkMlM4C7xq_"
+        mapping          = "pathname"
+        strict           = "0"
+        reactionsEnabled = "1"
+        emitMetadata     = "0"
+        inputPosition    = "bottom"
+        lightTheme       = "light"
+        darkTheme        = "dark"
+        lang             = "zh-CN"
+        loading          = "lazy"

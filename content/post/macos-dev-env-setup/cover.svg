@@ -63,6 +63,6 @@
     <path d="M218 36C234 6 270 4 286 30C294 48 288 72 262 94C232 78 212 56 218 36Z" fill="#93C5FD"/>
   </g>
 
-  <text x="130" y="126" fill="#5B4673" font-family="Avenir, Helvetica, Arial, sans-serif" font-size="66" font-weight="800">macOS ARM64 Dev Setup</text>
+  <text x="130" y="126" fill="#5B4673" font-family="Avenir, Helvetica, Arial, sans-serif" font-size="66" font-weight="800">macOS Dev Setup</text>
   <text x="132" y="186" fill="#7C6C8F" font-family="Avenir, Helvetica, Arial, sans-serif" font-size="28">A pastel anime-inspired desk illustration for development environment notes.</text>
 </svg>
