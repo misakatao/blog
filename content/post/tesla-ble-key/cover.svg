@@ -1,0 +1,108 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="160" y1="40" x2="1440" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="0.5" stop-color="#1E293B"/>
+      <stop offset="1" stop-color="#0B1220"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#1E293B" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#0F172A" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="phone" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#334155"/>
+      <stop offset="1" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="phoneScreen" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#0EA5E9"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="car" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#DC2626"/>
+      <stop offset="1" stop-color="#991B1B"/>
+    </linearGradient>
+    <radialGradient id="ble" cx="0.5" cy="0.5" r="0.5">
+      <stop stop-color="#38BDF8" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="30" flood-color="#020617" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <circle cx="1340" cy="100" r="90" fill="#DC2626" fill-opacity="0.15"/>
+  <circle cx="140" cy="160" r="70" fill="#38BDF8" fill-opacity="0.2"/>
+  <circle cx="1400" cy="780" r="100" fill="#6366F1" fill-opacity="0.15"/>
+  <circle cx="180" cy="760" r="80" fill="#22D3EE" fill-opacity="0.12"/>
+
+  <g filter="url(#soft)">
+    <rect x="110" y="120" width="1380" height="660" rx="36" fill="url(#panel)" stroke="#334155" stroke-width="1"/>
+  </g>
+
+  <g transform="translate(260,340)">
+    <rect x="0" y="0" width="200" height="320" rx="28" fill="url(#phone)" stroke="#475569" stroke-width="2"/>
+    <rect x="14" y="18" width="172" height="284" rx="18" fill="url(#phoneScreen)"/>
+    <rect x="76" y="26" width="48" height="8" rx="4" fill="#0F172A" fill-opacity="0.5"/>
+
+    <circle cx="100" cy="130" r="36" fill="#FFFFFF" fill-opacity="0.95"/>
+    <path d="M 100 108 L 100 152 M 100 108 L 118 126 L 88 148 M 100 152 L 118 134 L 88 112" stroke="#2563EB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+    <rect x="34" y="196" width="132" height="10" rx="5" fill="#FFFFFF" fill-opacity="0.6"/>
+    <rect x="48" y="218" width="104" height="8" rx="4" fill="#FFFFFF" fill-opacity="0.4"/>
+
+    <rect x="60" y="250" width="80" height="32" rx="16" fill="#FFFFFF" fill-opacity="0.95"/>
+    <text x="100" y="272" text-anchor="middle" fill="#2563EB" font-family="monospace" font-size="14" font-weight="700">UNLOCK</text>
+  </g>
+
+  <g transform="translate(560,460)">
+    <circle cx="0" cy="40" r="160" fill="url(#ble)"/>
+    <path d="M 0 40 Q 20 10 40 40" stroke="#38BDF8" stroke-width="3" fill="none" stroke-linecap="round" stroke-opacity="0.9"/>
+    <path d="M 0 40 Q 40 -10 80 40" stroke="#38BDF8" stroke-width="3" fill="none" stroke-linecap="round" stroke-opacity="0.7"/>
+    <path d="M 0 40 Q 60 -30 120 40" stroke="#38BDF8" stroke-width="3" fill="none" stroke-linecap="round" stroke-opacity="0.5"/>
+    <path d="M 0 40 Q 80 -50 160 40" stroke="#38BDF8" stroke-width="3" fill="none" stroke-linecap="round" stroke-opacity="0.3"/>
+
+    <g transform="translate(180,20)">
+      <rect x="0" y="0" width="120" height="40" rx="8" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+      <text x="60" y="26" text-anchor="middle" fill="#38BDF8" font-family="monospace" font-size="16" font-weight="700">BLE · ECC</text>
+    </g>
+  </g>
+
+  <g transform="translate(960,380)">
+    <ellipse cx="200" cy="230" rx="220" ry="14" fill="#000000" fill-opacity="0.35"/>
+
+    <path d="M 40 180 L 80 110 Q 90 90 114 90 L 286 90 Q 310 90 320 110 L 360 180 L 360 210 Q 360 224 346 224 L 330 224 Q 320 224 320 214 L 320 206 L 80 206 L 80 214 Q 80 224 70 224 L 54 224 Q 40 224 40 210 Z" fill="url(#car)" stroke="#7F1D1D" stroke-width="2"/>
+
+    <path d="M 96 178 L 124 118 Q 130 108 142 108 L 258 108 Q 270 108 276 118 L 304 178 Z" fill="#1E293B" fill-opacity="0.85"/>
+    <line x1="200" y1="108" x2="200" y2="178" stroke="#475569" stroke-width="2"/>
+
+    <circle cx="108" cy="206" r="24" fill="#0F172A"/>
+    <circle cx="108" cy="206" r="14" fill="#334155"/>
+    <circle cx="292" cy="206" r="24" fill="#0F172A"/>
+    <circle cx="292" cy="206" r="14" fill="#334155"/>
+
+    <rect x="56" y="150" width="16" height="12" rx="3" fill="#FDE68A"/>
+    <rect x="328" y="150" width="16" height="12" rx="3" fill="#FCA5A5"/>
+
+    <g transform="translate(150,40)">
+      <circle cx="50" cy="0" r="28" fill="#FFFFFF" fill-opacity="0.95"/>
+      <path d="M 42 -10 L 42 10 L 46 10 L 46 14 L 54 6 L 46 -2 L 46 -10 Z M 50 -4 L 58 4 L 54 8 L 50 4 Z M 50 4 L 58 -4 L 54 -8 L 50 -4 Z" fill="#DC2626"/>
+    </g>
+  </g>
+
+  <g transform="translate(110,720)">
+    <rect x="40" y="0" width="1300" height="44" rx="10" fill="#0F172A" fill-opacity="0.6" stroke="#334155" stroke-width="1"/>
+    <text x="72" y="30" fill="#6EE7B7" font-family="monospace" font-size="16" font-weight="600">Challenge</text>
+    <text x="200" y="30" fill="#94A3B8" font-family="monospace" font-size="16">→</text>
+    <text x="236" y="30" fill="#38BDF8" font-family="monospace" font-size="16" font-weight="600">Sign (Secure Enclave)</text>
+    <text x="520" y="30" fill="#94A3B8" font-family="monospace" font-size="16">→</text>
+    <text x="556" y="30" fill="#F472B6" font-family="monospace" font-size="16" font-weight="600">Verify</text>
+    <text x="652" y="30" fill="#94A3B8" font-family="monospace" font-size="16">→</text>
+    <text x="688" y="30" fill="#FDE68A" font-family="monospace" font-size="16" font-weight="600">Unlock</text>
+    <text x="1120" y="30" fill="#475569" font-family="monospace" font-size="14">RSSI · Challenge-Response</text>
+  </g>
+
+  <text x="800" y="240" text-anchor="middle" fill="#F8FAFC" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif" font-size="64" font-weight="700">Tesla BLE Key</text>
+  <text x="800" y="286" text-anchor="middle" fill="#94A3B8" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif" font-size="22">BLE · 非对称加密 · Secure Enclave · 本地认证</text>
+</svg>
