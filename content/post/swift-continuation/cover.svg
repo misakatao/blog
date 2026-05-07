@@ -1,0 +1,152 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="160" y1="40" x2="1440" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7ED"/>
+      <stop offset="0.5" stop-color="#FFEDD5"/>
+      <stop offset="1" stop-color="#FED7AA"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#FFF7ED" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="swiftBird" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#F97316"/>
+      <stop offset="1" stop-color="#DC2626"/>
+    </linearGradient>
+    <linearGradient id="suspend" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#EA580C"/>
+    </linearGradient>
+    <filter id="soft" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#9A3412" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <circle cx="1340" cy="100" r="90" fill="#FB923C" fill-opacity="0.25"/>
+  <circle cx="140" cy="160" r="70" fill="#FDBA74" fill-opacity="0.3"/>
+  <circle cx="1400" cy="780" r="100" fill="#F97316" fill-opacity="0.2"/>
+
+  <g filter="url(#soft)">
+    <rect x="110" y="120" width="1380" height="660" rx="36" fill="url(#panel)"/>
+  </g>
+
+  <g transform="translate(180,200)">
+    <rect x="0" y="0" width="520" height="500" rx="24" fill="#0F172A"/>
+    <rect x="0" y="0" width="520" height="44" rx="24" fill="#1E293B"/>
+    <rect x="0" y="20" width="520" height="24" fill="#1E293B"/>
+    <circle cx="24" cy="22" r="7" fill="#EF4444"/>
+    <circle cx="50" cy="22" r="7" fill="#F59E0B"/>
+    <circle cx="76" cy="22" r="7" fill="#22C55E"/>
+    <text x="260" y="28" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="13">Continuation.swift</text>
+
+    <text x="30" y="88" fill="#F472B6" font-family="monospace" font-size="15">func</text>
+    <text x="80" y="88" fill="#60A5FA" font-family="monospace" font-size="15">fetch</text>
+    <text x="130" y="88" fill="#E2E8F0" font-family="monospace" font-size="15">() </text>
+    <text x="162" y="88" fill="#F472B6" font-family="monospace" font-size="15">async throws</text>
+    <text x="290" y="88" fill="#E2E8F0" font-family="monospace" font-size="15"> -&gt; String {</text>
+
+    <text x="60" y="120" fill="#F472B6" font-family="monospace" font-size="15">try await</text>
+    <text x="160" y="120" fill="#FDE68A" font-family="monospace" font-size="15">withCheckedThrowingContinuation</text>
+
+    <text x="80" y="152" fill="#E2E8F0" font-family="monospace" font-size="15">{ continuation </text>
+    <text x="230" y="152" fill="#F472B6" font-family="monospace" font-size="15">in</text>
+
+    <text x="100" y="196" fill="#94A3B8" font-family="monospace" font-size="14">// callback world</text>
+    <text x="100" y="220" fill="#E2E8F0" font-family="monospace" font-size="15">someAPI { result </text>
+    <text x="248" y="220" fill="#F472B6" font-family="monospace" font-size="15">in</text>
+
+    <text x="120" y="256" fill="#F472B6" font-family="monospace" font-size="15">if let</text>
+    <text x="180" y="256" fill="#E2E8F0" font-family="monospace" font-size="15"> value = result {</text>
+
+    <text x="140" y="288" fill="#60A5FA" font-family="monospace" font-size="15">continuation</text>
+    <text x="262" y="288" fill="#E2E8F0" font-family="monospace" font-size="15">.</text>
+    <text x="270" y="288" fill="#6EE7B7" font-family="monospace" font-size="15">resume</text>
+    <text x="334" y="288" fill="#E2E8F0" font-family="monospace" font-size="15">(returning: value)</text>
+
+    <text x="120" y="320" fill="#F472B6" font-family="monospace" font-size="15">} else {</text>
+
+    <text x="140" y="352" fill="#60A5FA" font-family="monospace" font-size="15">continuation</text>
+    <text x="262" y="352" fill="#E2E8F0" font-family="monospace" font-size="15">.</text>
+    <text x="270" y="352" fill="#FCA5A5" font-family="monospace" font-size="15">resume</text>
+    <text x="334" y="352" fill="#E2E8F0" font-family="monospace" font-size="15">(throwing: error)</text>
+
+    <text x="120" y="384" fill="#E2E8F0" font-family="monospace" font-size="15">}</text>
+    <text x="100" y="416" fill="#E2E8F0" font-family="monospace" font-size="15">}</text>
+    <text x="80" y="448" fill="#E2E8F0" font-family="monospace" font-size="15">}</text>
+    <text x="30" y="472" fill="#E2E8F0" font-family="monospace" font-size="15">}</text>
+  </g>
+
+  <g transform="translate(740,300)">
+    <rect x="0" y="0" width="100" height="44" rx="22" fill="url(#suspend)"/>
+    <text x="50" y="28" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="14" font-weight="700">suspend</text>
+
+    <path d="M 50 54 L 50 130" stroke="#EA580C" stroke-width="3" stroke-dasharray="6,5"/>
+    <polygon points="42,130 58,130 50,148" fill="#EA580C"/>
+
+    <rect x="-10" y="160" width="120" height="44" rx="10" fill="#FFFFFF" stroke="#EA580C" stroke-width="2"/>
+    <text x="50" y="188" text-anchor="middle" fill="#9A3412" font-family="monospace" font-size="13" font-weight="700">Task 挂起</text>
+
+    <rect x="-10" y="214" width="120" height="44" rx="10" fill="#FFFFFF" stroke="#EA580C" stroke-width="2"/>
+    <text x="50" y="242" text-anchor="middle" fill="#9A3412" font-family="monospace" font-size="13" font-weight="700">保存上下文</text>
+
+    <rect x="-10" y="268" width="120" height="44" rx="10" fill="#FFFFFF" stroke="#EA580C" stroke-width="2"/>
+    <text x="50" y="296" text-anchor="middle" fill="#9A3412" font-family="monospace" font-size="13" font-weight="700">等待 resume</text>
+
+    <path d="M 50 322 L 50 360" stroke="#22C55E" stroke-width="3"/>
+    <polygon points="42,360 58,360 50,378" fill="#22C55E"/>
+
+    <rect x="-10" y="388" width="120" height="44" rx="22" fill="#22C55E"/>
+    <text x="50" y="416" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="14" font-weight="700">resume</text>
+  </g>
+
+  <g transform="translate(900,220)">
+    <rect x="0" y="0" width="460" height="480" rx="20" fill="#FFFFFF" stroke="#FED7AA" stroke-width="2"/>
+    <text x="230" y="44" text-anchor="middle" fill="#9A3412" font-family="'PingFang SC', sans-serif" font-size="20" font-weight="700">四种 Continuation</text>
+    <line x1="30" y1="60" x2="430" y2="60" stroke="#FED7AA" stroke-width="1"/>
+
+    <g transform="translate(30,80)">
+      <rect x="0" y="0" width="400" height="88" rx="12" fill="#FEF3C7"/>
+      <rect x="0" y="0" width="6" height="88" rx="3" fill="#D97706"/>
+      <text x="20" y="30" fill="#78350F" font-family="monospace" font-size="14" font-weight="700">withUnsafeContinuation</text>
+      <text x="20" y="52" fill="#92400E" font-family="monospace" font-size="11">Throw: ❌   Checked: ❌</text>
+      <text x="20" y="72" fill="#92400E" font-family="monospace" font-size="11">性能最高 · 风险最大</text>
+      <text x="370" y="52" text-anchor="middle" fill="#D97706" font-family="'PingFang SC', sans-serif" font-size="16" font-weight="700">⭐</text>
+    </g>
+
+    <g transform="translate(30,180)">
+      <rect x="0" y="0" width="400" height="88" rx="12" fill="#FED7AA"/>
+      <rect x="0" y="0" width="6" height="88" rx="3" fill="#EA580C"/>
+      <text x="20" y="30" fill="#7C2D12" font-family="monospace" font-size="13" font-weight="700">withUnsafeThrowingContinuation</text>
+      <text x="20" y="52" fill="#9A3412" font-family="monospace" font-size="11">Throw: ✅   Checked: ❌</text>
+      <text x="20" y="72" fill="#9A3412" font-family="monospace" font-size="11">支持错误 · 无检查</text>
+      <text x="370" y="52" text-anchor="middle" fill="#EA580C" font-family="'PingFang SC', sans-serif" font-size="16" font-weight="700">⭐</text>
+    </g>
+
+    <g transform="translate(30,280)">
+      <rect x="0" y="0" width="400" height="88" rx="12" fill="#DCFCE7"/>
+      <rect x="0" y="0" width="6" height="88" rx="3" fill="#16A34A"/>
+      <text x="20" y="30" fill="#14532D" font-family="monospace" font-size="14" font-weight="700">withCheckedContinuation</text>
+      <text x="20" y="52" fill="#166534" font-family="monospace" font-size="11">Throw: ❌   Checked: ✅</text>
+      <text x="20" y="72" fill="#166534" font-family="monospace" font-size="11">运行时安全检查</text>
+      <text x="370" y="52" text-anchor="middle" fill="#16A34A" font-family="'PingFang SC', sans-serif" font-size="14" font-weight="700">⭐⭐⭐⭐</text>
+    </g>
+
+    <g transform="translate(30,380)">
+      <rect x="0" y="0" width="400" height="88" rx="12" fill="#DBEAFE"/>
+      <rect x="0" y="0" width="6" height="88" rx="3" fill="#2563EB"/>
+      <text x="20" y="30" fill="#1E3A8A" font-family="monospace" font-size="13" font-weight="700">withCheckedThrowingContinuation</text>
+      <text x="20" y="52" fill="#1E40AF" font-family="monospace" font-size="11">Throw: ✅   Checked: ✅</text>
+      <text x="20" y="72" fill="#1E40AF" font-family="monospace" font-size="11">生产环境首选</text>
+      <text x="370" y="52" text-anchor="middle" fill="#2563EB" font-family="'PingFang SC', sans-serif" font-size="12" font-weight="700">⭐⭐⭐⭐⭐</text>
+    </g>
+  </g>
+
+  <g transform="translate(120,740)">
+    <rect x="0" y="0" width="1360" height="24" rx="12" fill="#0F172A" fill-opacity="0.6"/>
+    <text x="680" y="17" text-anchor="middle" fill="#FDBA74" font-family="monospace" font-size="13">callback  →  Continuation  →  async / await</text>
+  </g>
+
+  <text x="800" y="185" text-anchor="middle" fill="#9A3412" font-family="'PingFang SC', sans-serif" font-size="32" font-weight="800">Swift Continuation</text>
+</svg>
