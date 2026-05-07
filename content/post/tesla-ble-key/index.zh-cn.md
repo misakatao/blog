@@ -1,7 +1,7 @@
 ---
 title: "Tesla BLE Key 原理详解：为什么手机靠近车辆就能自动解锁"
 description: "从 BLE 广播、密钥交换、Challenge-Response 认证到 iPhone 本地钥匙实现，完整解析 Tesla Phone Key 的工作机制"
-date: 2026-05-07T12:00:00+08:00
+date: 2026-05-07T11:00:00+08:00
 slug: tesla-ble-key
 image: "cover.svg"
 categories:

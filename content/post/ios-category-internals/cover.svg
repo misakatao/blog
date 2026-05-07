@@ -1,15 +1,94 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFF3E0"/>
-      <stop offset="0.5" stop-color="#FFE0B2"/>
-      <stop offset="1" stop-color="#FFCC80"/>
+    <linearGradient id="bg" x1="160" y1="40" x2="1440" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7ED"/>
+      <stop offset="0.5" stop-color="#FFEDD5"/>
+      <stop offset="1" stop-color="#FED7AA"/>
     </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#FFF7ED" stop-opacity="0.92"/>
+    </linearGradient>
+    <filter id="soft" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#9A3412" flood-opacity="0.18"/>
+    </filter>
   </defs>
+
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <circle cx="250" cy="180" r="200" fill="#FF9800" fill-opacity="0.3"/>
-  <circle cx="1350" cy="700" r="280" fill="#FFB74D" fill-opacity="0.25"/>
-  <circle cx="900" cy="100" r="150" fill="#FFA726" fill-opacity="0.2"/>
-  <rect x="200" y="280" width="1200" height="340" rx="32" fill="#FFFFFF" fill-opacity="0.85"/>
-  <text x="800" y="470" text-anchor="middle" fill="#E65100" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif" font-size="72" font-weight="700">Category 底层原理研究</text>
+
+  <circle cx="1340" cy="100" r="90" fill="#FB923C" fill-opacity="0.25"/>
+  <circle cx="140" cy="160" r="70" fill="#FDBA74" fill-opacity="0.3"/>
+  <circle cx="1400" cy="780" r="100" fill="#F97316" fill-opacity="0.2"/>
+
+  <g filter="url(#soft)">
+    <rect x="110" y="120" width="1380" height="660" rx="36" fill="url(#panel)"/>
+  </g>
+
+  <g transform="translate(200,220)">
+    <rect x="0" y="0" width="320" height="120" rx="16" fill="#FB923C"/>
+    <text x="160" y="50" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="20" font-weight="700">@interface NSObject</text>
+    <text x="160" y="88" text-anchor="middle" fill="#FFF7ED" font-family="monospace" font-size="14">Class cls</text>
+
+    <g transform="translate(0,160)">
+      <rect x="0" y="0" width="320" height="44" rx="10" fill="#FFFFFF" stroke="#FB923C" stroke-width="2"/>
+      <text x="20" y="29" fill="#9A3412" font-family="monospace" font-size="15">- (void) originalMethod;</text>
+    </g>
+    <g transform="translate(0,214)">
+      <rect x="0" y="0" width="320" height="44" rx="10" fill="#FFFFFF" stroke="#FB923C" stroke-width="2"/>
+      <text x="20" y="29" fill="#9A3412" font-family="monospace" font-size="15">- (void) foo;</text>
+    </g>
+    <g transform="translate(0,268)">
+      <rect x="0" y="0" width="320" height="44" rx="10" fill="#FFFFFF" stroke="#FB923C" stroke-width="2"/>
+      <text x="20" y="29" fill="#9A3412" font-family="monospace" font-size="15">- (void) bar;</text>
+    </g>
+
+    <text x="160" y="360" text-anchor="middle" fill="#9A3412" font-family="'PingFang SC', sans-serif" font-size="16" font-weight="600">原有方法列表</text>
+  </g>
+
+  <g transform="translate(640,320)">
+    <path d="M 0 80 L 80 80 L 80 60 L 120 100 L 80 140 L 80 120 L 0 120 Z" fill="#F97316"/>
+    <text x="60" y="52" text-anchor="middle" fill="#9A3412" font-family="'PingFang SC', sans-serif" font-size="14" font-weight="700">attachLists</text>
+    <text x="60" y="180" text-anchor="middle" fill="#9A3412" font-family="monospace" font-size="12">memmove + memcpy</text>
+  </g>
+
+  <g transform="translate(820,220)">
+    <rect x="0" y="0" width="340" height="120" rx="16" fill="#DC2626"/>
+    <text x="170" y="50" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="20" font-weight="700">@interface NSObject</text>
+    <text x="170" y="88" text-anchor="middle" fill="#FEE2E2" font-family="monospace" font-size="14">(Category)</text>
+
+    <g transform="translate(0,160)">
+      <rect x="0" y="0" width="340" height="44" rx="10" fill="#FEF3C7" stroke="#DC2626" stroke-width="2"/>
+      <text x="20" y="29" fill="#7F1D1D" font-family="monospace" font-size="15">+ (void) load;</text>
+    </g>
+    <g transform="translate(0,214)">
+      <rect x="0" y="0" width="340" height="44" rx="10" fill="#FEF3C7" stroke="#DC2626" stroke-width="2"/>
+      <text x="20" y="29" fill="#7F1D1D" font-family="monospace" font-size="15">- (void) categoryMethod;</text>
+    </g>
+    <g transform="translate(0,268)">
+      <rect x="0" y="0" width="340" height="44" rx="10" fill="#FEF3C7" stroke="#DC2626" stroke-width="2"/>
+      <text x="20" y="29" fill="#7F1D1D" font-family="monospace" font-size="15">- (void) foo; // 覆盖</text>
+    </g>
+
+    <text x="170" y="360" text-anchor="middle" fill="#7F1D1D" font-family="'PingFang SC', sans-serif" font-size="16" font-weight="600">Category 方法列表</text>
+  </g>
+
+  <g transform="translate(1220,260)">
+    <rect x="0" y="0" width="220" height="340" rx="16" fill="#0F172A"/>
+    <text x="110" y="40" text-anchor="middle" fill="#FDE68A" font-family="monospace" font-size="14" font-weight="700">objc-runtime</text>
+    <line x1="20" y1="60" x2="200" y2="60" stroke="#334155" stroke-width="1"/>
+
+    <text x="20" y="94" fill="#6EE7B7" font-family="monospace" font-size="12">_objc_init()</text>
+    <text x="30" y="118" fill="#94A3B8" font-family="monospace" font-size="11">└ map_images</text>
+    <text x="40" y="140" fill="#94A3B8" font-family="monospace" font-size="11">└ _read_images</text>
+    <text x="50" y="162" fill="#94A3B8" font-family="monospace" font-size="11">└ remethodize-</text>
+    <text x="60" y="178" fill="#94A3B8" font-family="monospace" font-size="11">  Class()</text>
+    <text x="50" y="200" fill="#F472B6" font-family="monospace" font-size="11">└ attachLists()</text>
+
+    <rect x="20" y="228" width="180" height="90" rx="10" fill="#1E293B"/>
+    <text x="110" y="252" text-anchor="middle" fill="#38BDF8" font-family="monospace" font-size="11">+load &gt; +initialize</text>
+    <text x="110" y="274" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="11">父类 → 子类</text>
+    <text x="110" y="294" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="11">→ Category</text>
+  </g>
+
+  <text x="800" y="750" text-anchor="middle" fill="#9A3412" font-family="'PingFang SC', sans-serif" font-size="26" font-weight="700">Category · Objective-C Runtime</text>
 </svg>

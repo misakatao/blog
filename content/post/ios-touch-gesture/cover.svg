@@ -1,15 +1,101 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFF8E1"/>
-      <stop offset="0.5" stop-color="#FFECB3"/>
-      <stop offset="1" stop-color="#FFE082"/>
+    <linearGradient id="bg" x1="160" y1="40" x2="1440" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFBEB"/>
+      <stop offset="0.5" stop-color="#FEF3C7"/>
+      <stop offset="1" stop-color="#FDE68A"/>
     </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#FFFBEB" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#1E293B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <radialGradient id="touch" cx="0.5" cy="0.5" r="0.5">
+      <stop stop-color="#F59E0B" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#78350F" flood-opacity="0.2"/>
+    </filter>
   </defs>
+
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <circle cx="200" cy="150" r="210" fill="#FFB300" fill-opacity="0.3"/>
-  <circle cx="1400" cy="750" r="240" fill="#FFA000" fill-opacity="0.25"/>
-  <circle cx="1100" cy="100" r="180" fill="#FF8F00" fill-opacity="0.2"/>
-  <rect x="200" y="280" width="1200" height="340" rx="32" fill="#FFFFFF" fill-opacity="0.85"/>
-  <text x="800" y="470" text-anchor="middle" fill="#E65100" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif" font-size="72" font-weight="700">触摸与手势</text>
+
+  <circle cx="1340" cy="100" r="90" fill="#FBBF24" fill-opacity="0.25"/>
+  <circle cx="140" cy="160" r="70" fill="#FCD34D" fill-opacity="0.3"/>
+  <circle cx="1400" cy="780" r="100" fill="#F59E0B" fill-opacity="0.2"/>
+
+  <g filter="url(#soft)">
+    <rect x="110" y="120" width="1380" height="660" rx="36" fill="url(#panel)"/>
+  </g>
+
+  <g transform="translate(280,220)">
+    <rect x="0" y="0" width="400" height="500" rx="46" fill="url(#screen)" stroke="#1E293B" stroke-width="3"/>
+    <rect x="20" y="20" width="360" height="460" rx="34" fill="#F8FAFC"/>
+    <rect x="170" y="28" width="60" height="10" rx="5" fill="#0F172A" fill-opacity="0.7"/>
+
+    <rect x="60" y="80" width="280" height="60" rx="12" fill="#FEF3C7"/>
+    <text x="200" y="117" text-anchor="middle" fill="#92400E" font-family="'PingFang SC', sans-serif" font-size="20" font-weight="700">Tap · Pan · Pinch</text>
+
+    <circle cx="200" cy="260" r="70" fill="url(#touch)"/>
+    <circle cx="200" cy="260" r="30" fill="#F59E0B" fill-opacity="0.4"/>
+    <circle cx="200" cy="260" r="16" fill="#D97706"/>
+
+    <path d="M 150 220 Q 200 180 260 200" stroke="#F59E0B" stroke-width="3" fill="none" stroke-dasharray="5,4"/>
+    <path d="M 260 200 L 250 204 M 260 200 L 258 192" stroke="#F59E0B" stroke-width="3"/>
+
+    <rect x="60" y="380" width="130" height="50" rx="10" fill="#FBBF24"/>
+    <text x="125" y="410" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="14" font-weight="700">UITouch</text>
+
+    <rect x="210" y="380" width="130" height="50" rx="10" fill="#0F172A"/>
+    <text x="275" y="410" text-anchor="middle" fill="#FDE68A" font-family="monospace" font-size="13" font-weight="700">Gesture</text>
+  </g>
+
+  <g transform="translate(800,260)">
+    <rect x="0" y="0" width="560" height="420" rx="20" fill="#0F172A"/>
+    <rect x="0" y="0" width="560" height="44" rx="20" fill="#1E293B"/>
+    <rect x="0" y="20" width="560" height="24" fill="#1E293B"/>
+    <circle cx="24" cy="22" r="7" fill="#EF4444"/>
+    <circle cx="50" cy="22" r="7" fill="#F59E0B"/>
+    <circle cx="76" cy="22" r="7" fill="#22C55E"/>
+    <text x="280" y="28" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="13">TouchViewController.m</text>
+
+    <text x="30" y="85" fill="#F472B6" font-family="monospace" font-size="15">- (void)</text>
+    <text x="110" y="85" fill="#FDE68A" font-family="monospace" font-size="15">touchesBegan:</text>
+    <text x="230" y="85" fill="#E2E8F0" font-family="monospace" font-size="15">(NSSet *)touches</text>
+
+    <text x="30" y="120" fill="#F472B6" font-family="monospace" font-size="15">- (void)</text>
+    <text x="110" y="120" fill="#FDE68A" font-family="monospace" font-size="15">touchesMoved:</text>
+
+    <text x="30" y="155" fill="#F472B6" font-family="monospace" font-size="15">- (void)</text>
+    <text x="110" y="155" fill="#FDE68A" font-family="monospace" font-size="15">touchesEnded:</text>
+
+    <line x1="30" y1="180" x2="530" y2="180" stroke="#334155" stroke-width="1"/>
+
+    <text x="30" y="214" fill="#94A3B8" font-family="monospace" font-size="14">UITapGestureRecognizer *tap =</text>
+    <text x="30" y="236" fill="#94A3B8" font-family="monospace" font-size="14">  [[UITapGestureRecognizer alloc]</text>
+    <text x="30" y="258" fill="#94A3B8" font-family="monospace" font-size="14">   initWithTarget:self</text>
+    <text x="30" y="280" fill="#94A3B8" font-family="monospace" font-size="14">   action:@selector(handleTap:)];</text>
+
+    <text x="30" y="320" fill="#6EE7B7" font-family="monospace" font-size="14">[view addGestureRecognizer:tap];</text>
+
+    <line x1="30" y1="344" x2="530" y2="344" stroke="#334155" stroke-width="1"/>
+
+    <rect x="30" y="362" width="100" height="28" rx="6" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+    <text x="80" y="381" text-anchor="middle" fill="#FDE68A" font-family="monospace" font-size="12">Tap</text>
+
+    <rect x="140" y="362" width="100" height="28" rx="6" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+    <text x="190" y="381" text-anchor="middle" fill="#FDE68A" font-family="monospace" font-size="12">Pan</text>
+
+    <rect x="250" y="362" width="100" height="28" rx="6" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+    <text x="300" y="381" text-anchor="middle" fill="#FDE68A" font-family="monospace" font-size="12">Pinch</text>
+
+    <rect x="360" y="362" width="100" height="28" rx="6" fill="#1E293B" stroke="#F59E0B" stroke-width="1"/>
+    <text x="410" y="381" text-anchor="middle" fill="#FDE68A" font-family="monospace" font-size="12">Swipe</text>
+  </g>
+
+  <text x="800" y="770" text-anchor="middle" fill="#78350F" font-family="'PingFang SC', sans-serif" font-size="26" font-weight="700">UITouch &amp; UIGestureRecognizer · 触摸与手势</text>
 </svg>

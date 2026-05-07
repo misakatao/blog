@@ -1,15 +1,96 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FCE4EC"/>
-      <stop offset="0.5" stop-color="#F8BBD0"/>
-      <stop offset="1" stop-color="#F48FB1"/>
+    <linearGradient id="bg" x1="160" y1="40" x2="1440" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FDF2F8"/>
+      <stop offset="0.5" stop-color="#FCE7F3"/>
+      <stop offset="1" stop-color="#FBCFE8"/>
     </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#FDF2F8" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="vcA" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#F9A8D4"/>
+      <stop offset="1" stop-color="#DB2777"/>
+    </linearGradient>
+    <linearGradient id="vcB" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#C4B5FD"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <filter id="soft" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#831843" flood-opacity="0.2"/>
+    </filter>
   </defs>
+
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <circle cx="350" cy="200" r="220" fill="#EC407A" fill-opacity="0.3"/>
-  <circle cx="1350" cy="650" r="260" fill="#F06292" fill-opacity="0.25"/>
-  <circle cx="900" cy="850" r="170" fill="#E91E63" fill-opacity="0.2"/>
-  <rect x="200" y="280" width="1200" height="340" rx="32" fill="#FFFFFF" fill-opacity="0.85"/>
-  <text x="800" y="470" text-anchor="middle" fill="#880E4F" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif" font-size="72" font-weight="700">UI 界面传值</text>
+
+  <circle cx="1340" cy="100" r="90" fill="#F472B6" fill-opacity="0.25"/>
+  <circle cx="140" cy="160" r="70" fill="#F9A8D4" fill-opacity="0.3"/>
+  <circle cx="1400" cy="780" r="100" fill="#EC4899" fill-opacity="0.2"/>
+
+  <g filter="url(#soft)">
+    <rect x="110" y="120" width="1380" height="660" rx="36" fill="url(#panel)"/>
+  </g>
+
+  <g transform="translate(220,240)">
+    <rect x="0" y="0" width="320" height="440" rx="32" fill="url(#vcA)"/>
+    <rect x="20" y="20" width="280" height="400" rx="22" fill="#FFFFFF" fill-opacity="0.9"/>
+
+    <text x="160" y="70" text-anchor="middle" fill="#831843" font-family="'PingFang SC', sans-serif" font-size="18" font-weight="700">AViewController</text>
+    <line x1="40" y1="86" x2="280" y2="86" stroke="#FCE7F3" stroke-width="2"/>
+
+    <text x="40" y="120" fill="#9F1239" font-family="monospace" font-size="12">userInfo:</text>
+    <rect x="40" y="132" width="240" height="36" rx="8" fill="#FCE7F3"/>
+    <text x="56" y="155" fill="#831843" font-family="monospace" font-size="13">name: "Alice"</text>
+
+    <rect x="40" y="180" width="240" height="36" rx="8" fill="#FCE7F3"/>
+    <text x="56" y="203" fill="#831843" font-family="monospace" font-size="13">age: 25</text>
+
+    <rect x="40" y="228" width="240" height="36" rx="8" fill="#FCE7F3"/>
+    <text x="56" y="251" fill="#831843" font-family="monospace" font-size="13">avatar: url(...)</text>
+
+    <rect x="40" y="336" width="240" height="48" rx="12" fill="#DB2777"/>
+    <text x="160" y="365" text-anchor="middle" fill="#FFFFFF" font-family="'PingFang SC', sans-serif" font-size="14" font-weight="700">Push →</text>
+  </g>
+
+  <g transform="translate(580,400)">
+    <rect x="0" y="0" width="440" height="120" rx="16" fill="#0F172A"/>
+    <text x="220" y="34" text-anchor="middle" fill="#FDE68A" font-family="monospace" font-size="13" font-weight="700">5 种传值方式</text>
+    <line x1="20" y1="46" x2="420" y2="46" stroke="#334155" stroke-width="1"/>
+
+    <text x="20" y="72" fill="#F472B6" font-family="monospace" font-size="12">property</text>
+    <text x="115" y="72" fill="#A78BFA" font-family="monospace" font-size="12">· delegate</text>
+    <text x="220" y="72" fill="#60A5FA" font-family="monospace" font-size="12">· block</text>
+
+    <text x="20" y="98" fill="#34D399" font-family="monospace" font-size="12">notification</text>
+    <text x="150" y="98" fill="#FBBF24" font-family="monospace" font-size="12">· singleton</text>
+
+    <path d="M 0 60 L -30 60" stroke="#DB2777" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="440,60 460,60" fill="none"/>
+    <path d="M 440 60 L 470 60" stroke="#7C3AED" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="470,52 490,60 470,68" fill="#7C3AED"/>
+  </g>
+
+  <g transform="translate(1080,240)">
+    <rect x="0" y="0" width="320" height="440" rx="32" fill="url(#vcB)"/>
+    <rect x="20" y="20" width="280" height="400" rx="22" fill="#FFFFFF" fill-opacity="0.9"/>
+
+    <text x="160" y="70" text-anchor="middle" fill="#4C1D95" font-family="'PingFang SC', sans-serif" font-size="18" font-weight="700">BViewController</text>
+    <line x1="40" y1="86" x2="280" y2="86" stroke="#EDE9FE" stroke-width="2"/>
+
+    <circle cx="160" cy="140" r="36" fill="#EDE9FE"/>
+    <circle cx="160" cy="130" r="12" fill="#7C3AED"/>
+    <path d="M 138 160 Q 160 145 182 160 L 182 170 L 138 170 Z" fill="#7C3AED"/>
+
+    <rect x="40" y="194" width="240" height="32" rx="6" fill="#EDE9FE"/>
+    <text x="56" y="215" fill="#4C1D95" font-family="monospace" font-size="13">name: Alice</text>
+
+    <rect x="40" y="234" width="240" height="32" rx="6" fill="#EDE9FE"/>
+    <text x="56" y="255" fill="#4C1D95" font-family="monospace" font-size="13">age:  25</text>
+
+    <rect x="40" y="336" width="240" height="48" rx="12" fill="#7C3AED"/>
+    <text x="160" y="365" text-anchor="middle" fill="#FFFFFF" font-family="'PingFang SC', sans-serif" font-size="14" font-weight="700">← Pop</text>
+  </g>
+
+  <text x="800" y="750" text-anchor="middle" fill="#831843" font-family="'PingFang SC', sans-serif" font-size="28" font-weight="700">UI 界面传值 · 5 种常见方式</text>
 </svg>

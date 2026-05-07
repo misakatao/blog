@@ -1,15 +1,103 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E8F5E9"/>
-      <stop offset="0.5" stop-color="#C8E6C9"/>
-      <stop offset="1" stop-color="#81C784"/>
+    <linearGradient id="bg" x1="160" y1="40" x2="1440" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ECFDF5"/>
+      <stop offset="0.5" stop-color="#D1FAE5"/>
+      <stop offset="1" stop-color="#A7F3D0"/>
     </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#ECFDF5" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="map" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#D1FAE5"/>
+      <stop offset="1" stop-color="#6EE7B7"/>
+    </linearGradient>
+    <filter id="soft" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#064E3B" flood-opacity="0.2"/>
+    </filter>
   </defs>
+
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <circle cx="1400" cy="300" r="250" fill="#388E3C" fill-opacity="0.3"/>
-  <circle cx="200" cy="200" r="200" fill="#4CAF50" fill-opacity="0.25"/>
-  <circle cx="600" cy="800" r="180" fill="#2E7D32" fill-opacity="0.2"/>
-  <rect x="200" y="280" width="1200" height="340" rx="32" fill="#FFFFFF" fill-opacity="0.85"/>
-  <text x="800" y="470" text-anchor="middle" fill="#1B5E20" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif" font-size="72" font-weight="700">地图导航 URI</text>
+
+  <circle cx="1340" cy="100" r="90" fill="#34D399" fill-opacity="0.25"/>
+  <circle cx="140" cy="160" r="70" fill="#6EE7B7" fill-opacity="0.3"/>
+  <circle cx="1400" cy="780" r="100" fill="#10B981" fill-opacity="0.2"/>
+
+  <g filter="url(#soft)">
+    <rect x="110" y="120" width="1380" height="660" rx="36" fill="url(#panel)"/>
+  </g>
+
+  <g transform="translate(200,200)">
+    <rect x="0" y="0" width="800" height="500" rx="28" fill="url(#map)"/>
+
+    <path d="M 0 200 Q 200 150 400 220 T 800 200" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.5"/>
+    <path d="M 0 300 Q 200 350 400 280 T 800 320" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.5"/>
+    <path d="M 100 0 L 150 500" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.5"/>
+    <path d="M 400 0 L 380 500" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.5"/>
+    <path d="M 620 0 L 660 500" stroke="#FFFFFF" stroke-width="3" fill="none" opacity="0.5"/>
+
+    <path d="M 120 80 L 160 60 L 180 90 L 210 75 L 220 110 L 180 130 L 140 120 Z" fill="#10B981" fill-opacity="0.5"/>
+    <path d="M 480 120 L 540 100 L 580 140 L 560 180 L 500 170 Z" fill="#10B981" fill-opacity="0.5"/>
+    <path d="M 280 340 L 340 320 L 360 380 L 310 400 Z" fill="#10B981" fill-opacity="0.5"/>
+
+    <g transform="translate(150,120)">
+      <path d="M 0 0 Q 0 -30 30 -30 Q 60 -30 60 0 Q 60 30 30 70 Q 0 30 0 0 Z" fill="#DC2626" stroke="#FFFFFF" stroke-width="3"/>
+      <circle cx="30" cy="0" r="10" fill="#FFFFFF"/>
+    </g>
+
+    <g transform="translate(580,320)">
+      <path d="M 0 0 Q 0 -30 30 -30 Q 60 -30 60 0 Q 60 30 30 70 Q 0 30 0 0 Z" fill="#2563EB" stroke="#FFFFFF" stroke-width="3"/>
+      <circle cx="30" cy="0" r="10" fill="#FFFFFF"/>
+    </g>
+
+    <path d="M 180 160 Q 300 180 380 250 Q 450 310 610 360" stroke="#2563EB" stroke-width="4" fill="none" stroke-linecap="round" stroke-dasharray="10,6"/>
+
+    <rect x="30" y="420" width="740" height="56" rx="10" fill="#FFFFFF" fill-opacity="0.9"/>
+    <text x="50" y="454" fill="#065F46" font-family="monospace" font-size="14">📍 起点 → 终点 · 12.3 km · 约 26 分钟</text>
+  </g>
+
+  <g transform="translate(1040,220)">
+    <rect x="0" y="0" width="340" height="460" rx="24" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="2"/>
+    <rect x="0" y="0" width="340" height="48" rx="24" fill="#10B981"/>
+    <rect x="0" y="24" width="340" height="24" fill="#10B981"/>
+    <text x="170" y="32" text-anchor="middle" fill="#FFFFFF" font-family="'PingFang SC', sans-serif" font-size="16" font-weight="700">选择导航 App</text>
+
+    <g transform="translate(24,76)">
+      <rect x="0" y="0" width="292" height="56" rx="12" fill="#DBEAFE"/>
+      <rect x="12" y="12" width="32" height="32" rx="8" fill="#2563EB"/>
+      <text x="28" y="34" text-anchor="middle" fill="#FFFFFF" font-family="'PingFang SC', sans-serif" font-size="16" font-weight="700">高</text>
+      <text x="56" y="35" fill="#1E3A8A" font-family="'PingFang SC', sans-serif" font-size="16" font-weight="600">高德地图 · iosamap://</text>
+    </g>
+
+    <g transform="translate(24,148)">
+      <rect x="0" y="0" width="292" height="56" rx="12" fill="#FEE2E2"/>
+      <rect x="12" y="12" width="32" height="32" rx="8" fill="#DC2626"/>
+      <text x="28" y="34" text-anchor="middle" fill="#FFFFFF" font-family="'PingFang SC', sans-serif" font-size="16" font-weight="700">百</text>
+      <text x="56" y="35" fill="#7F1D1D" font-family="'PingFang SC', sans-serif" font-size="16" font-weight="600">百度地图 · baidumap://</text>
+    </g>
+
+    <g transform="translate(24,220)">
+      <rect x="0" y="0" width="292" height="56" rx="12" fill="#E0F2FE"/>
+      <rect x="12" y="12" width="32" height="32" rx="8" fill="#0EA5E9"/>
+      <text x="28" y="34" text-anchor="middle" fill="#FFFFFF" font-family="'PingFang SC', sans-serif" font-size="14" font-weight="700">🍎</text>
+      <text x="56" y="35" fill="#0C4A6E" font-family="'PingFang SC', sans-serif" font-size="15" font-weight="600">Apple Maps · MKMapItem</text>
+    </g>
+
+    <g transform="translate(24,292)">
+      <rect x="0" y="0" width="292" height="56" rx="12" fill="#F3F4F6"/>
+      <rect x="12" y="12" width="32" height="32" rx="8" fill="#4B5563"/>
+      <text x="28" y="34" text-anchor="middle" fill="#FFFFFF" font-family="'PingFang SC', sans-serif" font-size="14" font-weight="700">G</text>
+      <text x="56" y="35" fill="#111827" font-family="'PingFang SC', sans-serif" font-size="16" font-weight="600">Google · comgooglemaps://</text>
+    </g>
+
+    <g transform="translate(24,364)">
+      <rect x="0" y="0" width="292" height="56" rx="12" fill="#D1FAE5"/>
+      <rect x="12" y="12" width="32" height="32" rx="8" fill="#059669"/>
+      <text x="28" y="34" text-anchor="middle" fill="#FFFFFF" font-family="'PingFang SC', sans-serif" font-size="16" font-weight="700">腾</text>
+      <text x="56" y="35" fill="#064E3B" font-family="'PingFang SC', sans-serif" font-size="16" font-weight="600">腾讯地图 · qqmap://</text>
+    </g>
+  </g>
+
+  <text x="800" y="750" text-anchor="middle" fill="#064E3B" font-family="'PingFang SC', sans-serif" font-size="26" font-weight="700">URI 跳转 · 调起第三方地图导航</text>
 </svg>

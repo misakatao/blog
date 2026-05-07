@@ -1,15 +1,90 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E0F2F1"/>
-      <stop offset="0.5" stop-color="#B2DFDB"/>
-      <stop offset="1" stop-color="#80CBC4"/>
+    <linearGradient id="bg" x1="160" y1="40" x2="1440" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ECFEFF"/>
+      <stop offset="0.5" stop-color="#CFFAFE"/>
+      <stop offset="1" stop-color="#A5F3FC"/>
     </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#ECFEFF" stop-opacity="0.92"/>
+    </linearGradient>
+    <linearGradient id="barUnsorted" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#67E8F9"/>
+      <stop offset="1" stop-color="#0891B2"/>
+    </linearGradient>
+    <linearGradient id="barSorted" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FDE68A"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="soft" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#164E63" flood-opacity="0.2"/>
+    </filter>
   </defs>
+
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <circle cx="400" cy="150" r="190" fill="#0097A7" fill-opacity="0.3"/>
-  <circle cx="1200" cy="750" r="240" fill="#00838F" fill-opacity="0.25"/>
-  <circle cx="100" cy="800" r="160" fill="#006064" fill-opacity="0.2"/>
-  <rect x="200" y="280" width="1200" height="340" rx="32" fill="#FFFFFF" fill-opacity="0.85"/>
-  <text x="800" y="470" text-anchor="middle" fill="#004D40" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif" font-size="72" font-weight="700">排序算法</text>
+
+  <circle cx="1340" cy="100" r="90" fill="#22D3EE" fill-opacity="0.25"/>
+  <circle cx="140" cy="160" r="70" fill="#67E8F9" fill-opacity="0.3"/>
+  <circle cx="1400" cy="780" r="100" fill="#06B6D4" fill-opacity="0.2"/>
+
+  <g filter="url(#soft)">
+    <rect x="110" y="120" width="1380" height="660" rx="36" fill="url(#panel)"/>
+  </g>
+
+  <text x="280" y="220" fill="#164E63" font-family="'PingFang SC', sans-serif" font-size="18" font-weight="700">未排序</text>
+  <g transform="translate(200,240)">
+    <rect x="0" y="140" width="60" height="80" rx="6" fill="url(#barUnsorted)"/>
+    <text x="30" y="250" text-anchor="middle" fill="#164E63" font-family="monospace" font-size="16" font-weight="700">4</text>
+    <rect x="72" y="80" width="60" height="140" rx="6" fill="url(#barUnsorted)"/>
+    <text x="102" y="250" text-anchor="middle" fill="#164E63" font-family="monospace" font-size="16" font-weight="700">7</text>
+    <rect x="144" y="180" width="60" height="40" rx="6" fill="url(#barUnsorted)"/>
+    <text x="174" y="250" text-anchor="middle" fill="#164E63" font-family="monospace" font-size="16" font-weight="700">2</text>
+    <rect x="216" y="120" width="60" height="100" rx="6" fill="url(#barUnsorted)"/>
+    <text x="246" y="250" text-anchor="middle" fill="#164E63" font-family="monospace" font-size="16" font-weight="700">5</text>
+    <rect x="288" y="40" width="60" height="180" rx="6" fill="url(#barUnsorted)"/>
+    <text x="318" y="250" text-anchor="middle" fill="#164E63" font-family="monospace" font-size="16" font-weight="700">9</text>
+    <rect x="360" y="160" width="60" height="60" rx="6" fill="url(#barUnsorted)"/>
+    <text x="390" y="250" text-anchor="middle" fill="#164E63" font-family="monospace" font-size="16" font-weight="700">3</text>
+    <rect x="432" y="100" width="60" height="120" rx="6" fill="url(#barUnsorted)"/>
+    <text x="462" y="250" text-anchor="middle" fill="#164E63" font-family="monospace" font-size="16" font-weight="700">6</text>
+  </g>
+
+  <g transform="translate(740,360)">
+    <rect x="0" y="0" width="120" height="60" rx="12" fill="#0F172A"/>
+    <text x="60" y="32" text-anchor="middle" fill="#FDE68A" font-family="monospace" font-size="14" font-weight="700">Quick</text>
+    <text x="60" y="50" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="11">O(n log n)</text>
+
+    <line x1="120" y1="30" x2="180" y2="30" stroke="#0891B2" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="180,22 200,30 180,38" fill="#0891B2"/>
+  </g>
+
+  <text x="1180" y="220" fill="#164E63" font-family="'PingFang SC', sans-serif" font-size="18" font-weight="700">已排序</text>
+  <g transform="translate(960,240)">
+    <rect x="0" y="180" width="60" height="40" rx="6" fill="url(#barSorted)"/>
+    <text x="30" y="250" text-anchor="middle" fill="#78350F" font-family="monospace" font-size="16" font-weight="700">2</text>
+    <rect x="72" y="160" width="60" height="60" rx="6" fill="url(#barSorted)"/>
+    <text x="102" y="250" text-anchor="middle" fill="#78350F" font-family="monospace" font-size="16" font-weight="700">3</text>
+    <rect x="144" y="140" width="60" height="80" rx="6" fill="url(#barSorted)"/>
+    <text x="174" y="250" text-anchor="middle" fill="#78350F" font-family="monospace" font-size="16" font-weight="700">4</text>
+    <rect x="216" y="120" width="60" height="100" rx="6" fill="url(#barSorted)"/>
+    <text x="246" y="250" text-anchor="middle" fill="#78350F" font-family="monospace" font-size="16" font-weight="700">5</text>
+    <rect x="288" y="100" width="60" height="120" rx="6" fill="url(#barSorted)"/>
+    <text x="318" y="250" text-anchor="middle" fill="#78350F" font-family="monospace" font-size="16" font-weight="700">6</text>
+    <rect x="360" y="80" width="60" height="140" rx="6" fill="url(#barSorted)"/>
+    <text x="390" y="250" text-anchor="middle" fill="#78350F" font-family="monospace" font-size="16" font-weight="700">7</text>
+    <rect x="432" y="40" width="60" height="180" rx="6" fill="url(#barSorted)"/>
+    <text x="462" y="250" text-anchor="middle" fill="#78350F" font-family="monospace" font-size="16" font-weight="700">9</text>
+  </g>
+
+  <g transform="translate(200,580)">
+    <rect x="0" y="0" width="1200" height="130" rx="16" fill="#0F172A"/>
+    <text x="40" y="40" fill="#67E8F9" font-family="monospace" font-size="15" font-weight="700">NSMutableArray+Sort.m</text>
+    <line x1="40" y1="52" x2="1160" y2="52" stroke="#334155" stroke-width="1"/>
+
+    <text x="40" y="84" fill="#E2E8F0" font-family="monospace" font-size="14">- (void)bubbleSort;      - (void)selectionSort;   - (void)insertionSort;</text>
+    <text x="40" y="108" fill="#E2E8F0" font-family="monospace" font-size="14">- (void)mergeSort;       - (void)quickSort;       - (void)heapSort;</text>
+  </g>
+
+  <text x="800" y="770" text-anchor="middle" fill="#164E63" font-family="'PingFang SC', sans-serif" font-size="26" font-weight="700">排序算法 · Objective-C 实现</text>
 </svg>

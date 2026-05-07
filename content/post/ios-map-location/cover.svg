@@ -1,15 +1,93 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E8F5E9"/>
-      <stop offset="0.5" stop-color="#C8E6C9"/>
-      <stop offset="1" stop-color="#A5D6A7"/>
+    <linearGradient id="bg" x1="160" y1="40" x2="1440" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0FDFA"/>
+      <stop offset="0.5" stop-color="#CCFBF1"/>
+      <stop offset="1" stop-color="#99F6E4"/>
     </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#F0FDFA" stop-opacity="0.92"/>
+    </linearGradient>
+    <radialGradient id="pulse" cx="0.5" cy="0.5" r="0.5">
+      <stop stop-color="#14B8A6" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#14B8A6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#134E4A" flood-opacity="0.2"/>
+    </filter>
   </defs>
+
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <circle cx="150" cy="300" r="230" fill="#43A047" fill-opacity="0.3"/>
-  <circle cx="1450" cy="600" r="250" fill="#66BB6A" fill-opacity="0.25"/>
-  <circle cx="800" cy="50" r="170" fill="#2E7D32" fill-opacity="0.2"/>
-  <rect x="200" y="280" width="1200" height="340" rx="32" fill="#FFFFFF" fill-opacity="0.85"/>
-  <text x="800" y="470" text-anchor="middle" fill="#1B5E20" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif" font-size="72" font-weight="700">地图与定位</text>
+
+  <circle cx="1340" cy="100" r="90" fill="#2DD4BF" fill-opacity="0.25"/>
+  <circle cx="140" cy="160" r="70" fill="#5EEAD4" fill-opacity="0.3"/>
+  <circle cx="1400" cy="780" r="100" fill="#14B8A6" fill-opacity="0.2"/>
+
+  <g filter="url(#soft)">
+    <rect x="110" y="120" width="1380" height="660" rx="36" fill="url(#panel)"/>
+  </g>
+
+  <g transform="translate(200,220)">
+    <rect x="0" y="0" width="720" height="460" rx="24" fill="#134E4A"/>
+    <rect x="20" y="20" width="680" height="420" rx="16" fill="#0F766E"/>
+
+    <path d="M 50 100 L 670 100 M 50 180 L 670 180 M 50 260 L 670 260 M 50 340 L 670 340" stroke="#5EEAD4" stroke-opacity="0.2" stroke-width="1"/>
+    <path d="M 120 40 L 120 400 M 240 40 L 240 400 M 360 40 L 360 400 M 480 40 L 480 400 M 600 40 L 600 400" stroke="#5EEAD4" stroke-opacity="0.2" stroke-width="1"/>
+
+    <path d="M 180 200 Q 240 120 340 140 Q 420 160 480 100 Q 540 60 620 90" stroke="#FDE68A" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+    <path d="M 120 320 L 180 280 L 200 310 L 250 250 L 310 290 L 370 240 L 440 280 L 500 220 L 580 260 L 640 210" stroke="#6EE7B7" stroke-width="3" fill="none"/>
+
+    <circle cx="400" cy="240" r="60" fill="url(#pulse)"/>
+    <circle cx="400" cy="240" r="24" fill="#FBBF24"/>
+    <circle cx="400" cy="240" r="10" fill="#FFFFFF"/>
+
+    <text x="360" y="60" fill="#99F6E4" font-family="monospace" font-size="14">CLLocation</text>
+    <text x="50" y="430" fill="#5EEAD4" font-family="monospace" font-size="13">lat: 39.9042°N  ·  lng: 116.4074°E  ·  acc: ±5m</text>
+  </g>
+
+  <g transform="translate(960,240)">
+    <rect x="0" y="0" width="400" height="440" rx="20" fill="#FFFFFF" stroke="#5EEAD4" stroke-width="2"/>
+
+    <rect x="0" y="0" width="400" height="52" rx="20" fill="#0D9488"/>
+    <rect x="0" y="32" width="400" height="20" fill="#0D9488"/>
+    <text x="200" y="34" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="15" font-weight="700">MapKit · Core Location</text>
+
+    <g transform="translate(24,80)">
+      <rect x="0" y="0" width="352" height="60" rx="12" fill="#CCFBF1"/>
+      <circle cx="30" cy="30" r="16" fill="#0D9488"/>
+      <path d="M 22 30 Q 30 16 38 30 Q 30 42 22 30 Z M 30 24 A 3 3 0 1 1 30.01 24" fill="#FFFFFF"/>
+      <text x="58" y="26" fill="#134E4A" font-family="monospace" font-size="13" font-weight="700">CLLocationManager</text>
+      <text x="58" y="46" fill="#0F766E" font-family="monospace" font-size="12">requestWhenInUseAuthorization</text>
+    </g>
+
+    <g transform="translate(24,156)">
+      <rect x="0" y="0" width="352" height="60" rx="12" fill="#CCFBF1"/>
+      <circle cx="30" cy="30" r="16" fill="#14B8A6"/>
+      <text x="30" y="36" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="14" font-weight="700">📍</text>
+      <text x="58" y="26" fill="#134E4A" font-family="monospace" font-size="13" font-weight="700">CLGeocoder</text>
+      <text x="58" y="46" fill="#0F766E" font-family="monospace" font-size="12">地理编码 · 逆地理编码</text>
+    </g>
+
+    <g transform="translate(24,232)">
+      <rect x="0" y="0" width="352" height="60" rx="12" fill="#CCFBF1"/>
+      <circle cx="30" cy="30" r="16" fill="#2DD4BF"/>
+      <text x="30" y="36" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="14" font-weight="700">🗺</text>
+      <text x="58" y="26" fill="#134E4A" font-family="monospace" font-size="13" font-weight="700">MKMapView</text>
+      <text x="58" y="46" fill="#0F766E" font-family="monospace" font-size="12">标准/卫星/混合 · 大头针</text>
+    </g>
+
+    <g transform="translate(24,308)">
+      <rect x="0" y="0" width="352" height="60" rx="12" fill="#CCFBF1"/>
+      <circle cx="30" cy="30" r="16" fill="#5EEAD4"/>
+      <text x="30" y="36" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="14" font-weight="700">↗</text>
+      <text x="58" y="26" fill="#134E4A" font-family="monospace" font-size="13" font-weight="700">MKDirections</text>
+      <text x="58" y="46" fill="#0F766E" font-family="monospace" font-size="12">路径规划 · 导航绘制</text>
+    </g>
+
+    <text x="200" y="404" text-anchor="middle" fill="#115E59" font-family="'PingFang SC', sans-serif" font-size="13">定位 · 编码 · 展示 · 规划</text>
+  </g>
+
+  <text x="800" y="750" text-anchor="middle" fill="#134E4A" font-family="'PingFang SC', sans-serif" font-size="28" font-weight="700">iOS 地图与定位 · MapKit · Core Location</text>
 </svg>

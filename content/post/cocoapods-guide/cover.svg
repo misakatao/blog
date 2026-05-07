@@ -1,15 +1,82 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFEBEE"/>
-      <stop offset="0.5" stop-color="#FFCDD2"/>
-      <stop offset="1" stop-color="#EF9A9A"/>
+    <linearGradient id="bg" x1="160" y1="40" x2="1440" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FEF2F2"/>
+      <stop offset="0.5" stop-color="#FEE2E2"/>
+      <stop offset="1" stop-color="#FECACA"/>
     </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#FFF1F2" stop-opacity="0.92"/>
+    </linearGradient>
+    <radialGradient id="pod" cx="0.3" cy="0.3" r="0.8">
+      <stop stop-color="#FCA5A5"/>
+      <stop offset="1" stop-color="#B91C1C"/>
+    </radialGradient>
+    <filter id="soft" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#7F1D1D" flood-opacity="0.18"/>
+    </filter>
   </defs>
+
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <circle cx="1400" cy="200" r="220" fill="#E53935" fill-opacity="0.3"/>
-  <circle cx="200" cy="650" r="260" fill="#EF5350" fill-opacity="0.25"/>
-  <circle cx="800" cy="800" r="180" fill="#F44336" fill-opacity="0.2"/>
-  <rect x="200" y="280" width="1200" height="340" rx="32" fill="#FFFFFF" fill-opacity="0.85"/>
-  <text x="800" y="470" text-anchor="middle" fill="#B71C1C" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif" font-size="72" font-weight="700">CocoaPods 大全</text>
+
+  <circle cx="1340" cy="100" r="90" fill="#F87171" fill-opacity="0.25"/>
+  <circle cx="140" cy="160" r="70" fill="#FCA5A5" fill-opacity="0.3"/>
+  <circle cx="1400" cy="780" r="100" fill="#EF4444" fill-opacity="0.2"/>
+
+  <g filter="url(#soft)">
+    <rect x="110" y="120" width="1380" height="660" rx="36" fill="url(#panel)"/>
+  </g>
+
+  <g transform="translate(220,260)">
+    <ellipse cx="180" cy="280" rx="160" ry="20" fill="#000000" fill-opacity="0.1"/>
+    <circle cx="180" cy="140" r="120" fill="url(#pod)"/>
+    <circle cx="180" cy="140" r="120" fill="none" stroke="#7F1D1D" stroke-width="3"/>
+    <ellipse cx="140" cy="100" rx="40" ry="28" fill="#FFFFFF" fill-opacity="0.4"/>
+    <text x="180" y="152" text-anchor="middle" fill="#FFFFFF" font-family="'PingFang SC', sans-serif" font-size="48" font-weight="800">Pod</text>
+
+    <g transform="translate(0,310)">
+      <rect x="0" y="0" width="360" height="48" rx="10" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="2"/>
+      <text x="20" y="31" fill="#DC2626" font-family="monospace" font-size="16" font-weight="600">platform :ios, '13.0'</text>
+    </g>
+    <g transform="translate(0,370)">
+      <rect x="0" y="0" width="360" height="48" rx="10" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="2"/>
+      <text x="20" y="31" fill="#DC2626" font-family="monospace" font-size="16" font-weight="600">target 'MyApp' do</text>
+    </g>
+    <g transform="translate(0,430)">
+      <rect x="0" y="0" width="360" height="48" rx="10" fill="#FFFFFF" stroke="#FCA5A5" stroke-width="2"/>
+      <text x="20" y="31" fill="#7F1D1D" font-family="monospace" font-size="15">  pod 'AFNetworking'</text>
+    </g>
+  </g>
+
+  <g transform="translate(720,260)">
+    <line x1="0" y1="60" x2="120" y2="60" stroke="#DC2626" stroke-width="3" stroke-dasharray="8,6"/>
+    <polygon points="120,52 140,60 120,68" fill="#DC2626"/>
+  </g>
+
+  <g transform="translate(900,220)">
+    <rect x="0" y="0" width="460" height="460" rx="24" fill="#0F172A"/>
+    <rect x="24" y="24" width="412" height="412" rx="16" fill="#1E293B"/>
+
+    <circle cx="52" cy="52" r="8" fill="#EF4444"/>
+    <circle cx="80" cy="52" r="8" fill="#F59E0B"/>
+    <circle cx="108" cy="52" r="8" fill="#22C55E"/>
+    <text x="230" y="57" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="13">Podfile.lock</text>
+
+    <text x="52" y="108" fill="#6EE7B7" font-family="monospace" font-size="15">PODS:</text>
+    <text x="52" y="134" fill="#E2E8F0" font-family="monospace" font-size="14">  - AFNetworking (4.0.1):</text>
+    <text x="52" y="156" fill="#94A3B8" font-family="monospace" font-size="14">    - AFNetworking/NSURLSession</text>
+    <text x="52" y="178" fill="#94A3B8" font-family="monospace" font-size="14">    - AFNetworking/Reachability</text>
+    <text x="52" y="200" fill="#E2E8F0" font-family="monospace" font-size="14">  - Alamofire (5.8.1)</text>
+    <text x="52" y="222" fill="#E2E8F0" font-family="monospace" font-size="14">  - SDWebImage (5.18.10)</text>
+    <text x="52" y="244" fill="#E2E8F0" font-family="monospace" font-size="14">  - SnapKit (5.7.1)</text>
+    <text x="52" y="266" fill="#E2E8F0" font-family="monospace" font-size="14">  - SwiftyJSON (5.0.2)</text>
+
+    <text x="52" y="308" fill="#6EE7B7" font-family="monospace" font-size="15">DEPENDENCIES:</text>
+    <text x="52" y="334" fill="#FDE68A" font-family="monospace" font-size="14">  - AFNetworking</text>
+    <text x="52" y="356" fill="#FDE68A" font-family="monospace" font-size="14">  - Alamofire</text>
+    <text x="52" y="378" fill="#FDE68A" font-family="monospace" font-size="14">  - SnapKit</text>
+  </g>
+
+  <text x="800" y="750" text-anchor="middle" fill="#991B1B" font-family="'PingFang SC', sans-serif" font-size="28" font-weight="700">CocoaPods · iOS 依赖管理工具</text>
 </svg>
