@@ -1,38 +1,39 @@
+:root {
+    --base-font-family: "LXGW WenKai Screen", "PingFang SC", "Microsoft YaHei", sans-serif;
+    --code-font-family: "LXGW WenKai Mono", "JetBrains Mono", "Fira Code", monospace;
+}
+
 body {
     color: var(--body-text-color);
+    font-family: var(--base-font-family);
+}
 
-    .article-content {
-        font-family: "LXGW WenKai Screen", sans-serif;
-    }
+.article-content {
+    font-family: var(--base-font-family);
+}
 
-    .article-title {
-        font-family: "LXGW WenKai Screen", sans-serif;
-    }
-
-    .article-page {
-        font-family: "HarmonyOS_Regular", sans-serif;
-    }
+code,
+pre,
+kbd,
+samp {
+    font-family: var(--code-font-family);
 }
 
 .sidebar header .site-name {
     display: none;
 }
 
-[data-scheme="dark"] {
-    .article-content {
-        color: var(--card-text-color-main);
-        font-family: "LXGW WenKai Screen", sans-serif;
-    }
+[data-scheme="dark"] .article-content {
+    color: var(--card-text-color-main);
+}
 
-    .article-title {
-        font-family: "LXGW WenKai Screen", sans-serif;
-    }
+[data-scheme="dark"] svg {
+    color: inherit;
+}
 
-    .article-page {
-        font-family: "HarmonyOS_Regular", sans-serif;
-    }
-
-    svg {
-        color: inherit;
-    }
+.article-image img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
