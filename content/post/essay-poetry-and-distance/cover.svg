@@ -1,61 +1,67 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="nightSky" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1A1A2E"/>
-      <stop offset="0.4" stop-color="#16213E"/>
-      <stop offset="1" stop-color="#0F3460"/>
+    <linearGradient id="sky" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1B2A"/>
+      <stop offset="0.5" stop-color="#1B4F72"/>
+      <stop offset="1" stop-color="#5B8DB8"/>
     </linearGradient>
-    <linearGradient id="horizon" x1="800" y1="600" x2="800" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1A1A3A"/>
-      <stop offset="1" stop-color="#0A0A1A"/>
+    <linearGradient id="mist" x1="800" y1="500" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5B8DB8" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#0D1B2A" stop-opacity="0"/>
     </linearGradient>
-    <filter id="softGlow"><feGaussianBlur stdDeviation="12"/></filter>
-    <filter id="starGlow"><feGaussianBlur stdDeviation="2"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="8"/></filter>
   </defs>
 
-  <rect width="1600" height="900" fill="url(#nightSky)"/>
+  <rect width="1600" height="900" fill="url(#sky)"/>
 
-  <!-- Distant mountains -->
-  <path d="M0 650L200 480L400 550L600 420L800 500L1000 380L1200 460L1400 520L1600 440L1600 900L0 900Z" fill="url(#horizon)" opacity="0.6"/>
+  <!-- Distant mountains layered -->
+  <path d="M0 600L150 480L350 530L550 420L750 490L950 380L1150 450L1350 400L1600 460L1600 900L0 900Z" fill="#162D44" opacity="0.5"/>
+  <path d="M0 680L200 580L400 620L600 540L800 590L1000 500L1200 560L1400 520L1600 570L1600 900L0 900Z" fill="#0A1220" opacity="0.6"/>
+
+  <!-- Road fading into mist -->
+  <path d="M700 900L750 600L800 500L850 600L900 900Z" fill="#162D44" opacity="0.35"/>
+  <line x1="780" y1="900" x2="795" y2="550" stroke="#5B8DB8" stroke-width="0.8" opacity="0.15" stroke-dasharray="8 12"/>
+  <line x1="820" y1="900" x2="805" y2="550" stroke="#5B8DB8" stroke-width="0.8" opacity="0.15" stroke-dasharray="8 12"/>
+
+  <!-- Mist layers -->
+  <ellipse cx="800" cy="550" rx="600" ry="80" fill="#5B8DB8" opacity="0.06" filter="url(#glow)"/>
+  <ellipse cx="800" cy="620" rx="700" ry="60" fill="#5B8DB8" opacity="0.05" filter="url(#glow)"/>
+
+  <!-- Moon -->
+  <circle cx="300" cy="180" r="50" fill="#F5E6CA" opacity="0.1" filter="url(#glow)"/>
+  <circle cx="300" cy="180" r="25" fill="#F5E6CA" opacity="0.45"/>
 
   <!-- Stars -->
   <g fill="#FFFFFF">
-    <circle cx="200" cy="120" r="1.5" opacity="0.8"/>
-    <circle cx="450" cy="80" r="1" opacity="0.6"/>
-    <circle cx="700" cy="150" r="1.5" opacity="0.7"/>
-    <circle cx="950" cy="60" r="1" opacity="0.5"/>
-    <circle cx="1150" cy="130" r="1.5" opacity="0.8"/>
-    <circle cx="1350" cy="90" r="1" opacity="0.6"/>
-    <circle cx="300" cy="250" r="1" opacity="0.4"/>
-    <circle cx="550" cy="300" r="1.5" opacity="0.5"/>
-    <circle cx="1050" cy="220" r="1" opacity="0.6"/>
-    <circle cx="1400" cy="280" r="1.5" opacity="0.4"/>
-    <circle cx="100" cy="350" r="1" opacity="0.3"/>
-    <circle cx="850" cy="200" r="1" opacity="0.5"/>
+    <circle cx="500" cy="80" r="1.5" opacity="0.7"/>
+    <circle cx="700" cy="120" r="1" opacity="0.5"/>
+    <circle cx="1000" cy="60" r="1.5" opacity="0.6"/>
+    <circle cx="1250" cy="100" r="1" opacity="0.5"/>
+    <circle cx="1400" cy="70" r="1.5" opacity="0.6"/>
+    <circle cx="200" cy="300" r="1" opacity="0.4"/>
+    <circle cx="1350" cy="250" r="1" opacity="0.4"/>
   </g>
 
-  <!-- Moon -->
-  <circle cx="1200" cy="180" r="60" fill="#F5E6CA" opacity="0.15" filter="url(#softGlow)"/>
-  <circle cx="1200" cy="180" r="30" fill="#F5E6CA" opacity="0.6"/>
-  <circle cx="1210" cy="175" r="28" fill="url(#nightSky)" opacity="0.3"/>
-
-  <!-- Warm window light in distance -->
-  <rect x="380" y="520" width="24" height="30" rx="2" fill="#F5C87A" opacity="0.5"/>
-  <rect x="420" y="525" width="20" height="25" rx="2" fill="#F5C87A" opacity="0.35"/>
-  <rect x="1080" y="490" width="22" height="28" rx="2" fill="#F5C87A" opacity="0.4"/>
-
-  <!-- Bed silhouette in foreground -->
-  <g transform="translate(600, 680)" opacity="0.25">
-    <rect x="0" y="0" width="400" height="120" rx="6" fill="#2A2A4A"/>
-    <rect x="-10" y="-20" width="120" height="40" rx="8" fill="#2A2A4A"/>
-    <rect x="280" y="-20" width="120" height="40" rx="8" fill="#2A2A4A"/>
-    <path d="M60 -10C100 -50 180 -60 240 -40C280 -25 300 -10 340 -10" stroke="#3A3A5A" stroke-width="2" fill="none" opacity="0.6"/>
+  <!-- Atmospheric particles -->
+  <g fill="#7FBCD2" opacity="0.2" filter="url(#glow)">
+    <circle cx="600" cy="400" r="2.5"/>
+    <circle cx="1000" cy="350" r="2"/>
+    <circle cx="400" cy="500" r="2"/>
+    <circle cx="1200" cy="450" r="2.5"/>
   </g>
 
-  <!-- Warm glow from center -->
-  <circle cx="800" cy="700" r="200" fill="#F5C87A" opacity="0.04" filter="url(#softGlow)"/>
+  <!-- Rain streaks (light) -->
+  <g stroke="#7FBCD2" stroke-width="0.5" opacity="0.08">
+    <line x1="150" y1="0" x2="145" y2="900"/>
+    <line x1="450" y1="0" x2="445" y2="900"/>
+    <line x1="1100" y1="0" x2="1095" y2="900"/>
+    <line x1="1400" y1="0" x2="1395" y2="900"/>
+  </g>
+
+  <!-- Ground -->
+  <path d="M0 830C400 820 800 825 1600 830V900H0Z" fill="#081018" opacity="0.7"/>
 
   <!-- Title -->
-  <text x="112" y="126" fill="#E8D5B5" fill-opacity="0.90" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="80" font-weight="700">谈诗和远方</text>
-  <text x="118" y="192" fill="#E8D5B5" fill-opacity="0.60" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="28">她就是我的远方，门票不贵，可惜有效期太短</text>
+  <text x="112" y="126" fill="#FFFFFF" fill-opacity="0.95" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="80" font-weight="700">谈诗和远方</text>
+  <text x="118" y="172" fill="#FFFFFF" fill-opacity="0.78" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="28">她就是我的远方</text>
 </svg>
