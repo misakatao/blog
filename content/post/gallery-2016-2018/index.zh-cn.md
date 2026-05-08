@@ -3,7 +3,7 @@ title: "相册 · 2016-2018"
 description: "那些年留下的光影碎片"
 date: 2026-04-25T16:00:00+08:00
 slug: gallery-2016-2018
-image: "22.jpg"
+image: "cover.svg"
 categories:
     - 相册
 tags:
