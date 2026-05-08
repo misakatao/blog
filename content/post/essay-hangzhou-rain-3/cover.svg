@@ -5,56 +5,83 @@
       <stop offset="0.5" stop-color="#CFD8DC"/>
       <stop offset="1" stop-color="#90A4AE"/>
     </linearGradient>
-    <radialGradient id="glow1" cx="400" cy="500" r="80" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFAB40" stop-opacity="0.4"/>
+    <radialGradient id="bokeh1" cx="350" cy="400" r="80" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFAB40" stop-opacity="0.5"/>
       <stop offset="1" stop-color="#FFAB40" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="glow2" cx="1100" cy="400" r="60" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FF7043" stop-opacity="0.3"/>
+    <radialGradient id="bokeh2" cx="1200" cy="350" r="65" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF7043" stop-opacity="0.45"/>
       <stop offset="1" stop-color="#FF7043" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="glow3" cx="700" cy="650" r="50" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#66BB6A" stop-opacity="0.25"/>
+    <radialGradient id="bokeh3" cx="600" cy="600" r="55" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#66BB6A" stop-opacity="0.35"/>
       <stop offset="1" stop-color="#66BB6A" stop-opacity="0"/>
     </radialGradient>
-    <filter id="blur"><feGaussianBlur stdDeviation="2"/></filter>
+    <radialGradient id="bokeh4" cx="1000" cy="550" r="70" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#42A5F5" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#42A5F5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bokeh5" cx="200" cy="650" r="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFCA28" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#FFCA28" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="dropShadow"><feGaussianBlur stdDeviation="1.5"/></filter>
   </defs>
 
   <rect width="1600" height="900" fill="url(#bg)"/>
 
-  <!-- Glass texture overlay -->
-  <rect width="1600" height="900" fill="#B0BEC5" opacity="0.08"/>
+  <!-- Windshield glass tint -->
+  <rect width="1600" height="900" fill="#B0BEC5" opacity="0.06"/>
 
-  <!-- Rain streaks on glass -->
-  <g stroke="#78909C" stroke-width="1.5" opacity="0.3" stroke-linecap="round">
-    <path d="M300 50C305 150 298 280 310 400C315 450 308 520 312 600" fill="none"/>
-    <path d="M550 80C548 180 555 300 550 420C547 500 553 580 548 700" fill="none"/>
-    <path d="M900 30C905 130 898 250 903 380C907 460 900 550 905 680" fill="none"/>
-    <path d="M1200 60C1198 160 1205 290 1200 410C1197 490 1203 570 1198 700" fill="none"/>
-    <path d="M1450 90C1453 190 1448 310 1455 440C1458 520 1450 600 1455 720" fill="none"/>
+  <!-- Dashboard silhouette at bottom -->
+  <path d="M0 780C200 770 400 765 600 768C800 770 1000 770 1200 768C1400 765 1500 770 1600 780L1600 900L0 900Z" fill="#37474F" opacity="0.6"/>
+  <path d="M0 800C300 790 600 785 800 788C1000 790 1300 790 1600 800L1600 900L0 900Z" fill="#263238" opacity="0.7"/>
+
+  <!-- Rearview mirror -->
+  <path d="M720 120L880 120C890 120 895 125 895 130L895 200C895 210 885 215 880 215L720 215C715 215 710 210 710 200L710 130C710 125 715 120 720 120Z" fill="#455A64" opacity="0.5"/>
+  <rect x="720" y="128" width="170" height="80" rx="5" fill="#78909C" opacity="0.3"/>
+  <rect x="785" y="215" width="30" height="40" fill="#455A64" opacity="0.4"/>
+
+  <!-- Blurred city bokeh lights behind glass -->
+  <circle cx="350" cy="400" r="80" fill="url(#bokeh1)" filter="url(#blur)"/>
+  <circle cx="1200" cy="350" r="65" fill="url(#bokeh2)" filter="url(#blur)"/>
+  <circle cx="600" cy="600" r="55" fill="url(#bokeh3)" filter="url(#blur)"/>
+  <circle cx="1000" cy="550" r="70" fill="url(#bokeh4)" filter="url(#blur)"/>
+  <circle cx="200" cy="650" r="50" fill="url(#bokeh5)" filter="url(#blur)"/>
+  <circle cx="1400" cy="500" r="45" fill="#E040FB" opacity="0.12" filter="url(#blur)"/>
+  <circle cx="500" cy="350" r="40" fill="#FFCA28" opacity="0.15" filter="url(#blur)"/>
+  <circle cx="1350" cy="300" r="35" fill="#66BB6A" opacity="0.12" filter="url(#blur)"/>
+
+  <!-- Rain streaks on windshield -->
+  <g stroke="#90A4AE" stroke-width="1.5" opacity="0.35" stroke-linecap="round">
+    <path d="M200 50C205 150 198 280 206 400C210 480 204 560 210 680" fill="none"/>
+    <path d="M450 30C448 130 455 270 450 400C447 500 453 590 448 710" fill="none"/>
+    <path d="M700 60C705 160 698 290 704 420C708 510 702 600 706 730" fill="none"/>
+    <path d="M950 40C948 140 955 260 950 380C947 470 953 560 948 690" fill="none"/>
+    <path d="M1150 55C1155 155 1148 280 1154 410C1158 500 1152 590 1156 720" fill="none"/>
+    <path d="M1400 45C1398 145 1405 270 1400 400C1397 490 1403 580 1398 710" fill="none"/>
   </g>
 
-  <!-- Blurred city lights behind glass -->
-  <circle cx="400" cy="500" r="80" fill="url(#glow1)" filter="url(#blur)"/>
-  <circle cx="1100" cy="400" r="60" fill="url(#glow2)" filter="url(#blur)"/>
-  <circle cx="700" cy="650" r="50" fill="url(#glow3)" filter="url(#blur)"/>
-  <circle cx="1350" cy="600" r="45" fill="#42A5F5" opacity="0.15" filter="url(#blur)"/>
-  <circle cx="250" cy="350" r="35" fill="#FFCA28" opacity="0.15" filter="url(#blur)"/>
+  <!-- Wiper arcs -->
+  <path d="M400 850C450 650 550 480 700 380" stroke="#546E7A" stroke-width="3" fill="none" opacity="0.25"/>
+  <path d="M1200 850C1150 650 1050 480 900 380" stroke="#546E7A" stroke-width="3" fill="none" opacity="0.25"/>
+  <!-- Wiper blades -->
+  <path d="M400 850C450 650 550 480 700 380" stroke="#37474F" stroke-width="5" fill="none" opacity="0.15"/>
 
-  <!-- Small water droplets on glass -->
-  <circle cx="200" cy="200" r="5" fill="#B0BEC5" opacity="0.4"/>
-  <circle cx="450" cy="300" r="4" fill="#B0BEC5" opacity="0.35"/>
-  <circle cx="750" cy="180" r="6" fill="#B0BEC5" opacity="0.4"/>
-  <circle cx="1000" cy="250" r="4" fill="#B0BEC5" opacity="0.3"/>
-  <circle cx="1300" cy="300" r="5" fill="#B0BEC5" opacity="0.35"/>
-  <circle cx="350" cy="600" r="4" fill="#B0BEC5" opacity="0.3"/>
-  <circle cx="1150" cy="650" r="5" fill="#B0BEC5" opacity="0.35"/>
-
-  <!-- Decorative bokeh circles -->
-  <circle cx="150" cy="100" r="40" fill="#78909C" opacity="0.1"/>
-  <circle cx="1500" cy="150" r="55" fill="#90A4AE" opacity="0.12"/>
-  <circle cx="100" cy="700" r="35" fill="#CFD8DC" opacity="0.2"/>
-  <circle cx="1450" cy="750" r="45" fill="#78909C" opacity="0.1"/>
+  <!-- Water droplets on glass - various sizes -->
+  <circle cx="180" cy="200" r="8" fill="#B0BEC5" opacity="0.35"/>
+  <circle cx="180" cy="200" r="5" fill="#CFD8DC" opacity="0.2"/>
+  <circle cx="420" cy="280" r="6" fill="#B0BEC5" opacity="0.3"/>
+  <circle cx="650" cy="180" r="9" fill="#B0BEC5" opacity="0.35"/>
+  <circle cx="650" cy="180" r="6" fill="#CFD8DC" opacity="0.18"/>
+  <circle cx="950" cy="230" r="7" fill="#B0BEC5" opacity="0.32"/>
+  <circle cx="1250" cy="270" r="6" fill="#B0BEC5" opacity="0.3"/>
+  <circle cx="1450" cy="200" r="8" fill="#B0BEC5" opacity="0.33"/>
+  <circle cx="300" cy="550" r="5" fill="#B0BEC5" opacity="0.28"/>
+  <circle cx="1100" cy="650" r="7" fill="#B0BEC5" opacity="0.3"/>
+  <circle cx="550" cy="700" r="5" fill="#B0BEC5" opacity="0.25"/>
+  <circle cx="850" cy="350" r="4" fill="#B0BEC5" opacity="0.25"/>
 
   <!-- Title -->
   <text x="800" y="450" text-anchor="middle" fill="#263238" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">杭州的雨（三）</text>

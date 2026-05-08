@@ -1,55 +1,83 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E8EAF6"/>
-      <stop offset="0.5" stop-color="#C5CAE9"/>
-      <stop offset="1" stop-color="#9FA8DA"/>
+      <stop stop-color="#E0F2F1"/>
+      <stop offset="0.5" stop-color="#B2DFDB"/>
+      <stop offset="1" stop-color="#80CBC4"/>
     </linearGradient>
-    <radialGradient id="pond" cx="800" cy="750" r="300" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#7986CB" stop-opacity="0.3"/>
-      <stop offset="1" stop-color="#C5CAE9" stop-opacity="0"/>
+    <radialGradient id="waterGlow" cx="800" cy="700" r="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#80CBC4" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#E0F2F1" stop-opacity="0"/>
     </radialGradient>
     <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="mist"><feGaussianBlur stdDeviation="10"/></filter>
   </defs>
 
   <rect width="1600" height="900" fill="url(#bg)"/>
 
-  <!-- Lotus pond area -->
-  <ellipse cx="800" cy="780" rx="500" ry="100" fill="url(#pond)"/>
+  <!-- Water surface - West Lake -->
+  <rect x="0" y="600" width="1600" height="300" fill="#4DB6AC" opacity="0.15"/>
+  <ellipse cx="800" cy="700" rx="700" ry="200" fill="url(#waterGlow)"/>
 
-  <!-- Ripples on water -->
-  <ellipse cx="600" cy="750" rx="60" ry="8" stroke="#7986CB" stroke-width="1.2" fill="none" opacity="0.4"/>
-  <ellipse cx="600" cy="750" rx="100" ry="13" stroke="#7986CB" stroke-width="0.8" fill="none" opacity="0.25"/>
-  <ellipse cx="1000" cy="770" rx="50" ry="7" stroke="#7986CB" stroke-width="1" fill="none" opacity="0.35"/>
-  <ellipse cx="1000" cy="770" rx="90" ry="12" stroke="#7986CB" stroke-width="0.7" fill="none" opacity="0.2"/>
-  <ellipse cx="800" cy="800" rx="70" ry="9" stroke="#7986CB" stroke-width="1" fill="none" opacity="0.3"/>
+  <!-- Bridge in mist (arched) -->
+  <path d="M550 620C600 580 700 560 800 560C900 560 1000 580 1050 620" stroke="#00695C" stroke-width="4" fill="none" opacity="0.35"/>
+  <rect x="570" y="620" width="12" height="40" fill="#00695C" opacity="0.25"/>
+  <rect x="650" y="615" width="8" height="35" fill="#00695C" opacity="0.2"/>
+  <rect x="740" y="612" width="8" height="32" fill="#00695C" opacity="0.2"/>
+  <rect x="830" y="612" width="8" height="32" fill="#00695C" opacity="0.2"/>
+  <rect x="920" y="615" width="8" height="35" fill="#00695C" opacity="0.2"/>
+  <rect x="1020" y="620" width="12" height="40" fill="#00695C" opacity="0.25"/>
 
-  <!-- Lotus leaves -->
-  <ellipse cx="500" cy="720" rx="55" ry="20" fill="#66BB6A" opacity="0.35"/>
-  <ellipse cx="1100" cy="740" rx="50" ry="18" fill="#66BB6A" opacity="0.3"/>
-  <ellipse cx="750" cy="760" rx="45" ry="16" fill="#81C784" opacity="0.3"/>
+  <!-- Lotus leaves on water -->
+  <ellipse cx="300" cy="720" rx="70" ry="28" fill="#2E7D32" opacity="0.4"/>
+  <ellipse cx="450" cy="750" rx="55" ry="22" fill="#388E3C" opacity="0.35"/>
+  <ellipse cx="200" cy="770" rx="50" ry="20" fill="#4CAF50" opacity="0.3"/>
+  <ellipse cx="1200" cy="730" rx="65" ry="26" fill="#2E7D32" opacity="0.38"/>
+  <ellipse cx="1380" cy="760" rx="55" ry="22" fill="#388E3C" opacity="0.32"/>
+  <ellipse cx="1050" cy="770" rx="48" ry="18" fill="#4CAF50" opacity="0.28"/>
+  <!-- Lotus leaf veins -->
+  <line x1="300" y1="720" x2="330" y2="710" stroke="#1B5E20" stroke-width="0.8" opacity="0.3"/>
+  <line x1="300" y1="720" x2="280" y2="705" stroke="#1B5E20" stroke-width="0.8" opacity="0.3"/>
+  <line x1="1200" y1="730" x2="1230" y2="720" stroke="#1B5E20" stroke-width="0.8" opacity="0.3"/>
 
-  <!-- Rain drops falling -->
-  <circle cx="400" cy="200" r="3" fill="#7986CB" opacity="0.5"/>
-  <circle cx="400" cy="230" r="2" fill="#7986CB" opacity="0.35"/>
-  <circle cx="700" cy="150" r="3.5" fill="#7986CB" opacity="0.45"/>
-  <circle cx="1000" cy="180" r="3" fill="#7986CB" opacity="0.5"/>
-  <circle cx="1300" cy="220" r="2.5" fill="#7986CB" opacity="0.4"/>
-  <circle cx="250" cy="350" r="2.5" fill="#9FA8DA" opacity="0.4"/>
-  <circle cx="1400" cy="380" r="3" fill="#9FA8DA" opacity="0.35"/>
+  <!-- Rain drops on lotus leaves -->
+  <circle cx="310" cy="715" r="4" fill="#B2DFDB" opacity="0.6"/>
+  <circle cx="290" cy="722" r="3" fill="#80CBC4" opacity="0.5"/>
+  <circle cx="1210" cy="725" r="3.5" fill="#B2DFDB" opacity="0.55"/>
+  <circle cx="445" cy="745" r="3" fill="#80CBC4" opacity="0.5"/>
 
-  <!-- Decorative bokeh circles -->
-  <circle cx="200" cy="150" r="50" fill="#7986CB" opacity="0.1"/>
-  <circle cx="1400" cy="120" r="65" fill="#9FA8DA" opacity="0.12"/>
-  <circle cx="100" cy="600" r="40" fill="#C5CAE9" opacity="0.2"/>
-  <circle cx="1500" cy="500" r="55" fill="#7986CB" opacity="0.1"/>
-  <circle cx="800" cy="100" r="45" fill="#E8EAF6" opacity="0.3"/>
+  <!-- Willow branches hanging -->
+  <path d="M100 0C110 80 95 160 105 240C115 320 100 380 110 450" stroke="#4CAF50" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M140 0C148 70 135 140 145 210C155 280 142 340 150 400" stroke="#66BB6A" stroke-width="1.5" fill="none" opacity="0.35"/>
+  <path d="M1500 0C1490 90 1505 170 1495 250C1485 330 1500 400 1490 470" stroke="#4CAF50" stroke-width="2" fill="none" opacity="0.4"/>
+  <path d="M1460 0C1452 75 1465 150 1455 225C1445 300 1460 360 1450 430" stroke="#66BB6A" stroke-width="1.5" fill="none" opacity="0.35"/>
+  <!-- Willow leaves -->
+  <path d="M105 250C110 248 115 252 112 256C109 260 104 256 105 250Z" fill="#66BB6A" opacity="0.5"/>
+  <path d="M108 320C113 318 118 322 115 326C112 330 107 326 108 320Z" fill="#4CAF50" opacity="0.45"/>
+  <path d="M1493 260C1498 258 1503 262 1500 266C1497 270 1492 266 1493 260Z" fill="#66BB6A" opacity="0.5"/>
 
-  <!-- Soft clouds -->
-  <ellipse cx="300" cy="120" rx="120" ry="40" fill="#FFFFFF" opacity="0.25" filter="url(#soft)"/>
-  <ellipse cx="1200" cy="100" rx="150" ry="45" fill="#FFFFFF" opacity="0.2" filter="url(#soft)"/>
+  <!-- Rain streaks -->
+  <line x1="300" y1="50" x2="295" y2="130" stroke="#80CBC4" stroke-width="1" opacity="0.3"/>
+  <line x1="500" y1="30" x2="495" y2="110" stroke="#80CBC4" stroke-width="1" opacity="0.25"/>
+  <line x1="700" y1="60" x2="695" y2="140" stroke="#80CBC4" stroke-width="1" opacity="0.3"/>
+  <line x1="900" y1="40" x2="895" y2="120" stroke="#80CBC4" stroke-width="1" opacity="0.25"/>
+  <line x1="1100" y1="55" x2="1095" y2="135" stroke="#80CBC4" stroke-width="1" opacity="0.28"/>
+  <line x1="1300" y1="35" x2="1295" y2="115" stroke="#80CBC4" stroke-width="1" opacity="0.25"/>
+  <line x1="400" y1="200" x2="396" y2="270" stroke="#80CBC4" stroke-width="0.8" opacity="0.2"/>
+  <line x1="1000" y1="180" x2="996" y2="250" stroke="#80CBC4" stroke-width="0.8" opacity="0.2"/>
+
+  <!-- Ripples on water surface -->
+  <ellipse cx="500" cy="680" rx="40" ry="6" stroke="#4DB6AC" stroke-width="1" fill="none" opacity="0.3"/>
+  <ellipse cx="500" cy="680" rx="70" ry="10" stroke="#4DB6AC" stroke-width="0.7" fill="none" opacity="0.2"/>
+  <ellipse cx="900" cy="700" rx="35" ry="5" stroke="#4DB6AC" stroke-width="1" fill="none" opacity="0.28"/>
+  <ellipse cx="900" cy="700" rx="60" ry="9" stroke="#4DB6AC" stroke-width="0.7" fill="none" opacity="0.18"/>
+  <ellipse cx="1300" cy="690" rx="30" ry="5" stroke="#4DB6AC" stroke-width="0.8" fill="none" opacity="0.25"/>
+
+  <!-- Mist layer -->
+  <ellipse cx="800" cy="580" rx="500" ry="50" fill="#FFFFFF" opacity="0.2" filter="url(#mist)"/>
+  <ellipse cx="400" cy="600" rx="200" ry="30" fill="#E0F2F1" opacity="0.25" filter="url(#mist)"/>
 
   <!-- Title -->
-  <text x="800" y="450" text-anchor="middle" fill="#283593" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">杭州的雨</text>
-  <text x="800" y="500" text-anchor="middle" fill="#3949AB" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">雨下得正好，不早不晚</text>
+  <text x="800" y="450" text-anchor="middle" fill="#004D40" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">杭州的雨</text>
+  <text x="800" y="500" text-anchor="middle" fill="#00695C" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">雨下得正好，不早不晚</text>
 </svg>

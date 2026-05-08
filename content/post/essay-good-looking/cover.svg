@@ -1,47 +1,76 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFF3E0"/>
-      <stop offset="0.5" stop-color="#FFE0B2"/>
-      <stop offset="1" stop-color="#FFAB91"/>
+      <stop stop-color="#FFF8E1"/>
+      <stop offset="0.5" stop-color="#FFECB3"/>
+      <stop offset="1" stop-color="#FFE082"/>
     </linearGradient>
-    <radialGradient id="sunlight" cx="1100" cy="300" r="400" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFF8E1" stop-opacity="0.6"/>
-      <stop offset="1" stop-color="#FFE0B2" stop-opacity="0"/>
+    <radialGradient id="sunlight" cx="1200" cy="250" r="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8E1" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#FFD54F" stop-opacity="0"/>
     </radialGradient>
     <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="8"/></filter>
   </defs>
 
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <circle cx="1100" cy="300" r="350" fill="url(#sunlight)"/>
+  <!-- Afternoon golden sunlight -->
+  <circle cx="1200" cy="250" r="400" fill="url(#sunlight)"/>
 
-  <!-- Window frame with warm light -->
-  <rect x="1050" y="150" width="350" height="500" rx="8" stroke="#BF360C" stroke-width="2" fill="#FFF8E1" opacity="0.3"/>
-  <line x1="1225" y1="150" x2="1225" y2="650" stroke="#BF360C" stroke-width="1.5" opacity="0.3"/>
-  <line x1="1050" y1="400" x2="1400" y2="400" stroke="#BF360C" stroke-width="1.5" opacity="0.3"/>
+  <!-- Campus path -->
+  <path d="M600 900L700 650L750 550L800 500L850 550L900 650L1000 900Z" fill="#FF8F00" opacity="0.12"/>
+  <path d="M650 900L720 680L770 580L800 540L830 580L880 680L950 900Z" fill="#FFB300" opacity="0.08"/>
 
-  <!-- Autumn leaves scattered -->
-  <path d="M300 200C310 185 325 185 330 200C335 215 320 225 310 220C300 215 295 210 300 200Z" fill="#FF8A65" opacity="0.7"/>
-  <path d="M500 350C508 338 520 340 522 352C524 364 514 370 506 366C498 362 495 358 500 350Z" fill="#FFAB91" opacity="0.6"/>
-  <path d="M200 500C208 488 220 490 222 502C224 514 214 520 206 516C198 512 195 508 200 500Z" fill="#FF7043" opacity="0.5"/>
-  <path d="M1450 400C1458 388 1470 390 1472 402C1474 414 1464 420 1456 416C1448 412 1445 408 1450 400Z" fill="#FF8A65" opacity="0.6"/>
-  <path d="M400 700C408 688 420 690 422 702C424 714 414 720 406 716C398 712 395 708 400 700Z" fill="#FFAB91" opacity="0.5"/>
+  <!-- Ginkgo trees - left -->
+  <rect x="250" y="350" width="12" height="300" fill="#795548" opacity="0.5"/>
+  <circle cx="256" cy="300" r="90" fill="#FFD54F" opacity="0.5"/>
+  <circle cx="230" cy="280" r="60" fill="#FFC107" opacity="0.4"/>
+  <circle cx="290" cy="320" r="70" fill="#FFCA28" opacity="0.35"/>
 
-  <!-- Decorative bokeh circles (warm afternoon light) -->
-  <circle cx="250" cy="150" r="50" fill="#FFAB91" opacity="0.15"/>
-  <circle cx="1450" cy="200" r="40" fill="#FF8A65" opacity="0.12"/>
-  <circle cx="150" cy="400" r="35" fill="#FFE0B2" opacity="0.25"/>
-  <circle cx="600" cy="150" r="55" fill="#FFF3E0" opacity="0.3"/>
-  <circle cx="1300" cy="700" r="45" fill="#FFAB91" opacity="0.15"/>
+  <!-- Ginkgo trees - right -->
+  <rect x="1300" y="380" width="12" height="280" fill="#795548" opacity="0.45"/>
+  <circle cx="1306" cy="330" r="80" fill="#FFD54F" opacity="0.45"/>
+  <circle cx="1280" cy="310" r="55" fill="#FFC107" opacity="0.35"/>
+  <circle cx="1340" cy="350" r="65" fill="#FFCA28" opacity="0.3"/>
 
-  <!-- Light dust particles -->
-  <circle cx="1100" cy="250" r="2" fill="#FFF8E1" opacity="0.6"/>
-  <circle cx="1150" cy="350" r="1.5" fill="#FFF8E1" opacity="0.5"/>
-  <circle cx="1080" cy="450" r="2" fill="#FFF8E1" opacity="0.4"/>
-  <circle cx="1200" cy="500" r="1.5" fill="#FFF8E1" opacity="0.5"/>
-  <circle cx="1130" cy="550" r="2" fill="#FFF8E1" opacity="0.35"/>
+  <!-- More trees in background -->
+  <rect x="450" y="400" width="10" height="250" fill="#795548" opacity="0.35"/>
+  <circle cx="455" cy="360" r="65" fill="#FFD54F" opacity="0.3"/>
+  <rect x="1100" y="420" width="10" height="230" fill="#795548" opacity="0.3"/>
+  <circle cx="1105" cy="380" r="60" fill="#FFCA28" opacity="0.28"/>
+
+  <!-- Falling ginkgo leaves -->
+  <path d="M400 200C405 195 412 198 410 205C408 212 402 212 400 200Z" fill="#FFD54F" opacity="0.8"/>
+  <path d="M550 280C555 275 562 278 560 285C558 292 552 292 550 280Z" fill="#FFC107" opacity="0.7"/>
+  <path d="M700 180C705 175 712 178 710 185C708 192 702 192 700 180Z" fill="#FFD54F" opacity="0.6"/>
+  <path d="M900 220C905 215 912 218 910 225C908 232 902 232 900 220Z" fill="#FFCA28" opacity="0.7"/>
+  <path d="M1050 300C1055 295 1062 298 1060 305C1058 312 1052 312 1050 300Z" fill="#FFD54F" opacity="0.65"/>
+  <path d="M1200 180C1205 175 1212 178 1210 185C1208 192 1202 192 1200 180Z" fill="#FFC107" opacity="0.6"/>
+  <path d="M350 400C355 395 362 398 360 405C358 412 352 412 350 400Z" fill="#FFD54F" opacity="0.5"/>
+  <path d="M1400 350C1405 345 1412 348 1410 355C1408 362 1402 362 1400 350Z" fill="#FFCA28" opacity="0.55"/>
+  <path d="M650 350C655 345 662 348 660 355C658 362 652 362 650 350Z" fill="#FFC107" opacity="0.5"/>
+  <path d="M1150 420C1155 415 1162 418 1160 425C1158 432 1152 432 1150 420Z" fill="#FFD54F" opacity="0.45"/>
+
+  <!-- Girl silhouette on path - pleated skirt -->
+  <circle cx="800" cy="590" r="14" fill="#5D4037" opacity="0.5"/>
+  <path d="M793 604L793 640L807 640L807 604Z" fill="#5D4037" opacity="0.45"/>
+  <path d="M780 640L790 640L788 680L778 680Z" fill="#5D4037" opacity="0.4"/>
+  <path d="M810 640L820 640L822 680L812 680Z" fill="#5D4037" opacity="0.4"/>
+  <!-- Pleated skirt -->
+  <path d="M785 635C780 660 775 680 770 690L830 690C825 680 820 660 815 635Z" fill="#FF8F00" opacity="0.35"/>
+
+  <!-- Park bench -->
+  <rect x="1000" y="680" width="120" height="8" rx="3" fill="#795548" opacity="0.5"/>
+  <rect x="1010" y="688" width="8" height="40" fill="#795548" opacity="0.4"/>
+  <rect x="1102" y="688" width="8" height="40" fill="#795548" opacity="0.4"/>
+  <rect x="1000" y="700" width="120" height="6" rx="2" fill="#795548" opacity="0.35"/>
+
+  <!-- Ground shadow/light dappling -->
+  <ellipse cx="800" cy="750" rx="300" ry="30" fill="#FF8F00" opacity="0.08" filter="url(#glow)"/>
+  <ellipse cx="500" cy="780" rx="100" ry="15" fill="#FFD54F" opacity="0.1" filter="url(#soft)"/>
+  <ellipse cx="1100" cy="770" rx="120" ry="18" fill="#FFD54F" opacity="0.1" filter="url(#soft)"/>
 
   <!-- Title -->
-  <text x="800" y="450" text-anchor="middle" fill="#BF360C" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">好看</text>
-  <text x="800" y="500" text-anchor="middle" fill="#D84315" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">她那时候是真好看</text>
+  <text x="800" y="450" text-anchor="middle" fill="#E65100" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">好看</text>
+  <text x="800" y="500" text-anchor="middle" fill="#FF8F00" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">她那时候是真好看</text>
 </svg>

@@ -1,38 +1,66 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg1" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FBE9E7"/>
       <stop offset="0.5" stop-color="#FFCCBC"/>
       <stop offset="1" stop-color="#FFAB91"/>
     </linearGradient>
-    <radialGradient id="sunPatch" cx="900" cy="500" r="300" gradientUnits="userSpaceOnUse">
+    <radialGradient id="dawnGlow" cx="1300" cy="250" r="400" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FFF8E1" stop-opacity="0.6"/>
       <stop offset="1" stop-color="#FFAB91" stop-opacity="0"/>
     </radialGradient>
-    <filter id="soft"><feGaussianBlur stdDeviation="12"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="14"/></filter>
   </defs>
-  <rect width="1600" height="900" fill="url(#bg1)"/>
-  <!-- Sunlight patch -->
-  <ellipse cx="900" cy="520" rx="350" ry="200" fill="url(#sunPatch)"/>
-  <!-- Blanket edge - soft folds -->
-  <path d="M200 580C400 560 700 555 1000 565C1200 572 1400 585 1500 590" stroke="#FFAB91" stroke-width="3" opacity="0.5" fill="none"/>
-  <path d="M150 620C400 600 750 595 1100 605C1300 612 1450 625 1550 630" stroke="#FFAB91" stroke-width="2" opacity="0.35" fill="none"/>
-  <path d="M100 660C350 645 700 640 1050 648C1250 654 1400 665 1600 670" stroke="#BF360C" stroke-width="1.5" opacity="0.15" fill="none"/>
-  <!-- Soft blanket shape -->
-  <path d="M100 620C300 600 700 590 1100 600C1350 608 1500 620 1600 630V900H0V660Z" fill="#FFAB91" opacity="0.25"/>
-  <!-- Warm light glow -->
-  <circle cx="950" cy="400" r="180" fill="#FFF8E1" opacity="0.3" filter="url(#soft)"/>
-  <!-- Decorative circles -->
-  <circle cx="250" cy="200" r="80" fill="#FFAB91" opacity="0.15" filter="url(#soft)"/>
-  <circle cx="1350" cy="180" r="100" fill="#FBE9E7" opacity="0.4" filter="url(#soft)"/>
-  <circle cx="400" cy="700" r="60" fill="#BF360C" opacity="0.08" filter="url(#soft)"/>
-  <circle cx="1200" cy="650" r="90" fill="#FFCCBC" opacity="0.2" filter="url(#soft)"/>
-  <circle cx="700" cy="150" r="50" fill="#FFAB91" opacity="0.2"/>
-  <!-- Floating particles -->
-  <circle cx="500" cy="300" r="4" fill="#BF360C" opacity="0.15"/>
-  <circle cx="1100" cy="250" r="3" fill="#BF360C" opacity="0.12"/>
-  <circle cx="300" cy="450" r="3.5" fill="#FFAB91" opacity="0.2"/>
-  <circle cx="1300" cy="400" r="4" fill="#FFAB91" opacity="0.18"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <!-- Dawn glow from window -->
+  <ellipse cx="1300" cy="250" rx="400" ry="300" fill="url(#dawnGlow)"/>
+  <!-- Window with dawn light -->
+  <rect x="1150" y="50" width="350" height="450" rx="8" stroke="#BF360C" stroke-width="3" fill="none" opacity="0.2"/>
+  <rect x="1160" y="60" width="330" height="430" rx="4" fill="#FFF8E1" opacity="0.15"/>
+  <line x1="1325" y1="50" x2="1325" y2="500" stroke="#BF360C" stroke-width="2" opacity="0.15"/>
+  <!-- Dawn light rays -->
+  <path d="M1160 60L700 400L800 600L1160 300Z" fill="#FFAB91" opacity="0.06"/>
+  <path d="M1160 200L600 550L750 750L1160 400Z" fill="#FFAB91" opacity="0.04"/>
+  <!-- Bed with rumpled sheets -->
+  <path d="M100 550C300 540 600 535 900 540C1100 544 1300 550 1400 555" fill="none" stroke="#FFAB91" stroke-width="2" opacity="0.4"/>
+  <!-- Bedsheet area -->
+  <path d="M100 560C300 548 600 542 1000 548C1250 554 1400 562 1400 562V800H100Z" fill="#FFCCBC" opacity="0.25"/>
+  <!-- Rumpled sheet folds -->
+  <path d="M200 580C350 570 500 575 650 568C800 562 950 572 1100 565C1250 558 1380 570 1400 572" stroke="#BF360C" stroke-width="1.5" fill="none" opacity="0.12"/>
+  <path d="M150 620C320 612 480 618 650 610C820 602 1000 614 1150 608C1300 602 1400 612 1400 612" stroke="#FFAB91" stroke-width="1.5" fill="none" opacity="0.2"/>
+  <path d="M180 660C350 654 530 658 700 652C870 646 1050 656 1220 650C1350 645 1400 652 1400 652" stroke="#BF360C" stroke-width="1" fill="none" opacity="0.08"/>
+  <!-- Blanket edge with feet peeking out -->
+  <path d="M600 680C650 675 700 678 750 672C800 666 850 670 900 668" stroke="#FFAB91" stroke-width="3" fill="none" opacity="0.4"/>
+  <!-- Bare feet peeking from blanket edge -->
+  <ellipse cx="780" cy="660" rx="22" ry="12" fill="#FFCCBC" opacity="0.6"/>
+  <ellipse cx="820" cy="658" rx="20" ry="11" fill="#FFCCBC" opacity="0.55"/>
+  <!-- Toes hint -->
+  <circle cx="765" cy="655" r="4" fill="#FFAB91" opacity="0.3"/>
+  <circle cx="774" cy="653" r="3.5" fill="#FFAB91" opacity="0.3"/>
+  <circle cx="782" cy="651" r="3" fill="#FFAB91" opacity="0.25"/>
+  <circle cx="808" cy="653" r="4" fill="#FFAB91" opacity="0.3"/>
+  <circle cx="817" cy="651" r="3.5" fill="#FFAB91" opacity="0.3"/>
+  <circle cx="825" cy="649" r="3" fill="#FFAB91" opacity="0.25"/>
+  <!-- Pillow -->
+  <ellipse cx="300" cy="555" rx="140" ry="35" fill="#FBE9E7" opacity="0.5"/>
+  <ellipse cx="300" cy="560" rx="80" ry="18" fill="#BF360C" opacity="0.04"/>
+  <!-- Book fallen on floor -->
+  <g transform="translate(250, 750) rotate(-15)">
+    <rect width="70" height="50" rx="3" fill="#BF360C" opacity="0.2"/>
+    <rect x="5" y="5" width="60" height="40" rx="2" fill="#FBE9E7" opacity="0.3"/>
+    <line x1="15" y1="15" x2="55" y2="15" stroke="#BF360C" stroke-width="0.8" opacity="0.15"/>
+    <line x1="15" y1="22" x2="50" y2="22" stroke="#BF360C" stroke-width="0.8" opacity="0.12"/>
+    <line x1="15" y1="29" x2="48" y2="29" stroke="#BF360C" stroke-width="0.8" opacity="0.1"/>
+  </g>
+  <!-- Morning light particles -->
+  <circle cx="1000" cy="300" r="2.5" fill="#FFD54F" opacity="0.4"/>
+  <circle cx="900" cy="400" r="2" fill="#FFD54F" opacity="0.35"/>
+  <circle cx="1100" cy="350" r="1.5" fill="#FFD54F" opacity="0.3"/>
+  <circle cx="950" cy="250" r="2" fill="#FFD54F" opacity="0.3"/>
+  <!-- Soft ambient -->
+  <circle cx="150" cy="200" r="100" fill="#FBE9E7" opacity="0.3" filter="url(#soft)"/>
+  <circle cx="500" cy="150" r="80" fill="#FFCCBC" opacity="0.2" filter="url(#soft)"/>
   <!-- Title -->
   <text x="800" y="450" text-anchor="middle" fill="#BF360C" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">无题</text>
   <text x="800" y="500" text-anchor="middle" fill="#BF360C" fill-opacity="0.65" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">她的脚不喜欢被看见</text>

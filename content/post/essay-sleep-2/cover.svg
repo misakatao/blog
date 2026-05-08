@@ -1,43 +1,64 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E8F5E9"/>
-      <stop offset="0.6" stop-color="#C8E6C9"/>
-      <stop offset="1" stop-color="#A5D6A7"/>
+      <stop stop-color="#F1F8E9"/>
+      <stop offset="0.4" stop-color="#DCEDC8"/>
+      <stop offset="1" stop-color="#AED581"/>
     </linearGradient>
-    <linearGradient id="water" x1="800" y1="550" x2="800" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#A5D6A7" stop-opacity="0.6"/>
-      <stop offset="1" stop-color="#66BB6A" stop-opacity="0.4"/>
+    <linearGradient id="water" x1="800" y1="500" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C5E1A5" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#7CB342" stop-opacity="0.4"/>
     </linearGradient>
-    <filter id="soft"><feGaussianBlur stdDeviation="12"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="mist"><feGaussianBlur stdDeviation="25"/></filter>
+    <radialGradient id="mistGlow" cx="800" cy="480" r="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#F1F8E9" stop-opacity="0"/>
+    </radialGradient>
   </defs>
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <!-- Wood grain texture (upper half) -->
-  <path d="M100 250C350 245 650 255 1000 248C1350 241 1500 250 1600 245" stroke="#8D6E63" stroke-width="2.5" opacity="0.15"/>
-  <path d="M0 300C300 295 600 305 900 298C1200 291 1450 300 1600 295" stroke="#6D4C41" stroke-width="2" opacity="0.12"/>
-  <path d="M50 350C400 345 700 355 1050 348C1350 341 1500 350 1600 345" stroke="#8D6E63" stroke-width="2" opacity="0.1"/>
-  <path d="M0 400C350 395 650 405 1000 398C1300 391 1500 400 1600 395" stroke="#6D4C41" stroke-width="1.5" opacity="0.08"/>
-  <!-- Transition: wood dissolving -->
-  <path d="M0 480C200 470 500 490 800 475C1100 460 1400 485 1600 480" stroke="#A5D6A7" stroke-width="3" opacity="0.3"/>
-  <path d="M0 520C250 510 550 525 850 515C1150 505 1400 520 1600 515" stroke="#81C784" stroke-width="2" opacity="0.25"/>
+  <!-- Morning mist layer -->
+  <ellipse cx="800" cy="480" rx="700" ry="200" fill="url(#mistGlow)"/>
+  <ellipse cx="300" cy="420" rx="250" ry="80" fill="#FFFFFF" opacity="0.15" filter="url(#mist)"/>
+  <ellipse cx="1300" cy="440" rx="280" ry="90" fill="#FFFFFF" opacity="0.12" filter="url(#mist)"/>
   <!-- Water surface -->
-  <path d="M0 560C300 550 600 565 900 555C1200 545 1500 560 1600 555V900H0Z" fill="url(#water)"/>
-  <!-- Water ripples -->
-  <path d="M0 600C200 595 400 602 600 596C800 590 1000 598 1200 594C1400 590 1600 596 1600 596" stroke="#66BB6A" stroke-width="1.5" opacity="0.3" fill="none"/>
-  <path d="M200 650C450 645 700 652 950 646C1200 640 1450 648 1600 644" stroke="#4CAF50" stroke-width="1" opacity="0.25" fill="none"/>
-  <path d="M0 700C300 695 600 702 900 696C1200 690 1500 698 1600 694" stroke="#66BB6A" stroke-width="1" opacity="0.2" fill="none"/>
-  <path d="M100 750C400 745 700 752 1000 746C1300 740 1500 748 1600 744" stroke="#81C784" stroke-width="0.8" opacity="0.15" fill="none"/>
-  <!-- Decorative circles -->
-  <circle cx="250" cy="300" r="65" fill="#C8E6C9" opacity="0.25" filter="url(#soft)"/>
-  <circle cx="1350" cy="350" r="70" fill="#A5D6A7" opacity="0.2" filter="url(#soft)"/>
-  <circle cx="500" cy="650" r="55" fill="#81C784" opacity="0.15" filter="url(#soft)"/>
-  <circle cx="1100" cy="700" r="60" fill="#66BB6A" opacity="0.12" filter="url(#soft)"/>
-  <circle cx="700" cy="200" r="40" fill="#E8F5E9" opacity="0.35" filter="url(#soft)"/>
-  <!-- Leaf motifs -->
-  <ellipse cx="150" cy="500" rx="20" ry="8" fill="#4CAF50" opacity="0.15" transform="rotate(-30 150 500)"/>
-  <ellipse cx="1450" cy="480" rx="18" ry="7" fill="#66BB6A" opacity="0.12" transform="rotate(20 1450 480)"/>
-  <ellipse cx="350" cy="550" rx="15" ry="6" fill="#81C784" opacity="0.1" transform="rotate(-15 350 550)"/>
+  <path d="M0 520C400 510 800 515 1200 508C1400 505 1600 510 1600 510V900H0Z" fill="url(#water)"/>
+  <!-- Wood plank floating on water -->
+  <path d="M500 490L1100 480L1120 510L1110 530L490 540L480 515Z" fill="#8D6E63" opacity="0.5"/>
+  <path d="M500 490L1100 480L1120 510L480 515Z" fill="#A1887F" opacity="0.3"/>
+  <!-- Wood grain lines on plank -->
+  <line x1="520" y1="498" x2="1080" y2="488" stroke="#6D4C41" stroke-width="1" opacity="0.2"/>
+  <line x1="510" y1="510" x2="1090" y2="500" stroke="#6D4C41" stroke-width="0.8" opacity="0.15"/>
+  <line x1="495" y1="522" x2="1100" y2="514" stroke="#6D4C41" stroke-width="0.8" opacity="0.12"/>
+  <line x1="500" y1="530" x2="1105" y2="522" stroke="#6D4C41" stroke-width="0.6" opacity="0.1"/>
+  <!-- Wood grain dissolving into ripples -->
+  <path d="M1100 488C1150 490 1200 495 1250 498C1300 502 1350 504 1400 502" stroke="#8D6E63" stroke-width="0.8" opacity="0.12" fill="none"/>
+  <path d="M1110 500C1160 503 1220 508 1280 510C1340 512 1380 510 1420 507" stroke="#8D6E63" stroke-width="0.6" opacity="0.08" fill="none"/>
+  <!-- Leaf floating on water -->
+  <ellipse cx="700" cy="560" rx="20" ry="8" fill="#7CB342" opacity="0.6" transform="rotate(-10 700 560)"/>
+  <line x1="690" y1="560" x2="710" y2="558" stroke="#558B2F" stroke-width="0.8" opacity="0.4"/>
+  <!-- Water ripples - concentric from plank -->
+  <ellipse cx="800" cy="570" rx="350" ry="30" fill="none" stroke="#7CB342" stroke-width="1.5" opacity="0.2"/>
+  <ellipse cx="800" cy="590" rx="420" ry="35" fill="none" stroke="#AED581" stroke-width="1.2" opacity="0.15"/>
+  <ellipse cx="800" cy="615" rx="500" ry="40" fill="none" stroke="#7CB342" stroke-width="1" opacity="0.12"/>
+  <!-- Broader water ripples -->
+  <path d="M0 650C200 644 400 648 600 643C800 638 1000 644 1200 640C1400 636 1600 642 1600 642" stroke="#689F38" stroke-width="1" opacity="0.15" fill="none"/>
+  <path d="M100 700C300 695 500 698 700 694C900 690 1100 695 1300 692C1500 689 1600 693 1600 693" stroke="#7CB342" stroke-width="0.8" opacity="0.12" fill="none"/>
+  <path d="M0 750C250 746 500 749 750 745C1000 741 1250 746 1500 743" stroke="#AED581" stroke-width="0.6" opacity="0.1" fill="none"/>
+  <!-- Reflection of plank in water -->
+  <path d="M520 550L1080 542L1070 580L530 588Z" fill="#8D6E63" opacity="0.06"/>
+  <!-- Reflection of leaf -->
+  <ellipse cx="700" cy="580" rx="15" ry="5" fill="#7CB342" opacity="0.1" transform="rotate(10 700 580)"/>
+  <!-- Distant treeline through mist -->
+  <path d="M0 380C100 370 150 350 200 360C250 370 280 355 320 365C360 375 400 360 450 365C500 370 550 358 600 362C650 366 700 355 750 360C800 365 850 356 900 358C950 360 1000 352 1050 356C1100 360 1150 350 1200 354C1250 358 1300 348 1350 352C1400 356 1450 347 1500 350C1550 353 1600 345 1600 345V450H0Z" fill="#33691E" opacity="0.06"/>
+  <!-- Soft ambient circles -->
+  <circle cx="250" cy="250" r="80" fill="#DCEDC8" opacity="0.25" filter="url(#soft)"/>
+  <circle cx="1350" cy="300" r="90" fill="#F1F8E9" opacity="0.3" filter="url(#soft)"/>
+  <!-- Small dragonfly -->
+  <line x1="350" y1="400" x2="370" y2="395" stroke="#33691E" stroke-width="1.5" opacity="0.3"/>
+  <ellipse cx="345" cy="398" rx="12" ry="3" fill="#AED581" opacity="0.2" transform="rotate(-20 345 398)"/>
+  <ellipse cx="345" cy="402" rx="12" ry="3" fill="#AED581" opacity="0.2" transform="rotate(20 345 402)"/>
   <!-- Title -->
-  <text x="800" y="450" text-anchor="middle" fill="#1B5E20" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">睡（二）</text>
-  <text x="800" y="500" text-anchor="middle" fill="#2E7D32" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">这是木头，遇见水之后的命</text>
+  <text x="800" y="450" text-anchor="middle" fill="#33691E" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">睡（二）</text>
+  <text x="800" y="500" text-anchor="middle" fill="#558B2F" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">这是木头，遇见水之后的命</text>
 </svg>

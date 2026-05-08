@@ -1,40 +1,67 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg2" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FFFDE7"/>
       <stop offset="0.5" stop-color="#FFF9C4"/>
       <stop offset="1" stop-color="#FFF59D"/>
     </linearGradient>
-    <radialGradient id="sunGlow" cx="1100" cy="300" r="350" gradientUnits="userSpaceOnUse">
+    <radialGradient id="sunbeam" cx="1200" cy="300" r="400" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FFFFFF" stop-opacity="0.5"/>
+      <stop offset="0.6" stop-color="#FFF59D" stop-opacity="0.2"/>
       <stop offset="1" stop-color="#FFF59D" stop-opacity="0"/>
     </radialGradient>
-    <filter id="soft2"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="16"/></filter>
+    <linearGradient id="beam" x1="1250" y1="0" x2="600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F57F17" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#F57F17" stop-opacity="0"/>
+    </linearGradient>
   </defs>
-  <rect width="1600" height="900" fill="url(#bg2)"/>
-  <!-- Afternoon sunlight glow -->
-  <ellipse cx="1100" cy="300" rx="400" ry="300" fill="url(#sunGlow)"/>
-  <!-- Curtain lines -->
-  <path d="M1200 0C1190 200 1195 400 1185 600C1180 750 1182 900 1182 900" stroke="#F57F17" stroke-width="2" opacity="0.15" fill="none"/>
-  <path d="M1250 0C1242 180 1248 380 1240 580C1236 740 1238 900 1238 900" stroke="#F57F17" stroke-width="1.5" opacity="0.12" fill="none"/>
-  <path d="M1300 0C1294 200 1298 400 1292 600C1288 750 1290 900 1290 900" stroke="#F57F17" stroke-width="1" opacity="0.1" fill="none"/>
-  <!-- Sofa corner -->
-  <path d="M100 600C100 570 130 550 180 550L700 550C740 550 760 570 760 600L760 750L100 750Z" fill="#F57F17" opacity="0.12"/>
-  <path d="M100 550C100 510 130 490 180 490L700 490C740 490 760 510 760 550" fill="#F57F17" opacity="0.08"/>
-  <!-- Golden dust motes -->
-  <circle cx="900" cy="200" r="3" fill="#F57F17" opacity="0.3"/>
-  <circle cx="1000" cy="350" r="2.5" fill="#F57F17" opacity="0.25"/>
-  <circle cx="850" cy="400" r="2" fill="#F57F17" opacity="0.2"/>
-  <circle cx="1050" cy="150" r="2" fill="#F57F17" opacity="0.28"/>
-  <circle cx="950" cy="500" r="3" fill="#F57F17" opacity="0.18"/>
-  <circle cx="1150" cy="250" r="2.5" fill="#F57F17" opacity="0.22"/>
-  <circle cx="750" cy="300" r="1.5" fill="#F57F17" opacity="0.2"/>
-  <!-- Decorative bokeh -->
-  <circle cx="200" cy="200" r="90" fill="#FFF59D" opacity="0.3" filter="url(#soft2)"/>
-  <circle cx="1400" cy="600" r="110" fill="#FFF59D" opacity="0.25" filter="url(#soft2)"/>
-  <circle cx="500" cy="750" r="70" fill="#F57F17" opacity="0.08" filter="url(#soft2)"/>
-  <circle cx="1300" cy="150" r="80" fill="#FFFFFF" opacity="0.3" filter="url(#soft2)"/>
-  <circle cx="350" cy="400" r="60" fill="#FFF9C4" opacity="0.35"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <!-- Sunlight glow -->
+  <ellipse cx="1200" cy="300" rx="400" ry="300" fill="url(#sunbeam)"/>
+  <!-- Curtain with light gap -->
+  <path d="M1300 0C1295 150 1305 300 1298 450C1292 600 1300 750 1296 900" stroke="#F57F17" stroke-width="4" opacity="0.2" fill="none"/>
+  <path d="M1340 0C1336 130 1344 280 1338 420C1333 570 1340 730 1337 900" stroke="#F57F17" stroke-width="3" opacity="0.15" fill="none"/>
+  <path d="M1380 0C1377 150 1383 300 1378 450C1374 600 1380 750 1377 900" stroke="#F57F17" stroke-width="2" opacity="0.12" fill="none"/>
+  <!-- Curtain fabric fill -->
+  <path d="M1300 0L1600 0V900L1300 900C1305 750 1295 600 1300 450C1305 300 1295 150 1300 0Z" fill="#F57F17" opacity="0.05"/>
+  <!-- Sunbeam through curtain gap -->
+  <path d="M1280 0L1320 0L900 900L860 900Z" fill="url(#beam)"/>
+  <!-- Sofa -->
+  <path d="M100 550C100 520 130 500 170 500L750 500C790 500 820 520 820 550L820 700C820 720 800 730 780 730L140 730C120 730 100 720 100 700Z" fill="#F57F17" opacity="0.1"/>
+  <!-- Sofa back -->
+  <path d="M100 500C100 460 130 440 170 440L750 440C790 440 820 460 820 500" fill="#F57F17" opacity="0.07"/>
+  <!-- Sofa arm -->
+  <path d="M80 440C60 440 50 460 50 480V700C50 720 60 730 80 730H100V440Z" fill="#F57F17" opacity="0.08"/>
+  <!-- Cushion on sofa -->
+  <ellipse cx="650" cy="580" rx="80" ry="50" fill="#FFF59D" opacity="0.3"/>
+  <path d="M580 570C610 560 650 555 690 560C720 565 740 575 730 585C720 595 680 600 640 598C600 596 575 585 580 570Z" stroke="#F57F17" stroke-width="1" fill="none" opacity="0.2"/>
+  <!-- White socks on floor -->
+  <g transform="translate(500, 740)">
+    <ellipse cx="0" cy="0" rx="25" ry="12" fill="#FFFFFF" opacity="0.7"/>
+    <ellipse cx="0" cy="-3" rx="18" ry="8" fill="#FAFAFA" opacity="0.5"/>
+    <path d="M-20 0C-22 5 -20 12 -15 15C-10 18 0 18 5 15" stroke="#E0E0E0" stroke-width="0.8" fill="none" opacity="0.4"/>
+  </g>
+  <g transform="translate(560, 750) rotate(15)">
+    <ellipse cx="0" cy="0" rx="24" ry="11" fill="#FFFFFF" opacity="0.65"/>
+    <ellipse cx="0" cy="-3" rx="17" ry="7" fill="#FAFAFA" opacity="0.45"/>
+    <path d="M-18 0C-20 5 -18 11 -13 14C-8 17 2 17 7 14" stroke="#E0E0E0" stroke-width="0.8" fill="none" opacity="0.35"/>
+  </g>
+  <!-- Dust motes in sunbeam -->
+  <circle cx="1050" cy="200" r="2.5" fill="#F57F17" opacity="0.4"/>
+  <circle cx="1100" cy="350" r="2" fill="#F57F17" opacity="0.35"/>
+  <circle cx="1000" cy="450" r="3" fill="#F57F17" opacity="0.3"/>
+  <circle cx="1150" cy="150" r="1.5" fill="#F57F17" opacity="0.35"/>
+  <circle cx="980" cy="550" r="2" fill="#F57F17" opacity="0.25"/>
+  <circle cx="1080" cy="500" r="2.5" fill="#F57F17" opacity="0.28"/>
+  <circle cx="950" cy="650" r="2" fill="#F57F17" opacity="0.2"/>
+  <circle cx="1020" cy="300" r="1.5" fill="#F57F17" opacity="0.32"/>
+  <!-- Floor line -->
+  <line x1="0" y1="780" x2="1600" y2="780" stroke="#F57F17" stroke-width="1" opacity="0.1"/>
+  <!-- Warm ambient -->
+  <circle cx="200" cy="200" r="100" fill="#FFF9C4" opacity="0.3" filter="url(#soft)"/>
+  <circle cx="400" cy="800" r="80" fill="#FFF59D" opacity="0.2" filter="url(#soft)"/>
   <!-- Title -->
   <text x="800" y="450" text-anchor="middle" fill="#F57F17" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">无题（二）</text>
   <text x="800" y="500" text-anchor="middle" fill="#F57F17" fill-opacity="0.6" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">那双白棉袜裹过她的脚</text>

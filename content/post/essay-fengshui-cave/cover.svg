@@ -2,53 +2,72 @@
   <defs>
     <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
       <stop stop-color="#E0F7FA"/>
-      <stop offset="0.6" stop-color="#B2DFDB"/>
+      <stop offset="0.5" stop-color="#B2DFDB"/>
       <stop offset="1" stop-color="#80CBC4"/>
     </linearGradient>
-    <radialGradient id="mist" cx="800" cy="450" r="400" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFFFF" stop-opacity="0.4"/>
+    <radialGradient id="caveMist" cx="800" cy="500" r="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.3"/>
       <stop offset="1" stop-color="#E0F7FA" stop-opacity="0"/>
     </radialGradient>
     <filter id="soft"><feGaussianBlur stdDeviation="4"/></filter>
+    <filter id="mist"><feGaussianBlur stdDeviation="12"/></filter>
   </defs>
 
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <ellipse cx="800" cy="500" rx="500" ry="300" fill="url(#mist)"/>
 
-  <!-- Cave arch shape -->
-  <path d="M0 0L0 900L400 900C380 650 420 400 550 300C680 200 750 180 800 170C850 180 920 200 1050 300C1180 400 1220 650 1200 900L1600 900L1600 0Z" fill="#004D40" opacity="0.15"/>
-  <path d="M0 0L0 900L300 900C290 700 350 450 500 330C650 210 750 190 800 180C850 190 950 210 1100 330C1250 450 1310 700 1300 900L1600 900L1600 0Z" fill="#004D40" opacity="0.08"/>
+  <!-- Cave arch - outer rock face -->
+  <path d="M0 0L0 900L350 900C330 750 340 600 400 480C480 340 600 250 720 200C760 185 800 178 800 175C800 178 840 185 880 200C1000 250 1120 340 1200 480C1260 600 1270 750 1250 900L1600 900L1600 0Z" fill="#00695C" opacity="0.85"/>
+  <!-- Cave arch - inner edge detail -->
+  <path d="M50 0L50 900L380 900C370 730 385 580 440 470C510 350 620 265 730 215C770 200 800 192 800 190C800 192 830 200 870 215C980 265 1090 350 1160 470C1215 580 1230 730 1220 900L1550 900L1550 0Z" fill="#004D40" opacity="0.6"/>
 
-  <!-- Green moss patches -->
-  <ellipse cx="350" cy="650" rx="60" ry="20" fill="#4DB6AC" opacity="0.4"/>
-  <ellipse cx="1250" cy="680" rx="50" ry="15" fill="#4DB6AC" opacity="0.35"/>
-  <ellipse cx="450" cy="750" rx="40" ry="12" fill="#26A69A" opacity="0.3"/>
-  <ellipse cx="1150" cy="770" rx="45" ry="14" fill="#26A69A" opacity="0.3"/>
+  <!-- Stalactites hanging from cave ceiling -->
+  <path d="M250 0L260 120L240 120Z" fill="#4DB6AC" opacity="0.7"/>
+  <path d="M420 0L435 150L410 150Z" fill="#00695C" opacity="0.6"/>
+  <path d="M580 0L590 90L570 90Z" fill="#4DB6AC" opacity="0.5"/>
+  <path d="M1020 0L1030 100L1010 100Z" fill="#4DB6AC" opacity="0.5"/>
+  <path d="M1180 0L1195 140L1165 140Z" fill="#00695C" opacity="0.6"/>
+  <path d="M1350 0L1360 110L1340 110Z" fill="#4DB6AC" opacity="0.7"/>
 
-  <!-- Water droplets -->
-  <circle cx="600" cy="300" r="4" fill="#80CBC4" opacity="0.7"/>
-  <circle cx="600" cy="330" r="3" fill="#80CBC4" opacity="0.5"/>
-  <circle cx="750" cy="280" r="3.5" fill="#80CBC4" opacity="0.6"/>
-  <circle cx="900" cy="310" r="4" fill="#80CBC4" opacity="0.65"/>
-  <circle cx="1000" cy="340" r="3" fill="#80CBC4" opacity="0.5"/>
-  <circle cx="700" cy="360" r="2.5" fill="#B2DFDB" opacity="0.6"/>
-  <circle cx="850" cy="380" r="3" fill="#B2DFDB" opacity="0.5"/>
+  <!-- Water dripping from stalactites -->
+  <circle cx="260" cy="135" r="3" fill="#80CBC4" opacity="0.8"/>
+  <circle cx="435" cy="165" r="2.5" fill="#80CBC4" opacity="0.7"/>
+  <circle cx="1195" cy="155" r="3" fill="#80CBC4" opacity="0.75"/>
+  <circle cx="260" cy="160" r="2" fill="#4DB6AC" opacity="0.5"/>
+  <circle cx="1030" cy="115" r="2.5" fill="#80CBC4" opacity="0.6"/>
 
-  <!-- Decorative bokeh circles -->
-  <circle cx="200" cy="200" r="45" fill="#80CBC4" opacity="0.15"/>
-  <circle cx="1400" cy="180" r="60" fill="#4DB6AC" opacity="0.12"/>
-  <circle cx="300" cy="500" r="35" fill="#B2DFDB" opacity="0.2"/>
-  <circle cx="1350" cy="550" r="50" fill="#80CBC4" opacity="0.1"/>
-  <circle cx="150" cy="750" r="30" fill="#4DB6AC" opacity="0.15"/>
+  <!-- Green moss patches on rocks -->
+  <ellipse cx="180" cy="550" rx="70" ry="25" fill="#4DB6AC" opacity="0.5"/>
+  <ellipse cx="120" cy="650" rx="55" ry="18" fill="#26A69A" opacity="0.45"/>
+  <ellipse cx="1420" cy="580" rx="65" ry="22" fill="#4DB6AC" opacity="0.5"/>
+  <ellipse cx="1480" cy="680" rx="50" ry="16" fill="#26A69A" opacity="0.4"/>
+  <ellipse cx="350" cy="780" rx="40" ry="12" fill="#00897B" opacity="0.35"/>
+  <ellipse cx="1260" cy="800" rx="45" ry="14" fill="#00897B" opacity="0.35"/>
 
-  <!-- Mist wisps -->
-  <ellipse cx="800" cy="600" rx="300" ry="40" fill="#FFFFFF" opacity="0.2" filter="url(#soft)"/>
-  <ellipse cx="600" cy="700" rx="200" ry="25" fill="#FFFFFF" opacity="0.15" filter="url(#soft)"/>
-  <ellipse cx="1000" cy="650" rx="180" ry="30" fill="#FFFFFF" opacity="0.15" filter="url(#soft)"/>
+  <!-- Cave floor path with puddles -->
+  <path d="M400 900L500 850L700 840L900 845L1100 840L1200 850L1250 900Z" fill="#00695C" opacity="0.15"/>
+  <ellipse cx="600" cy="860" rx="60" ry="12" fill="#4DB6AC" opacity="0.3"/>
+  <ellipse cx="850" cy="855" rx="45" ry="10" fill="#80CBC4" opacity="0.25"/>
+  <ellipse cx="1050" cy="865" rx="55" ry="11" fill="#4DB6AC" opacity="0.28"/>
+  <!-- Ripples in puddles -->
+  <ellipse cx="600" cy="860" rx="30" ry="6" stroke="#80CBC4" stroke-width="0.8" fill="none" opacity="0.4"/>
+  <ellipse cx="850" cy="855" rx="22" ry="5" stroke="#B2DFDB" stroke-width="0.6" fill="none" opacity="0.35"/>
 
-  <!-- Water pool at bottom -->
-  <ellipse cx="800" cy="820" rx="250" ry="30" fill="#80CBC4" opacity="0.25"/>
-  <ellipse cx="800" cy="820" rx="120" ry="12" fill="#4DB6AC" opacity="0.15"/>
+  <!-- Mist rising from ground -->
+  <ellipse cx="700" cy="780" rx="200" ry="40" fill="#FFFFFF" opacity="0.2" filter="url(#mist)"/>
+  <ellipse cx="950" cy="750" rx="150" ry="35" fill="#FFFFFF" opacity="0.15" filter="url(#mist)"/>
+  <ellipse cx="500" cy="760" rx="120" ry="30" fill="#E0F7FA" opacity="0.2" filter="url(#mist)"/>
+
+  <!-- Pair of shoes at cave entrance -->
+  <path d="M730 870C730 865 735 860 745 860L765 860C770 860 775 863 775 868L775 878C775 882 770 885 765 885L740 885C735 885 730 882 730 878Z" fill="#5D4037" opacity="0.7"/>
+  <path d="M780 870C780 865 785 860 795 860L815 860C820 860 825 863 825 868L825 878C825 882 820 885 815 885L790 885C785 885 780 882 780 878Z" fill="#5D4037" opacity="0.7"/>
+  <ellipse cx="752" cy="860" rx="12" ry="4" fill="#3E2723" opacity="0.5"/>
+  <ellipse cx="802" cy="860" rx="12" ry="4" fill="#3E2723" opacity="0.5"/>
+
+  <!-- Light beam entering cave -->
+  <path d="M700 175L650 900L950 900L900 175Z" fill="#FFFFFF" opacity="0.06"/>
+
+  <!-- Central mist glow -->
+  <circle cx="800" cy="500" r="300" fill="url(#caveMist)"/>
 
   <!-- Title -->
   <text x="800" y="450" text-anchor="middle" fill="#004D40" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">游风水洞有感</text>

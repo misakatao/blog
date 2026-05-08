@@ -2,45 +2,66 @@
   <defs>
     <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FCE4EC"/>
-      <stop offset="0.5" stop-color="#F8BBD0"/>
+      <stop offset="0.4" stop-color="#F8BBD0"/>
       <stop offset="1" stop-color="#F48FB1"/>
     </linearGradient>
-    <radialGradient id="glow" cx="800" cy="400" r="350" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFFFF" stop-opacity="0.35"/>
+    <radialGradient id="glow" cx="800" cy="350" r="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.3"/>
       <stop offset="1" stop-color="#FCE4EC" stop-opacity="0"/>
     </radialGradient>
     <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="breeze"><feGaussianBlur stdDeviation="6"/></filter>
   </defs>
 
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <circle cx="800" cy="400" r="350" fill="url(#glow)"/>
+  <circle cx="800" cy="350" r="400" fill="url(#glow)"/>
 
-  <!-- Cherry blossom petals falling -->
-  <path d="M350 200C355 190 365 190 368 200C371 210 362 215 356 212C350 209 347 206 350 200Z" fill="#F48FB1" opacity="0.7"/>
-  <path d="M550 300C555 290 565 290 568 300C571 310 562 315 556 312C550 309 547 306 550 300Z" fill="#F8BBD0" opacity="0.6"/>
-  <path d="M250 450C255 440 265 440 268 450C271 460 262 465 256 462C250 459 247 456 250 450Z" fill="#F48FB1" opacity="0.5"/>
-  <path d="M1200 250C1205 240 1215 240 1218 250C1221 260 1212 265 1206 262C1200 259 1197 256 1200 250Z" fill="#F8BBD0" opacity="0.65"/>
-  <path d="M1350 400C1355 390 1365 390 1368 400C1371 410 1362 415 1356 412C1350 409 1347 406 1350 400Z" fill="#F48FB1" opacity="0.55"/>
-  <path d="M450 600C455 590 465 590 468 600C471 610 462 615 456 612C450 609 447 606 450 600Z" fill="#F8BBD0" opacity="0.5"/>
-  <path d="M1100 550C1105 540 1115 540 1118 550C1121 560 1112 565 1106 562C1100 559 1097 556 1100 550Z" fill="#F48FB1" opacity="0.6"/>
-  <path d="M700 150C705 140 715 140 718 150C721 160 712 165 706 162C700 159 697 156 700 150Z" fill="#F8BBD0" opacity="0.55"/>
+  <!-- Cherry blossom tree trunk and branches -->
+  <path d="M250 900C260 800 270 700 290 620C310 540 340 480 380 430C420 380 450 360 500 340" stroke="#6D4C41" stroke-width="18" fill="none" opacity="0.6" stroke-linecap="round"/>
+  <path d="M380 430C350 380 330 320 340 260C350 200 380 160 420 130" stroke="#6D4C41" stroke-width="10" fill="none" opacity="0.5" stroke-linecap="round"/>
+  <path d="M500 340C540 310 580 290 630 270C680 250 730 240 780 235" stroke="#6D4C41" stroke-width="8" fill="none" opacity="0.45" stroke-linecap="round"/>
+  <path d="M420 130C460 100 510 85 570 80" stroke="#6D4C41" stroke-width="6" fill="none" opacity="0.4" stroke-linecap="round"/>
+  <path d="M340 260C310 220 300 180 310 140" stroke="#6D4C41" stroke-width="5" fill="none" opacity="0.35" stroke-linecap="round"/>
 
-  <!-- Umbrella edge at top -->
-  <path d="M1050 100C1100 80 1200 70 1300 70C1400 70 1500 80 1550 100C1550 108 1500 112 1300 112C1100 112 1050 108 1050 100Z" fill="#880E4F" opacity="0.25"/>
+  <!-- Blossom clusters on branches -->
+  <circle cx="500" cy="330" r="25" fill="#F8BBD0" opacity="0.6"/>
+  <circle cx="530" cy="310" r="20" fill="#F48FB1" opacity="0.5"/>
+  <circle cx="480" cy="310" r="18" fill="#FCE4EC" opacity="0.65"/>
+  <circle cx="630" cy="260" r="22" fill="#F8BBD0" opacity="0.55"/>
+  <circle cx="660" cy="240" r="18" fill="#F48FB1" opacity="0.5"/>
+  <circle cx="750" cy="230" r="20" fill="#FCE4EC" opacity="0.6"/>
+  <circle cx="420" cy="125" r="22" fill="#F8BBD0" opacity="0.55"/>
+  <circle cx="460" cy="100" r="18" fill="#F48FB1" opacity="0.5"/>
+  <circle cx="560" cy="80" r="20" fill="#FCE4EC" opacity="0.55"/>
+  <circle cx="340" cy="255" r="18" fill="#F8BBD0" opacity="0.5"/>
+  <circle cx="310" cy="140" r="16" fill="#F48FB1" opacity="0.45"/>
 
-  <!-- Decorative bokeh circles -->
-  <circle cx="200" cy="150" r="55" fill="#F48FB1" opacity="0.15"/>
-  <circle cx="1400" cy="200" r="45" fill="#FCE4EC" opacity="0.3"/>
-  <circle cx="150" cy="600" r="40" fill="#F8BBD0" opacity="0.2"/>
-  <circle cx="1450" cy="650" r="50" fill="#F48FB1" opacity="0.12"/>
-  <circle cx="800" cy="800" r="60" fill="#FCE4EC" opacity="0.25"/>
+  <!-- Falling petals -->
+  <path d="M600 350C606 344 614 346 612 354C610 362 603 360 600 350Z" fill="#F48FB1" opacity="0.75"/>
+  <path d="M750 300C756 294 764 296 762 304C760 312 753 310 750 300Z" fill="#F8BBD0" opacity="0.65"/>
+  <path d="M900 380C906 374 914 376 912 384C910 392 903 390 900 380Z" fill="#F48FB1" opacity="0.6"/>
+  <path d="M1050 320C1056 314 1064 316 1062 324C1060 332 1053 330 1050 320Z" fill="#FCE4EC" opacity="0.7"/>
+  <path d="M1200 400C1206 394 1214 396 1212 404C1210 412 1203 410 1200 400Z" fill="#F48FB1" opacity="0.55"/>
+  <path d="M850 250C856 244 864 246 862 254C860 262 853 260 850 250Z" fill="#F8BBD0" opacity="0.6"/>
+  <path d="M1100 500C1106 494 1114 496 1112 504C1110 512 1103 510 1100 500Z" fill="#F48FB1" opacity="0.45"/>
+  <path d="M700 550C706 544 714 546 712 554C710 562 703 560 700 550Z" fill="#F8BBD0" opacity="0.4"/>
+  <path d="M1300 280C1306 274 1314 276 1312 284C1310 292 1303 290 1300 280Z" fill="#FCE4EC" opacity="0.6"/>
 
-  <!-- Soft branch with blossoms -->
-  <path d="M100 700C200 650 350 620 500 640" stroke="#880E4F" stroke-width="2" fill="none" opacity="0.2"/>
-  <circle cx="200" cy="670" r="8" fill="#F48FB1" opacity="0.5"/>
-  <circle cx="300" cy="640" r="10" fill="#F8BBD0" opacity="0.45"/>
-  <circle cx="400" cy="635" r="7" fill="#F48FB1" opacity="0.5"/>
-  <circle cx="450" cy="638" r="9" fill="#FCE4EC" opacity="0.5"/>
+  <!-- Umbrella edge (top-right) -->
+  <path d="M1100 50C1150 30 1250 15 1350 15C1450 15 1530 25 1580 50C1585 58 1560 65 1350 65C1140 65 1095 58 1100 50Z" fill="#AD1457" opacity="0.35"/>
+  <path d="M1340 65L1340 120" stroke="#6D4C41" stroke-width="3" opacity="0.3"/>
+
+  <!-- Two shadows on ground - close together -->
+  <ellipse cx="780" cy="800" rx="50" ry="15" fill="#880E4F" opacity="0.12"/>
+  <ellipse cx="840" cy="800" rx="45" ry="14" fill="#880E4F" opacity="0.12"/>
+  <!-- Shadow figures (simple, overlapping) -->
+  <ellipse cx="790" cy="780" rx="18" ry="45" fill="#880E4F" opacity="0.08"/>
+  <ellipse cx="830" cy="780" rx="16" ry="42" fill="#880E4F" opacity="0.08"/>
+
+  <!-- Spring breeze lines -->
+  <path d="M950 200C1000 195 1050 200 1100 195" stroke="#F48FB1" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <path d="M1000 250C1050 248 1100 252 1150 248" stroke="#F8BBD0" stroke-width="1" fill="none" opacity="0.25"/>
+  <path d="M1050 350C1100 348 1150 352 1200 348" stroke="#F48FB1" stroke-width="1" fill="none" opacity="0.2"/>
 
   <!-- Title -->
   <text x="800" y="450" text-anchor="middle" fill="#880E4F" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">亲嘴</text>

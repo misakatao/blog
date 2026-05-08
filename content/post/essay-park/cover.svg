@@ -2,42 +2,91 @@
   <defs>
     <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
       <stop stop-color="#E8F5E9"/>
-      <stop offset="0.5" stop-color="#C8E6C9"/>
+      <stop offset="0.4" stop-color="#C8E6C9"/>
       <stop offset="1" stop-color="#A5D6A7"/>
     </linearGradient>
-    <filter id="soft"><feGaussianBlur stdDeviation="8"/></filter>
+    <radialGradient id="duskGlow" cx="800" cy="300" r="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF9C4" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#E8F5E9" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="4"/></filter>
+    <filter id="canopy"><feGaussianBlur stdDeviation="8"/></filter>
   </defs>
 
   <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="800" cy="300" r="500" fill="url(#duskGlow)"/>
 
-  <circle cx="300" cy="200" r="120" fill="#81C784" opacity="0.2" filter="url(#soft)"/>
-  <circle cx="1300" cy="150" r="100" fill="#66BB6A" opacity="0.2" filter="url(#soft)"/>
-  <circle cx="800" cy="750" r="90" fill="#A5D6A7" opacity="0.25" filter="url(#soft)"/>
-  <circle cx="1400" cy="700" r="80" fill="#81C784" opacity="0.15" filter="url(#soft)"/>
+  <!-- Dense tree canopy forming tunnel -->
+  <!-- Left trees -->
+  <rect x="100" y="250" width="18" height="450" fill="#4E342E" opacity="0.5"/>
+  <circle cx="109" cy="200" r="100" fill="#2E7D32" opacity="0.45" filter="url(#canopy)"/>
+  <circle cx="80" cy="180" r="70" fill="#388E3C" opacity="0.35"/>
+  <rect x="250" y="300" width="15" height="400" fill="#4E342E" opacity="0.45"/>
+  <circle cx="257" cy="250" r="85" fill="#43A047" opacity="0.4" filter="url(#canopy)"/>
+  <circle cx="235" cy="230" r="60" fill="#2E7D32" opacity="0.3"/>
+  <rect x="400" y="320" width="14" height="380" fill="#4E342E" opacity="0.4"/>
+  <circle cx="407" cy="270" r="80" fill="#66BB6A" opacity="0.38"/>
+  <circle cx="385" cy="260" r="55" fill="#388E3C" opacity="0.3"/>
+  <rect x="530" y="350" width="12" height="350" fill="#4E342E" opacity="0.35"/>
+  <circle cx="536" cy="310" r="70" fill="#43A047" opacity="0.35"/>
 
-  <path d="M0 650 Q200 600 400 640 Q600 680 800 650 Q1000 620 1200 660 Q1400 700 1600 650 V900 H0 Z" fill="#2E7D32" opacity="0.15"/>
-  <path d="M0 700 Q300 670 600 710 Q900 750 1200 700 Q1400 670 1600 720 V900 H0 Z" fill="#1B5E20" opacity="0.1"/>
+  <!-- Right trees -->
+  <rect x="1480" y="260" width="18" height="440" fill="#4E342E" opacity="0.5"/>
+  <circle cx="1489" cy="210" r="95" fill="#2E7D32" opacity="0.45" filter="url(#canopy)"/>
+  <circle cx="1510" cy="190" r="65" fill="#388E3C" opacity="0.35"/>
+  <rect x="1330" y="310" width="15" height="390" fill="#4E342E" opacity="0.45"/>
+  <circle cx="1337" cy="260" r="82" fill="#43A047" opacity="0.4" filter="url(#canopy)"/>
+  <circle cx="1360" cy="240" r="58" fill="#2E7D32" opacity="0.3"/>
+  <rect x="1180" y="330" width="14" height="370" fill="#4E342E" opacity="0.4"/>
+  <circle cx="1187" cy="280" r="78" fill="#66BB6A" opacity="0.38"/>
+  <circle cx="1210" cy="270" r="52" fill="#388E3C" opacity="0.3"/>
+  <rect x="1050" y="360" width="12" height="340" fill="#4E342E" opacity="0.35"/>
+  <circle cx="1056" cy="320" r="68" fill="#43A047" opacity="0.35"/>
 
-  <g transform="translate(700,500)">
-    <rect x="0" y="0" width="200" height="160" fill="none" stroke="#4E342E" stroke-width="3" opacity="0.2"/>
-    <line x1="0" y1="0" x2="100" y2="-60" stroke="#4E342E" stroke-width="3" opacity="0.2"/>
-    <line x1="200" y1="0" x2="100" y2="-60" stroke="#4E342E" stroke-width="3" opacity="0.2"/>
-    <line x1="100" y1="-60" x2="100" y2="-80" stroke="#4E342E" stroke-width="2" opacity="0.15"/>
-  </g>
+  <!-- Overhead canopy connection -->
+  <ellipse cx="800" cy="100" rx="600" ry="150" fill="#2E7D32" opacity="0.2" filter="url(#canopy)"/>
+  <ellipse cx="800" cy="130" rx="400" ry="100" fill="#388E3C" opacity="0.15" filter="url(#canopy)"/>
 
-  <g opacity="0.12">
-    <path d="M200 500 Q220 400 250 420 Q280 440 260 500" fill="#388E3C"/>
-    <path d="M1300 480 Q1320 380 1350 400 Q1380 420 1360 480" fill="#388E3C"/>
-    <path d="M500 550 Q520 470 540 490 Q560 510 545 560" fill="#43A047"/>
-    <path d="M1100 520 Q1120 440 1140 460 Q1160 480 1145 530" fill="#43A047"/>
-  </g>
+  <!-- Park path (perspective) -->
+  <path d="M550 900L700 600L750 500L780 450L800 420L820 450L850 500L900 600L1050 900Z" fill="#795548" opacity="0.12"/>
+  <path d="M600 900L720 620L770 520L800 470L830 520L880 620L1000 900Z" fill="#5D4037" opacity="0.06"/>
 
-  <circle cx="400" cy="300" r="3" fill="#FFF9C4" opacity="0.4"/>
-  <circle cx="1200" cy="280" r="2.5" fill="#FFF9C4" opacity="0.35"/>
-  <circle cx="600" cy="350" r="2" fill="#FFF9C4" opacity="0.3"/>
-  <circle cx="1000" cy="320" r="3" fill="#FFF9C4" opacity="0.3"/>
-  <circle cx="150" cy="450" r="2" fill="#FFF9C4" opacity="0.25"/>
+  <!-- Stone steps on path -->
+  <rect x="720" y="600" width="160" height="8" rx="2" fill="#795548" opacity="0.15"/>
+  <rect x="700" y="650" width="200" height="8" rx="2" fill="#795548" opacity="0.12"/>
+  <rect x="680" y="700" width="240" height="8" rx="2" fill="#795548" opacity="0.1"/>
+  <rect x="650" y="760" width="300" height="10" rx="3" fill="#795548" opacity="0.08"/>
 
-  <text x="800" y="430" text-anchor="middle" fill="#1B5E20" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">高教东公园</text>
-  <text x="800" y="480" text-anchor="middle" fill="#2E7D32" fill-opacity="0.6" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">我的心也痒，我没说</text>
+  <!-- Pavilion/gazebo in distance -->
+  <rect x="775" y="350" width="50" height="60" fill="none" stroke="#4E342E" stroke-width="2" opacity="0.3"/>
+  <path d="M765 350L800 320L835 350" stroke="#4E342E" stroke-width="2.5" fill="#2E7D32" opacity="0.2"/>
+  <line x1="800" y1="320" x2="800" y2="310" stroke="#4E342E" stroke-width="1.5" opacity="0.25"/>
+  <rect x="780" y="410" width="6" height="30" fill="#4E342E" opacity="0.25"/>
+  <rect x="814" y="410" width="6" height="30" fill="#4E342E" opacity="0.25"/>
+
+  <!-- Wooden bench (left side of path) -->
+  <rect x="350" y="600" width="100" height="8" rx="3" fill="#5D4037" opacity="0.45"/>
+  <rect x="360" y="608" width="8" height="35" fill="#5D4037" opacity="0.35"/>
+  <rect x="432" y="608" width="8" height="35" fill="#5D4037" opacity="0.35"/>
+  <rect x="350" y="618" width="100" height="6" rx="2" fill="#5D4037" opacity="0.3"/>
+
+  <!-- Fireflies / light dots -->
+  <circle cx="300" cy="450" r="4" fill="#FFF9C4" opacity="0.6"/>
+  <circle cx="450" cy="500" r="3" fill="#FFF9C4" opacity="0.5"/>
+  <circle cx="600" cy="400" r="3.5" fill="#FFF9C4" opacity="0.55"/>
+  <circle cx="1000" cy="420" r="4" fill="#FFF9C4" opacity="0.6"/>
+  <circle cx="1150" cy="480" r="3" fill="#FFF9C4" opacity="0.5"/>
+  <circle cx="1350" cy="440" r="3.5" fill="#FFF9C4" opacity="0.55"/>
+  <circle cx="700" cy="300" r="2.5" fill="#FFF9C4" opacity="0.45"/>
+  <circle cx="900" cy="280" r="2.5" fill="#FFF9C4" opacity="0.4"/>
+  <circle cx="500" cy="350" r="2" fill="#FFEE58" opacity="0.35"/>
+  <circle cx="1250" cy="350" r="2" fill="#FFEE58" opacity="0.35"/>
+  <!-- Firefly glow halos -->
+  <circle cx="300" cy="450" r="10" fill="#FFF9C4" opacity="0.15" filter="url(#soft)"/>
+  <circle cx="1000" cy="420" r="10" fill="#FFF9C4" opacity="0.15" filter="url(#soft)"/>
+  <circle cx="600" cy="400" r="8" fill="#FFF9C4" opacity="0.12" filter="url(#soft)"/>
+
+  <!-- Title -->
+  <text x="800" y="450" text-anchor="middle" fill="#1B5E20" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">高教东公园</text>
+  <text x="800" y="500" text-anchor="middle" fill="#2E7D32" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">我的心也痒，我没说</text>
 </svg>

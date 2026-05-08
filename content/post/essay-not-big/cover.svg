@@ -2,41 +2,88 @@
   <defs>
     <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
       <stop stop-color="#F3E5F5"/>
+      <stop offset="0.5" stop-color="#E1BEE7"/>
       <stop offset="1" stop-color="#CE93D8"/>
     </linearGradient>
-    <radialGradient id="moonGlow" cx="1150" cy="200" r="250" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFFFF" stop-opacity="0.4"/>
+    <radialGradient id="moonGlow" cx="1100" cy="200" r="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.45"/>
       <stop offset="1" stop-color="#F3E5F5" stop-opacity="0"/>
     </radialGradient>
-    <filter id="soft"><feGaussianBlur stdDeviation="12"/></filter>
+    <radialGradient id="lampGlow" cx="300" cy="550" r="150" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8E1" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#F3E5F5" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="4"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="12"/></filter>
   </defs>
+
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <circle cx="1150" cy="200" r="250" fill="url(#moonGlow)"/>
-  <!-- Moon -->
-  <circle cx="1150" cy="200" r="60" fill="#FFFFFF" opacity="0.9"/>
-  <circle cx="1165" cy="190" r="55" fill="#F3E5F5" opacity="0.6"/>
-  <!-- Stars peeking in -->
-  <circle cx="1000" cy="120" r="4" fill="#CE93D8" opacity="0.6"/>
-  <circle cx="1300" cy="150" r="3" fill="#AB47BC" opacity="0.5"/>
-  <circle cx="1050" cy="280" r="3.5" fill="#CE93D8" opacity="0.5"/>
-  <circle cx="1350" cy="250" r="2.5" fill="#AB47BC" opacity="0.4"/>
-  <circle cx="900" cy="180" r="3" fill="#E1BEE7" opacity="0.6"/>
+
   <!-- Window frame -->
-  <rect x="880" y="100" width="450" height="550" rx="20" stroke="#AB47BC" stroke-width="2" fill="none" opacity="0.3"/>
-  <line x1="1105" y1="100" x2="1105" y2="650" stroke="#AB47BC" stroke-width="1.5" opacity="0.2"/>
-  <line x1="880" y1="375" x2="1330" y2="375" stroke="#AB47BC" stroke-width="1.5" opacity="0.2"/>
-  <!-- Curtain curves -->
-  <path d="M880 100C860 250 870 400 850 550C840 650 860 750 880 650" stroke="#CE93D8" stroke-width="3" fill="none" opacity="0.4"/>
-  <path d="M1330 100C1350 250 1340 400 1360 550C1370 650 1350 750 1330 650" stroke="#CE93D8" stroke-width="3" fill="none" opacity="0.4"/>
-  <!-- Soft bedroom curves (blanket) -->
-  <path d="M200 700C400 680 700 670 1000 680C1200 688 1400 700 1500 710" stroke="#AB47BC" stroke-width="2.5" fill="none" opacity="0.25"/>
-  <path d="M250 720C450 705 700 698 950 705C1150 712 1350 720 1450 728" stroke="#CE93D8" stroke-width="2" fill="none" opacity="0.2"/>
-  <!-- Decorative circles (bokeh) -->
-  <circle cx="200" cy="300" r="80" fill="#E1BEE7" opacity="0.2" filter="url(#soft)"/>
-  <circle cx="400" cy="600" r="60" fill="#CE93D8" opacity="0.15" filter="url(#soft)"/>
-  <circle cx="1400" cy="700" r="70" fill="#E1BEE7" opacity="0.18" filter="url(#soft)"/>
-  <circle cx="650" cy="200" r="45" fill="#F3E5F5" opacity="0.3" filter="url(#soft)"/>
-  <circle cx="300" cy="750" r="55" fill="#CE93D8" opacity="0.12" filter="url(#soft)"/>
+  <rect x="850" y="80" width="550" height="650" rx="8" stroke="#7B1FA2" stroke-width="3" fill="#4A148C" opacity="0.1"/>
+  <!-- Window panes -->
+  <line x1="1125" y1="80" x2="1125" y2="730" stroke="#7B1FA2" stroke-width="2" opacity="0.2"/>
+  <line x1="850" y1="405" x2="1400" y2="405" stroke="#7B1FA2" stroke-width="2" opacity="0.2"/>
+  <!-- Window sill -->
+  <rect x="840" y="730" width="570" height="12" rx="3" fill="#7B1FA2" opacity="0.25"/>
+
+  <!-- Moonlight through window -->
+  <circle cx="1100" cy="200" r="300" fill="url(#moonGlow)"/>
+  <!-- Moon -->
+  <circle cx="1100" cy="200" r="50" fill="#FFFFFF" opacity="0.85"/>
+  <circle cx="1115" cy="190" r="45" fill="#F3E5F5" opacity="0.5"/>
+
+  <!-- Stars visible outside window -->
+  <circle cx="950" cy="130" r="3" fill="#FFFFFF" opacity="0.7"/>
+  <circle cx="1000" cy="180" r="2" fill="#FFFFFF" opacity="0.6"/>
+  <circle cx="1250" cy="120" r="2.5" fill="#FFFFFF" opacity="0.65"/>
+  <circle cx="1300" cy="200" r="2" fill="#FFFFFF" opacity="0.55"/>
+  <circle cx="1350" cy="140" r="3" fill="#FFFFFF" opacity="0.6"/>
+  <circle cx="920" cy="250" r="2" fill="#FFFFFF" opacity="0.5"/>
+  <circle cx="1380" cy="300" r="2.5" fill="#FFFFFF" opacity="0.5"/>
+  <circle cx="1050" cy="320" r="1.5" fill="#FFFFFF" opacity="0.45"/>
+  <!-- Star twinkle crosses -->
+  <g stroke="#FFFFFF" stroke-width="1" opacity="0.5">
+    <line x1="950" y1="126" x2="950" y2="134"/>
+    <line x1="946" y1="130" x2="954" y2="130"/>
+    <line x1="1350" y1="136" x2="1350" y2="144"/>
+    <line x1="1346" y1="140" x2="1354" y2="140"/>
+  </g>
+
+  <!-- Curtain blowing in breeze (left curtain) -->
+  <path d="M850 80C830 200 820 350 840 500C850 580 835 650 850 730" stroke="#BA68C8" stroke-width="3" fill="none" opacity="0.5"/>
+  <path d="M850 80C870 150 860 250 840 350C820 450 830 550 820 650C815 690 825 720 850 730" fill="#BA68C8" opacity="0.12"/>
+  <!-- Right curtain (less blown) -->
+  <path d="M1400 80C1410 200 1415 350 1405 500C1400 580 1410 650 1400 730" stroke="#BA68C8" stroke-width="3" fill="none" opacity="0.45"/>
+  <path d="M1400 80C1390 150 1395 280 1405 400C1415 520 1408 630 1400 730" fill="#BA68C8" opacity="0.1"/>
+
+  <!-- Bed corner with rumpled sheets -->
+  <path d="M0 650C100 640 250 635 400 640C550 645 700 650 850 655C900 657 950 660 1000 665L1000 900L0 900Z" fill="#CE93D8" opacity="0.2"/>
+  <!-- Sheet folds/rumples -->
+  <path d="M100 680C150 670 200 675 250 668C300 661 350 665 400 660" stroke="#AB47BC" stroke-width="2" fill="none" opacity="0.2"/>
+  <path d="M200 710C260 700 320 705 380 698C440 691 500 695 560 690" stroke="#BA68C8" stroke-width="1.5" fill="none" opacity="0.18"/>
+  <path d="M50 730C120 722 190 728 260 720C330 712 400 718 470 712" stroke="#AB47BC" stroke-width="1.5" fill="none" opacity="0.15"/>
+  <!-- Pillow -->
+  <ellipse cx="200" cy="620" rx="100" ry="35" fill="#E1BEE7" opacity="0.35"/>
+  <ellipse cx="200" cy="620" rx="80" ry="25" fill="#F3E5F5" opacity="0.25"/>
+
+  <!-- Soft lamp on bedside -->
+  <rect x="280" y="520" width="40" height="50" rx="4" fill="#5D4037" opacity="0.3"/>
+  <!-- Lamp shade -->
+  <path d="M270 520C275 490 295 475 300 475C305 475 325 490 330 520Z" fill="#FFF8E1" opacity="0.35"/>
+  <!-- Lamp glow -->
+  <circle cx="300" cy="550" r="150" fill="url(#lampGlow)"/>
+  <circle cx="300" cy="500" r="20" fill="#FFF8E1" opacity="0.3" filter="url(#soft)"/>
+
+  <!-- Moonlight beam on floor -->
+  <path d="M900 730L950 900L1350 900L1350 730Z" fill="#FFFFFF" opacity="0.04"/>
+
+  <!-- Floating dust in moonlight -->
+  <circle cx="1000" cy="500" r="1.5" fill="#FFFFFF" opacity="0.4"/>
+  <circle cx="1050" cy="550" r="1" fill="#FFFFFF" opacity="0.35"/>
+  <circle cx="1150" cy="480" r="1.5" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="1200" cy="600" r="1" fill="#FFFFFF" opacity="0.3"/>
+
   <!-- Title -->
   <text x="800" y="450" text-anchor="middle" fill="#4A148C" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">不大</text>
   <text x="800" y="500" text-anchor="middle" fill="#6A1B9A" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">不大和喜欢，是两件事</text>

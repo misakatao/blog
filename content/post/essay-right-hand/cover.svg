@@ -2,42 +2,67 @@
   <defs>
     <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FFF8E1"/>
-      <stop offset="0.7" stop-color="#FFE082"/>
-      <stop offset="1" stop-color="#FFD54F"/>
+      <stop offset="0.5" stop-color="#FFE0B2"/>
+      <stop offset="1" stop-color="#FFB74D"/>
     </linearGradient>
-    <radialGradient id="sunGlow" cx="1250" cy="300" r="350" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FF8F00" stop-opacity="0.3"/>
-      <stop offset="1" stop-color="#FFF8E1" stop-opacity="0"/>
+    <radialGradient id="windowLight" cx="1150" cy="350" r="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.5"/>
+      <stop offset="0.5" stop-color="#FFB74D" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#FFB74D" stop-opacity="0"/>
     </radialGradient>
-    <filter id="soft"><feGaussianBlur stdDeviation="12"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="18"/></filter>
+    <linearGradient id="rays" x1="1150" y1="100" x2="400" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8F00" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#FF8F00" stop-opacity="0"/>
+    </linearGradient>
   </defs>
   <rect width="1600" height="900" fill="url(#bg)"/>
-  <circle cx="1250" cy="300" r="350" fill="url(#sunGlow)"/>
-  <!-- Sunset window -->
-  <rect x="950" y="120" width="420" height="520" rx="15" stroke="#E65100" stroke-width="2.5" fill="none" opacity="0.3"/>
-  <line x1="1160" y1="120" x2="1160" y2="640" stroke="#E65100" stroke-width="1.5" opacity="0.2"/>
-  <line x1="950" y1="380" x2="1370" y2="380" stroke="#E65100" stroke-width="1.5" opacity="0.2"/>
-  <!-- Warm light through window -->
-  <path d="M970 140L1350 140L1250 800L870 800Z" fill="#FF8F00" opacity="0.06"/>
-  <!-- Hand shadow silhouette -->
-  <g transform="translate(1050, 380)" opacity="0.2">
-    <path d="M0 100C5 80 8 50 10 30C12 15 10 5 7 8C5 15 5 40 4 60
-             L0 60C2 35 0 8 -3 0C-6 -6 -10 -3 -8 5C-6 18 -2 42 0 60
-             L-5 60C-6 35 -10 8 -14 0C-17 -6 -20 -2 -18 5C-15 20 -9 45 -7 60
-             L-12 60C-14 42 -20 15 -24 7C-27 0 -30 4 -28 10C-25 24 -16 48 -13 65
-             L-18 65C-21 50 -30 28 -35 22C-38 16 -42 20 -40 27C-36 38 -24 58 -20 72
-             C-14 92 -8 110 0 100Z" fill="#E65100"/>
+  <!-- Window glow -->
+  <circle cx="1150" cy="350" r="400" fill="url(#windowLight)"/>
+  <!-- Window frame -->
+  <rect x="950" y="80" width="400" height="520" rx="8" stroke="#8D6E63" stroke-width="6" fill="none" opacity="0.6"/>
+  <rect x="960" y="90" width="380" height="500" rx="4" fill="#FF8F00" opacity="0.1"/>
+  <!-- Window crossbars -->
+  <line x1="1150" y1="80" x2="1150" y2="600" stroke="#8D6E63" stroke-width="4" opacity="0.5"/>
+  <line x1="950" y1="340" x2="1350" y2="340" stroke="#8D6E63" stroke-width="4" opacity="0.5"/>
+  <!-- Sunset through window - warm orange circle -->
+  <circle cx="1150" cy="280" r="70" fill="#FF8F00" opacity="0.5"/>
+  <circle cx="1150" cy="280" r="50" fill="#FFD54F" opacity="0.7"/>
+  <!-- Light rays streaming from window -->
+  <path d="M960 100L400 500L500 700L960 340Z" fill="url(#rays)"/>
+  <path d="M960 340L300 700L500 850L960 600Z" fill="url(#rays)" opacity="0.7"/>
+  <path d="M1340 100L1500 400L1550 650L1340 340Z" fill="#FF8F00" opacity="0.04"/>
+  <!-- Dust particles in light beam -->
+  <circle cx="700" cy="350" r="3" fill="#FFD54F" opacity="0.6"/>
+  <circle cx="600" cy="450" r="2.5" fill="#FFD54F" opacity="0.5"/>
+  <circle cx="750" cy="500" r="2" fill="#FFD54F" opacity="0.45"/>
+  <circle cx="550" cy="380" r="3.5" fill="#FF8F00" opacity="0.35"/>
+  <circle cx="650" cy="550" r="2" fill="#FFD54F" opacity="0.4"/>
+  <circle cx="500" cy="500" r="2.5" fill="#FFD54F" opacity="0.5"/>
+  <circle cx="800" cy="420" r="1.5" fill="#FFD54F" opacity="0.55"/>
+  <circle cx="680" cy="600" r="2" fill="#FF8F00" opacity="0.3"/>
+  <circle cx="850" cy="300" r="2" fill="#FFD54F" opacity="0.4"/>
+  <!-- Hand silhouette reaching toward window -->
+  <g transform="translate(750, 350) scale(1.8)" opacity="0.3">
+    <path d="M0 80C5 60 8 35 10 18C12 8 10 2 7 5C5 12 4 30 3 45
+             L-1 45C1 25 0 5 -2 -2C-5 -7 -8 -4 -6 3C-4 14 -1 32 0 45
+             L-5 45C-6 25 -9 5 -12 -2C-14 -7 -17 -3 -15 3C-13 16 -8 34 -6 45
+             L-11 45C-13 32 -18 12 -22 5C-24 -1 -27 3 -25 8C-23 20 -15 38 -12 50
+             L-16 50C-19 38 -26 22 -30 16C-33 10 -36 14 -34 20C-31 30 -22 46 -18 56
+             C-13 72 -7 85 0 80Z" fill="#E65100"/>
   </g>
-  <!-- Warm light rays -->
-  <line x1="1250" y1="300" x2="600" y2="500" stroke="#FF8F00" stroke-width="1" opacity="0.1"/>
-  <line x1="1250" y1="300" x2="500" y2="700" stroke="#FF8F00" stroke-width="1" opacity="0.08"/>
-  <line x1="1250" y1="300" x2="800" y2="800" stroke="#FFD54F" stroke-width="1" opacity="0.1"/>
-  <!-- Decorative circles -->
-  <circle cx="200" cy="250" r="70" fill="#FFD54F" opacity="0.2" filter="url(#soft)"/>
-  <circle cx="400" cy="650" r="55" fill="#FF8F00" opacity="0.12" filter="url(#soft)"/>
-  <circle cx="700" cy="180" r="50" fill="#FFF8E1" opacity="0.4" filter="url(#soft)"/>
-  <circle cx="150" cy="600" r="45" fill="#FFE082" opacity="0.2" filter="url(#soft)"/>
-  <circle cx="600" cy="750" r="65" fill="#FFD54F" opacity="0.15" filter="url(#soft)"/>
+  <!-- Desk corner bottom-left -->
+  <path d="M0 750L600 720L600 900H0Z" fill="#8D6E63" opacity="0.15"/>
+  <line x1="0" y1="750" x2="600" y2="720" stroke="#6D4C41" stroke-width="2" opacity="0.25"/>
+  <!-- Pencil on desk -->
+  <line x1="150" y1="770" x2="350" y2="760" stroke="#FFD54F" stroke-width="4" opacity="0.5"/>
+  <polygon points="350,760 365,758 352,764" fill="#E65100" opacity="0.5"/>
+  <!-- Wall texture - subtle warm hues -->
+  <circle cx="200" cy="200" r="120" fill="#FFE0B2" opacity="0.2" filter="url(#soft)"/>
+  <circle cx="400" cy="700" r="80" fill="#FFB74D" opacity="0.1" filter="url(#soft)"/>
+  <!-- Warm ambient glow -->
+  <circle cx="900" cy="500" r="250" fill="#FFD54F" opacity="0.08" filter="url(#glow)"/>
   <!-- Title -->
   <text x="800" y="450" text-anchor="middle" fill="#E65100" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">我的右手像一头驴</text>
   <text x="800" y="500" text-anchor="middle" fill="#BF360C" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">它什么都记得</text>

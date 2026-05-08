@@ -1,37 +1,64 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg3" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FFF3E0"/>
       <stop offset="0.5" stop-color="#FFE0B2"/>
       <stop offset="1" stop-color="#FFCC80"/>
     </linearGradient>
-    <radialGradient id="warmLight" cx="700" cy="400" r="350" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFFFF" stop-opacity="0.4"/>
+    <radialGradient id="lampGlow" cx="350" cy="350" r="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.45"/>
+      <stop offset="0.5" stop-color="#FFCC80" stop-opacity="0.2"/>
       <stop offset="1" stop-color="#FFCC80" stop-opacity="0"/>
     </radialGradient>
-    <filter id="soft3"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="14"/></filter>
+    <linearGradient id="fabricSheen" x1="0" y1="300" x2="1600" y2="600" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.05"/>
+    </linearGradient>
   </defs>
-  <rect width="1600" height="900" fill="url(#bg3)"/>
-  <!-- Warm light center -->
-  <ellipse cx="700" cy="420" rx="400" ry="280" fill="url(#warmLight)"/>
-  <!-- Silky fabric drape lines -->
-  <path d="M200 300C450 280 700 310 950 290C1150 275 1350 295 1500 285" stroke="#E65100" stroke-width="1.5" opacity="0.12" fill="none"/>
-  <path d="M150 380C400 365 650 390 900 375C1100 362 1300 380 1500 370" stroke="#E65100" stroke-width="1.2" opacity="0.1" fill="none"/>
-  <path d="M250 460C500 448 750 470 1000 455C1200 443 1400 460 1550 452" stroke="#FFCC80" stroke-width="2" opacity="0.2" fill="none"/>
-  <path d="M100 540C350 528 600 550 850 535C1050 523 1300 540 1500 532" stroke="#E65100" stroke-width="1" opacity="0.08" fill="none"/>
-  <path d="M200 620C450 610 700 628 950 615C1150 605 1350 620 1550 612" stroke="#FFCC80" stroke-width="1.5" opacity="0.15" fill="none"/>
-  <!-- Decorative circles -->
-  <circle cx="300" cy="200" r="100" fill="#FFCC80" opacity="0.2" filter="url(#soft3)"/>
-  <circle cx="1300" cy="250" r="120" fill="#FFF3E0" opacity="0.35" filter="url(#soft3)"/>
-  <circle cx="150" cy="650" r="80" fill="#E65100" opacity="0.06" filter="url(#soft3)"/>
-  <circle cx="1400" cy="700" r="90" fill="#FFCC80" opacity="0.15" filter="url(#soft3)"/>
-  <circle cx="800" cy="750" r="70" fill="#FFE0B2" opacity="0.3"/>
-  <!-- Floating particles -->
-  <circle cx="500" cy="250" r="4" fill="#E65100" opacity="0.15"/>
-  <circle cx="1000" cy="300" r="3" fill="#E65100" opacity="0.12"/>
-  <circle cx="350" cy="500" r="3.5" fill="#FFCC80" opacity="0.25"/>
-  <circle cx="1150" cy="550" r="3" fill="#E65100" opacity="0.1"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <!-- Lamp glow -->
+  <ellipse cx="350" cy="350" rx="300" ry="250" fill="url(#lampGlow)"/>
+  <!-- Lamp stand -->
+  <line x1="250" y1="600" x2="250" y2="350" stroke="#BF360C" stroke-width="3" opacity="0.25"/>
+  <line x1="230" y1="600" x2="270" y2="600" stroke="#BF360C" stroke-width="3" opacity="0.2"/>
+  <!-- Lamp shade -->
+  <path d="M200 350C200 330 220 310 250 310C280 310 300 330 300 350" fill="none" stroke="#BF360C" stroke-width="2" opacity="0.25"/>
+  <path d="M190 350L310 350L290 280L210 280Z" fill="#FFCC80" opacity="0.3"/>
+  <!-- Lamp light cone -->
+  <path d="M210 350L150 600L350 600L290 350Z" fill="#FFD54F" opacity="0.06"/>
+  <!-- Draped fabric - main flowing curves -->
+  <path d="M400 200C600 180 900 220 1100 190C1300 160 1500 200 1600 180" stroke="#FFCC80" stroke-width="3" opacity="0.3" fill="none"/>
+  <path d="M350 280C580 260 850 300 1050 270C1250 240 1450 280 1600 260" stroke="#E65100" stroke-width="1.5" opacity="0.12" fill="none"/>
+  <path d="M300 360C550 345 820 380 1020 350C1220 320 1420 360 1600 340" stroke="#FFCC80" stroke-width="2" opacity="0.25" fill="none"/>
+  <path d="M380 440C600 425 870 460 1080 430C1280 400 1480 440 1600 420" stroke="#E65100" stroke-width="1.2" opacity="0.1" fill="none"/>
+  <path d="M350 520C580 508 850 540 1060 510C1260 480 1460 520 1600 500" stroke="#FFCC80" stroke-width="2" opacity="0.2" fill="none"/>
+  <path d="M400 600C620 588 880 620 1100 590C1300 560 1500 600 1600 580" stroke="#E65100" stroke-width="1" opacity="0.08" fill="none"/>
+  <!-- Fabric sheen overlay -->
+  <path d="M400 200C600 180 900 220 1100 190C1300 160 1500 200 1600 180V600C1500 620 1300 580 1100 610C900 640 600 600 400 620Z" fill="url(#fabricSheen)"/>
+  <!-- Light shining through fabric - bright spots -->
+  <ellipse cx="800" cy="350" rx="150" ry="80" fill="#FFFFFF" opacity="0.08" filter="url(#soft)"/>
+  <ellipse cx="1100" cy="280" rx="120" ry="60" fill="#FFFFFF" opacity="0.06" filter="url(#soft)"/>
+  <!-- Silky texture lines - finer detail -->
+  <path d="M500 250C650 240 800 260 950 248C1100 236 1250 255 1400 245" stroke="#FFFFFF" stroke-width="0.8" opacity="0.12" fill="none"/>
+  <path d="M450 330C620 320 790 340 960 328C1130 316 1300 335 1450 325" stroke="#FFFFFF" stroke-width="0.6" opacity="0.1" fill="none"/>
+  <path d="M480 410C650 400 820 420 990 408C1160 396 1330 415 1480 405" stroke="#FFFFFF" stroke-width="0.6" opacity="0.08" fill="none"/>
+  <!-- Cozy room corner - wall meeting floor -->
+  <line x1="0" y1="700" x2="1600" y2="700" stroke="#BF360C" stroke-width="1" opacity="0.08"/>
+  <!-- Soft shadows on floor -->
+  <ellipse cx="800" cy="780" rx="400" ry="60" fill="#BF360C" opacity="0.04" filter="url(#glow)"/>
+  <!-- Warm particles -->
+  <circle cx="500" cy="300" r="2" fill="#FFD54F" opacity="0.4"/>
+  <circle cx="700" cy="250" r="2.5" fill="#FFD54F" opacity="0.35"/>
+  <circle cx="900" cy="350" r="1.5" fill="#FFD54F" opacity="0.3"/>
+  <circle cx="1100" cy="400" r="2" fill="#FFD54F" opacity="0.25"/>
+  <circle cx="600" cy="500" r="2" fill="#FFD54F" opacity="0.3"/>
+  <!-- Ambient warmth -->
+  <circle cx="1400" cy="700" r="100" fill="#FFCC80" opacity="0.15" filter="url(#soft)"/>
+  <circle cx="200" cy="750" r="80" fill="#FFE0B2" opacity="0.2" filter="url(#soft)"/>
   <!-- Title -->
-  <text x="800" y="450" text-anchor="middle" fill="#E65100" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">无题（三）</text>
-  <text x="800" y="500" text-anchor="middle" fill="#E65100" fill-opacity="0.6" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">隔着一层丝袜</text>
+  <text x="800" y="450" text-anchor="middle" fill="#BF360C" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">无题（三）</text>
+  <text x="800" y="500" text-anchor="middle" fill="#BF360C" fill-opacity="0.6" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">隔着一层丝袜</text>
 </svg>

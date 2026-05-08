@@ -1,42 +1,83 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg4" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
       <stop stop-color="#E0F7FA"/>
       <stop offset="0.5" stop-color="#B2EBF2"/>
       <stop offset="1" stop-color="#80DEEA"/>
     </linearGradient>
-    <radialGradient id="steamGlow4" cx="800" cy="400" r="350" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#FFFFFF" stop-opacity="0.45"/>
-      <stop offset="1" stop-color="#80DEEA" stop-opacity="0"/>
+    <radialGradient id="steamGlow" cx="800" cy="400" r="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#E0F7FA" stop-opacity="0"/>
     </radialGradient>
-    <filter id="soft4"><feGaussianBlur stdDeviation="10"/></filter>
-    <filter id="steamF"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="steam"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="14"/></filter>
+    <linearGradient id="tile" x1="800" y1="700" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4DD0E1" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#00695C" stop-opacity="0.1"/>
+    </linearGradient>
   </defs>
-  <rect width="1600" height="900" fill="url(#bg4)"/>
-  <!-- Central steam glow -->
-  <ellipse cx="800" cy="400" rx="400" ry="300" fill="url(#steamGlow4)"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <!-- Steam atmosphere -->
+  <ellipse cx="800" cy="400" rx="500" ry="300" fill="url(#steamGlow)"/>
+  <!-- Tile floor -->
+  <rect x="0" y="700" width="1600" height="200" fill="url(#tile)"/>
+  <!-- Tile grid lines -->
+  <line x1="0" y1="750" x2="1600" y2="750" stroke="#00695C" stroke-width="0.8" opacity="0.08"/>
+  <line x1="0" y1="800" x2="1600" y2="800" stroke="#00695C" stroke-width="0.8" opacity="0.08"/>
+  <line x1="0" y1="850" x2="1600" y2="850" stroke="#00695C" stroke-width="0.8" opacity="0.08"/>
+  <line x1="200" y1="700" x2="200" y2="900" stroke="#00695C" stroke-width="0.5" opacity="0.06"/>
+  <line x1="400" y1="700" x2="400" y2="900" stroke="#00695C" stroke-width="0.5" opacity="0.06"/>
+  <line x1="600" y1="700" x2="600" y2="900" stroke="#00695C" stroke-width="0.5" opacity="0.06"/>
+  <line x1="800" y1="700" x2="800" y2="900" stroke="#00695C" stroke-width="0.5" opacity="0.06"/>
+  <line x1="1000" y1="700" x2="1000" y2="900" stroke="#00695C" stroke-width="0.5" opacity="0.06"/>
+  <line x1="1200" y1="700" x2="1200" y2="900" stroke="#00695C" stroke-width="0.5" opacity="0.06"/>
+  <line x1="1400" y1="700" x2="1400" y2="900" stroke="#00695C" stroke-width="0.5" opacity="0.06"/>
+  <!-- Shower glass panel -->
+  <rect x="1050" y="100" width="400" height="600" rx="5" fill="#FFFFFF" opacity="0.06"/>
+  <rect x="1050" y="100" width="400" height="600" rx="5" stroke="#4DD0E1" stroke-width="2" fill="none" opacity="0.15"/>
+  <!-- Condensation on glass -->
+  <circle cx="1150" cy="200" r="4" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="1200" cy="250" r="3" fill="#FFFFFF" opacity="0.25"/>
+  <circle cx="1300" cy="180" r="3.5" fill="#FFFFFF" opacity="0.28"/>
+  <circle cx="1250" cy="350" r="4" fill="#FFFFFF" opacity="0.22"/>
+  <circle cx="1350" cy="300" r="3" fill="#FFFFFF" opacity="0.2"/>
+  <circle cx="1180" cy="400" r="3.5" fill="#FFFFFF" opacity="0.25"/>
+  <circle cx="1320" cy="450" r="3" fill="#FFFFFF" opacity="0.18"/>
+  <circle cx="1100" cy="320" r="2.5" fill="#FFFFFF" opacity="0.22"/>
+  <!-- Towel hook on wall -->
+  <circle cx="350" cy="250" r="8" fill="#00695C" opacity="0.2"/>
+  <line x1="350" y1="258" x2="350" y2="270" stroke="#00695C" stroke-width="3" opacity="0.2"/>
+  <!-- Towel hanging -->
+  <path d="M310 270C310 268 330 265 350 265C370 265 390 268 390 270L395 500L305 500Z" fill="#FFFFFF" opacity="0.5"/>
+  <path d="M305 500L395 500L392 520L308 520Z" fill="#E0F7FA" opacity="0.4"/>
+  <!-- Towel folds -->
+  <line x1="325" y1="280" x2="322" y2="500" stroke="#B2EBF2" stroke-width="1" opacity="0.3"/>
+  <line x1="350" y1="270" x2="350" y2="500" stroke="#B2EBF2" stroke-width="0.8" opacity="0.25"/>
+  <line x1="375" y1="278" x2="378" y2="500" stroke="#B2EBF2" stroke-width="1" opacity="0.3"/>
+  <!-- Mirror with water droplets -->
+  <rect x="550" y="120" width="300" height="380" rx="10" fill="#FFFFFF" opacity="0.08"/>
+  <rect x="550" y="120" width="300" height="380" rx="10" stroke="#4DD0E1" stroke-width="2" fill="none" opacity="0.2"/>
+  <!-- Droplets on mirror -->
+  <circle cx="600" cy="180" r="3" fill="#FFFFFF" opacity="0.35"/>
+  <path d="M600 177C600 175 602 173 603 175C604 177 603 180 600 183C597 180 596 177 597 175C598 173 600 175 600 177Z" fill="#FFFFFF" opacity="0.2"/>
+  <circle cx="750" cy="220" r="2.5" fill="#FFFFFF" opacity="0.3"/>
+  <circle cx="680" cy="300" r="3" fill="#FFFFFF" opacity="0.28"/>
+  <circle cx="800" cy="350" r="2" fill="#FFFFFF" opacity="0.25"/>
+  <circle cx="620" cy="400" r="2.5" fill="#FFFFFF" opacity="0.22"/>
   <!-- Steam wisps -->
-  <g opacity="0.2" filter="url(#steamF)">
-    <path d="M500 750C510 680 495 620 505 560C515 500 530 450 520 400" stroke="white" stroke-width="18" stroke-linecap="round" fill="none"/>
-    <path d="M750 770C762 700 748 640 758 580C768 520 782 470 776 410" stroke="white" stroke-width="14" stroke-linecap="round" fill="none"/>
-    <path d="M1050 760C1058 690 1045 630 1055 570C1065 510 1078 460 1072 400" stroke="white" stroke-width="16" stroke-linecap="round" fill="none"/>
+  <g opacity="0.15" filter="url(#steam)">
+    <path d="M500 700C510 640 495 580 505 520C515 460 525 410 520 360" stroke="white" stroke-width="20" stroke-linecap="round" fill="none"/>
+    <path d="M750 720C762 660 748 600 758 540C768 480 778 430 774 380" stroke="white" stroke-width="16" stroke-linecap="round" fill="none"/>
+    <path d="M1000 710C1008 650 998 590 1005 530C1012 470 1022 420 1018 370" stroke="white" stroke-width="14" stroke-linecap="round" fill="none"/>
   </g>
-  <!-- Water droplets -->
-  <circle cx="350" cy="250" r="5" fill="#006064" opacity="0.15"/>
-  <circle cx="500" cy="300" r="4" fill="#006064" opacity="0.12"/>
-  <circle cx="700" cy="220" r="4.5" fill="#006064" opacity="0.14"/>
-  <circle cx="1000" cy="280" r="5" fill="#006064" opacity="0.12"/>
-  <circle cx="1200" cy="230" r="4" fill="#006064" opacity="0.1"/>
-  <circle cx="1350" cy="310" r="3.5" fill="#006064" opacity="0.13"/>
-  <circle cx="450" cy="600" r="4" fill="#006064" opacity="0.1"/>
-  <circle cx="1100" cy="620" r="3.5" fill="#006064" opacity="0.08"/>
-  <!-- Decorative bokeh -->
-  <circle cx="200" cy="180" r="90" fill="#80DEEA" opacity="0.2" filter="url(#soft4)"/>
-  <circle cx="1400" cy="200" r="110" fill="#E0F7FA" opacity="0.35" filter="url(#soft4)"/>
-  <circle cx="300" cy="700" r="70" fill="#006064" opacity="0.06" filter="url(#soft4)"/>
-  <circle cx="1300" cy="680" r="80" fill="#80DEEA" opacity="0.15" filter="url(#soft4)"/>
-  <circle cx="800" cy="150" r="60" fill="#B2EBF2" opacity="0.3"/>
+  <!-- Small puddle on tile floor -->
+  <ellipse cx="700" cy="780" rx="80" ry="15" fill="#4DD0E1" opacity="0.12"/>
+  <ellipse cx="700" cy="780" rx="50" ry="8" fill="#FFFFFF" opacity="0.08"/>
+  <!-- Ambient circles -->
+  <circle cx="150" cy="600" r="80" fill="#B2EBF2" opacity="0.15" filter="url(#soft)"/>
+  <circle cx="1450" cy="750" r="90" fill="#4DD0E1" opacity="0.1" filter="url(#soft)"/>
   <!-- Title -->
-  <text x="800" y="450" text-anchor="middle" fill="#006064" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">无题（四）</text>
-  <text x="800" y="500" text-anchor="middle" fill="#006064" fill-opacity="0.6" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">那一刻，我觉得毛巾比我幸福</text>
+  <text x="800" y="450" text-anchor="middle" fill="#00695C" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">无题（四）</text>
+  <text x="800" y="500" text-anchor="middle" fill="#00695C" fill-opacity="0.6" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">那一刻，我觉得毛巾比我幸福</text>
 </svg>

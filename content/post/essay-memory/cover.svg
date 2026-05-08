@@ -5,50 +5,79 @@
       <stop offset="0.5" stop-color="#BBDEFB"/>
       <stop offset="1" stop-color="#90CAF9"/>
     </linearGradient>
-    <radialGradient id="puddle" cx="1100" cy="750" r="80" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#64B5F6" stop-opacity="0.3"/>
-      <stop offset="1" stop-color="#90CAF9" stop-opacity="0"/>
+    <radialGradient id="hallLight" cx="950" cy="350" r="200" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8E1" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#BBDEFB" stop-opacity="0"/>
     </radialGradient>
     <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+    <filter id="dimGlow"><feGaussianBlur stdDeviation="10"/></filter>
   </defs>
 
   <rect width="1600" height="900" fill="url(#bg)"/>
 
-  <!-- Old doorway/wall -->
-  <rect x="900" y="200" width="400" height="600" rx="6" fill="#1565C0" opacity="0.1"/>
-  <rect x="920" y="220" width="360" height="560" rx="4" fill="#E3F2FD" opacity="0.15"/>
-  <path d="M920 220L920 780L1280 780L1280 220L1100 180Z" fill="#1565C0" opacity="0.05"/>
+  <!-- Old doorway/wall structure -->
+  <rect x="700" y="100" width="500" height="700" fill="#1565C0" opacity="0.12"/>
+  <!-- Door frame -->
+  <rect x="850" y="200" width="200" height="450" rx="4" fill="#0D47A1" opacity="0.08"/>
+  <rect x="850" y="200" width="200" height="450" rx="4" stroke="#1565C0" stroke-width="3" fill="none" opacity="0.3"/>
+  <!-- Door arch -->
+  <path d="M850 200C850 160 900 140 950 140C1000 140 1050 160 1050 200" stroke="#1565C0" stroke-width="3" fill="#0D47A1" opacity="0.15"/>
+
+  <!-- Peeling wall texture -->
+  <path d="M720 300C730 295 740 305 735 310C730 315 720 310 720 300Z" fill="#90CAF9" opacity="0.3"/>
+  <path d="M1150 400C1160 395 1170 405 1165 410C1160 415 1150 410 1150 400Z" fill="#90CAF9" opacity="0.25"/>
+  <path d="M750 550C758 545 768 552 764 558C760 564 748 558 750 550Z" fill="#64B5F6" opacity="0.2"/>
+  <path d="M1130 250C1138 248 1142 255 1138 260C1134 265 1125 258 1130 250Z" fill="#64B5F6" opacity="0.22"/>
+  <rect x="730" y="450" width="15" height="8" fill="#BBDEFB" opacity="0.2"/>
+  <rect x="1160" y="350" width="12" height="6" fill="#BBDEFB" opacity="0.18"/>
+
+  <!-- Dim hallway light (warm) -->
+  <circle cx="950" cy="350" r="200" fill="url(#hallLight)"/>
+  <!-- Light fixture suggestion -->
+  <rect x="935" y="210" width="30" height="10" rx="3" fill="#FFF8E1" opacity="0.3"/>
+  <circle cx="950" cy="230" r="15" fill="#FFF8E1" opacity="0.25" filter="url(#dimGlow)"/>
 
   <!-- Umbrella leaning against wall -->
-  <line x1="1050" y1="450" x2="1080" y2="720" stroke="#1565C0" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
-  <path d="M1080 720C1080 735 1072 740 1066 735" stroke="#1565C0" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
-  <path d="M1010 450C1020 430 1040 420 1060 420C1080 420 1095 430 1100 450" stroke="#1565C0" stroke-width="3" fill="#64B5F6" opacity="0.4"/>
+  <line x1="790" y1="420" x2="815" y2="680" stroke="#1565C0" stroke-width="5" stroke-linecap="round" opacity="0.65"/>
+  <!-- Umbrella hook -->
+  <path d="M815 680C815 700 808 710 800 705" stroke="#1565C0" stroke-width="4.5" fill="none" stroke-linecap="round" opacity="0.65"/>
+  <!-- Umbrella canopy (folded) -->
+  <path d="M760 420C770 400 785 390 800 390C815 390 825 400 830 420" stroke="#1565C0" stroke-width="3" fill="#64B5F6" opacity="0.4"/>
+  <line x1="760" y1="420" x2="830" y2="420" stroke="#1565C0" stroke-width="2" opacity="0.35"/>
 
-  <!-- Small puddle under umbrella -->
-  <ellipse cx="1085" cy="750" rx="40" ry="8" fill="url(#puddle)"/>
-  <ellipse cx="1085" cy="750" rx="20" ry="4" fill="#64B5F6" opacity="0.2"/>
+  <!-- Puddle under umbrella with ripples -->
+  <ellipse cx="810" cy="720" rx="70" ry="14" fill="#64B5F6" opacity="0.25"/>
+  <ellipse cx="810" cy="720" rx="40" ry="8" fill="#90CAF9" opacity="0.2"/>
+  <ellipse cx="810" cy="720" rx="25" ry="5" stroke="#64B5F6" stroke-width="0.8" fill="none" opacity="0.35"/>
+  <ellipse cx="810" cy="720" rx="50" ry="10" stroke="#64B5F6" stroke-width="0.6" fill="none" opacity="0.25"/>
+  <ellipse cx="810" cy="720" rx="70" ry="14" stroke="#64B5F6" stroke-width="0.5" fill="none" opacity="0.15"/>
+  <!-- Drip from umbrella tip -->
+  <circle cx="816" cy="700" r="3" fill="#64B5F6" opacity="0.5"/>
+  <circle cx="814" cy="710" r="2" fill="#64B5F6" opacity="0.4"/>
 
-  <!-- Water drops from umbrella -->
-  <circle cx="1082" cy="730" r="2.5" fill="#64B5F6" opacity="0.5"/>
-  <circle cx="1084" cy="740" r="2" fill="#64B5F6" opacity="0.4"/>
+  <!-- Pair of wet shoes near door -->
+  <path d="M1000 670C1000 665 1005 660 1015 660L1035 660C1040 660 1045 663 1045 668L1045 678C1045 682 1040 685 1035 685L1010 685C1005 685 1000 682 1000 678Z" fill="#4E342E" opacity="0.55"/>
+  <path d="M1055 670C1055 665 1060 660 1070 660L1090 660C1095 660 1100 663 1100 668L1100 678C1100 682 1095 685 1090 685L1065 685C1060 685 1055 682 1055 678Z" fill="#4E342E" opacity="0.55"/>
+  <!-- Wet marks around shoes -->
+  <ellipse cx="1025" cy="688" rx="25" ry="5" fill="#64B5F6" opacity="0.15"/>
+  <ellipse cx="1080" cy="688" rx="25" ry="5" fill="#64B5F6" opacity="0.15"/>
 
-  <!-- Decorative bokeh circles -->
-  <circle cx="200" cy="150" r="50" fill="#90CAF9" opacity="0.15"/>
-  <circle cx="1400" cy="120" r="60" fill="#BBDEFB" opacity="0.2"/>
-  <circle cx="100" cy="500" r="40" fill="#64B5F6" opacity="0.1"/>
-  <circle cx="600" cy="800" r="45" fill="#90CAF9" opacity="0.15"/>
-  <circle cx="1500" cy="600" r="35" fill="#BBDEFB" opacity="0.18"/>
+  <!-- Floor -->
+  <path d="M700 800L1200 800L1200 900L700 900Z" fill="#1565C0" opacity="0.05"/>
+  <line x1="700" y1="800" x2="1200" y2="800" stroke="#1565C0" stroke-width="1" opacity="0.15"/>
 
-  <!-- Soft clouds -->
-  <ellipse cx="300" cy="100" rx="130" ry="40" fill="#FFFFFF" opacity="0.3" filter="url(#soft)"/>
-  <ellipse cx="700" cy="80" rx="100" ry="30" fill="#FFFFFF" opacity="0.25" filter="url(#soft)"/>
+  <!-- Wall crack details -->
+  <path d="M1170 500L1175 520L1172 540" stroke="#90CAF9" stroke-width="1" fill="none" opacity="0.2"/>
+  <path d="M725 380L730 400L728 410" stroke="#90CAF9" stroke-width="0.8" fill="none" opacity="0.18"/>
 
-  <!-- Abstract organic shapes (leaves/nature) -->
-  <path d="M150 650C160 635 175 635 178 650C181 665 168 670 158 665C148 660 145 655 150 650Z" fill="#64B5F6" opacity="0.3"/>
-  <path d="M400 300C408 288 418 290 420 300C422 310 413 315 406 312C399 309 396 305 400 300Z" fill="#90CAF9" opacity="0.25"/>
-  <path d="M1400 450C1408 438 1418 440 1420 450C1422 460 1413 465 1406 462C1399 459 1396 455 1400 450Z" fill="#64B5F6" opacity="0.3"/>
+  <!-- Subtle night-time atmosphere particles -->
+  <circle cx="400" cy="300" r="2" fill="#BBDEFB" opacity="0.3"/>
+  <circle cx="300" cy="500" r="1.5" fill="#90CAF9" opacity="0.25"/>
+  <circle cx="1350" cy="400" r="2" fill="#BBDEFB" opacity="0.28"/>
+  <circle cx="1400" cy="600" r="1.5" fill="#90CAF9" opacity="0.22"/>
+  <circle cx="500" cy="700" r="2" fill="#BBDEFB" opacity="0.2"/>
 
   <!-- Title -->
-  <text x="800" y="450" text-anchor="middle" fill="#1565C0" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">回忆</text>
-  <text x="800" y="500" text-anchor="middle" fill="#1976D2" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">伞靠在墙角，滴了一夜的水</text>
+  <text x="800" y="450" text-anchor="middle" fill="#0D47A1" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">回忆</text>
+  <text x="800" y="500" text-anchor="middle" fill="#1565C0" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">伞靠在墙角，滴了一夜的水</text>
 </svg>
