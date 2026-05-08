@@ -1,0 +1,99 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rainSky" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1B2A"/>
+      <stop offset="0.5" stop-color="#1B3A5C"/>
+      <stop offset="1" stop-color="#2C5F7A"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A8D8EA" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#1B4F72" stop-opacity="0.15"/>
+    </linearGradient>
+    <radialGradient id="dropGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop stop-color="#A8D8EA" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#A8D8EA" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="2"/></filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#rainSky)"/>
+  <rect width="1600" height="900" fill="url(#glass)"/>
+
+  <g stroke="#A8D8EA" stroke-width="1" opacity="0.3">
+    <line x1="80" y1="0" x2="50" y2="900"/>
+    <line x1="200" y1="0" x2="170" y2="900"/>
+    <line x1="320" y1="0" x2="290" y2="900"/>
+    <line x1="440" y1="0" x2="410" y2="900"/>
+    <line x1="560" y1="0" x2="530" y2="900"/>
+    <line x1="680" y1="0" x2="650" y2="900"/>
+    <line x1="800" y1="0" x2="770" y2="900"/>
+    <line x1="920" y1="0" x2="890" y2="900"/>
+    <line x1="1040" y1="0" x2="1010" y2="900"/>
+    <line x1="1160" y1="0" x2="1130" y2="900"/>
+    <line x1="1280" y1="0" x2="1250" y2="900"/>
+    <line x1="1400" y1="0" x2="1370" y2="900"/>
+    <line x1="1520" y1="0" x2="1490" y2="900"/>
+  </g>
+  <g stroke="#A8D8EA" stroke-width="0.6" opacity="0.15">
+    <line x1="140" y1="0" x2="110" y2="900"/>
+    <line x1="260" y1="0" x2="230" y2="900"/>
+    <line x1="380" y1="0" x2="350" y2="900"/>
+    <line x1="500" y1="0" x2="470" y2="900"/>
+    <line x1="740" y1="0" x2="710" y2="900"/>
+    <line x1="860" y1="0" x2="830" y2="900"/>
+    <line x1="1100" y1="0" x2="1070" y2="900"/>
+    <line x1="1340" y1="0" x2="1310" y2="900"/>
+    <line x1="1460" y1="0" x2="1430" y2="900"/>
+  </g>
+
+  <g fill="#A8D8EA" opacity="0.5">
+    <circle cx="300" cy="180" r="4"/>
+    <circle cx="520" cy="320" r="5"/>
+    <circle cx="780" cy="140" r="3"/>
+    <circle cx="1050" cy="260" r="4"/>
+    <circle cx="1300" cy="190" r="3"/>
+    <circle cx="200" cy="450" r="3"/>
+    <circle cx="600" cy="500" r="4"/>
+    <circle cx="900" cy="420" r="3"/>
+    <circle cx="1150" cy="480" r="5"/>
+    <circle cx="1400" cy="380" r="3"/>
+    <circle cx="400" cy="600" r="4"/>
+    <circle cx="700" cy="650" r="3"/>
+    <circle cx="1000" cy="580" r="4"/>
+    <circle cx="1250" cy="620" r="3"/>
+    <circle cx="150" cy="700" r="3"/>
+    <circle cx="450" cy="750" r="4"/>
+    <circle cx="850" cy="720" r="3"/>
+    <circle cx="1100" cy="760" r="4"/>
+    <circle cx="1350" cy="700" r="3"/>
+    <circle cx="1500" cy="550" r="4"/>
+  </g>
+
+  <g filter="url(#blur)" opacity="0.4">
+    <circle cx="300" cy="180" r="8" fill="url(#dropGlow)"/>
+    <circle cx="520" cy="320" r="10" fill="url(#dropGlow)"/>
+    <circle cx="1050" cy="260" r="8" fill="url(#dropGlow)"/>
+    <circle cx="1150" cy="480" r="10" fill="url(#dropGlow)"/>
+    <circle cx="600" cy="500" r="8" fill="url(#dropGlow)"/>
+  </g>
+
+  <path d="M0 780C300 760 600 770 900 765C1200 760 1400 770 1600 780V900H0Z" fill="#0D1B2A" opacity="0.85"/>
+
+  <g opacity="0.3">
+    <ellipse cx="400" cy="840" rx="60" ry="6" stroke="#A8D8EA" stroke-width="0.8" fill="none"/>
+    <ellipse cx="400" cy="840" rx="100" ry="10" stroke="#A8D8EA" stroke-width="0.6" fill="none"/>
+    <ellipse cx="1100" cy="850" rx="50" ry="5" stroke="#A8D8EA" stroke-width="0.8" fill="none"/>
+    <ellipse cx="1100" cy="850" rx="90" ry="9" stroke="#A8D8EA" stroke-width="0.6" fill="none"/>
+  </g>
+
+  <g opacity="0.25">
+    <rect x="0" y="820" width="1600" height="80" fill="#0D1B2A"/>
+    <rect x="60" y="840" width="200" height="4" rx="2" fill="#1B4F72"/>
+    <rect x="400" y="845" width="300" height="3" rx="1.5" fill="#1B4F72"/>
+    <rect x="900" y="842" width="250" height="4" rx="2" fill="#1B4F72"/>
+    <rect x="1300" y="846" width="200" height="3" rx="1.5" fill="#1B4F72"/>
+  </g>
+
+  <text x="112" y="140" fill="#FFFFFF" fill-opacity="0.95" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="80" font-weight="700">杭州的雨（三）</text>
+  <text x="118" y="210" fill="#FFFFFF" fill-opacity="0.75" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="28">雨是多情的贼，偷走了伞，还偷走了晴天</text>
+</svg>
