@@ -1,86 +1,60 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0D1B2A"/>
-      <stop offset="0.5" stop-color="#1B3A5C"/>
-      <stop offset="1" stop-color="#2C5F7A"/>
+    <linearGradient id="bg5" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF9C4"/>
+      <stop offset="0.4" stop-color="#FFECB3"/>
+      <stop offset="0.7" stop-color="#E1BEE7"/>
+      <stop offset="1" stop-color="#B2EBF2"/>
     </linearGradient>
-    <linearGradient id="film" x1="0" y1="0" x2="0" y2="1">
-      <stop stop-color="#1E293B"/>
-      <stop offset="1" stop-color="#0F172A"/>
-    </linearGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="soft5"><feGaussianBlur stdDeviation="10"/></filter>
   </defs>
-
-  <rect width="1600" height="900" fill="url(#bg)"/>
-
-  <g opacity="0.2">
-    <circle cx="200" cy="150" r="3" fill="#A8D8EA"/>
-    <circle cx="400" cy="80" r="2" fill="#A8D8EA"/>
-    <circle cx="700" cy="120" r="2.5" fill="#A8D8EA"/>
-    <circle cx="1000" cy="60" r="2" fill="#A8D8EA"/>
-    <circle cx="1300" cy="140" r="3" fill="#A8D8EA"/>
-    <circle cx="1500" cy="90" r="2" fill="#A8D8EA"/>
-    <circle cx="150" cy="400" r="2" fill="#A8D8EA"/>
-    <circle cx="1450" cy="350" r="2.5" fill="#A8D8EA"/>
+  <rect width="1600" height="900" fill="url(#bg5)"/>
+  <!-- Colorful bokeh background -->
+  <circle cx="200" cy="150" r="100" fill="#E1BEE7" opacity="0.25" filter="url(#soft5)"/>
+  <circle cx="1400" cy="180" r="120" fill="#B2EBF2" opacity="0.25" filter="url(#soft5)"/>
+  <circle cx="400" cy="700" r="80" fill="#FFECB3" opacity="0.3" filter="url(#soft5)"/>
+  <circle cx="1200" cy="720" r="90" fill="#E1BEE7" opacity="0.2" filter="url(#soft5)"/>
+  <circle cx="800" cy="800" r="70" fill="#B2EBF2" opacity="0.25" filter="url(#soft5)"/>
+  <!-- Polaroid 1 (tilted left) -->
+  <g transform="translate(250,280) rotate(-8)">
+    <rect x="0" y="0" width="240" height="280" rx="4" fill="white" opacity="0.9"/>
+    <rect x="15" y="15" width="210" height="210" rx="2" fill="#B2EBF2" opacity="0.5"/>
+    <circle cx="160" cy="80" r="30" fill="#FFF9C4" opacity="0.6"/>
+    <path d="M50 150L90 120L130 145L170 100L200 140V210H30V170Z" fill="#E1BEE7" opacity="0.4"/>
   </g>
-
-  <g transform="translate(200,300)">
-    <rect x="0" y="0" width="340" height="260" rx="8" fill="url(#film)" stroke="#5B8DB8" stroke-width="2"/>
-    <rect x="16" y="16" width="308" height="196" rx="4" fill="#2C5F7A" fill-opacity="0.5"/>
-    <path d="M 100 80 L 140 60 L 180 90 L 220 50 L 280 100 L 280 180 L 40 180 L 40 120 Z" fill="#1B4F72" fill-opacity="0.6"/>
-    <circle cx="240" cy="60" r="20" fill="#FDE68A" fill-opacity="0.4"/>
-    <rect x="16" y="224" width="308" height="20" rx="4" fill="#0F172A"/>
-    <text x="170" y="240" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="11">2016 · 风景</text>
+  <!-- Polaroid 2 (center, straight) -->
+  <g transform="translate(650,250) rotate(3)">
+    <rect x="0" y="0" width="260" height="300" rx="4" fill="white" opacity="0.9"/>
+    <rect x="15" y="15" width="230" height="230" rx="2" fill="#FFECB3" opacity="0.5"/>
+    <circle cx="115" cy="100" r="35" fill="#E1BEE7" opacity="0.5"/>
+    <rect x="60" y="160" width="140" height="12" rx="6" fill="#B2EBF2" opacity="0.4"/>
+    <rect x="80" y="182" width="100" height="10" rx="5" fill="#B2EBF2" opacity="0.3"/>
   </g>
-
-  <g transform="translate(620,260)">
-    <rect x="0" y="0" width="360" height="280" rx="8" fill="url(#film)" stroke="#5B8DB8" stroke-width="2"/>
-    <rect x="16" y="16" width="328" height="216" rx="4" fill="#2C5F7A" fill-opacity="0.5"/>
-    <circle cx="164" cy="100" r="40" fill="#F9A8D4" fill-opacity="0.3"/>
-    <circle cx="164" cy="80" r="16" fill="#F9A8D4" fill-opacity="0.4"/>
-    <path d="M 134 110 Q 164 95 194 110 L 194 130 L 134 130 Z" fill="#F9A8D4" fill-opacity="0.4"/>
-    <rect x="80" y="150" width="168" height="12" rx="6" fill="#A8D8EA" fill-opacity="0.3"/>
-    <rect x="100" y="172" width="128" height="10" rx="5" fill="#A8D8EA" fill-opacity="0.2"/>
-    <rect x="16" y="244" width="328" height="20" rx="4" fill="#0F172A"/>
-    <text x="180" y="260" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="11">2017 · 日常</text>
+  <!-- Polaroid 3 (tilted right) -->
+  <g transform="translate(1050,300) rotate(6)">
+    <rect x="0" y="0" width="240" height="280" rx="4" fill="white" opacity="0.9"/>
+    <rect x="15" y="15" width="210" height="210" rx="2" fill="#E1BEE7" opacity="0.4"/>
+    <circle cx="105" cy="90" r="25" fill="#FFECB3" opacity="0.5"/>
+    <path d="M40 130L80 110L120 135L160 95L195 130V210H30V160Z" fill="#B2EBF2" opacity="0.35"/>
   </g>
-
-  <g transform="translate(1060,280)">
-    <rect x="0" y="0" width="340" height="260" rx="8" fill="url(#film)" stroke="#5B8DB8" stroke-width="2"/>
-    <rect x="16" y="16" width="308" height="196" rx="4" fill="#2C5F7A" fill-opacity="0.5"/>
-    <circle cx="154" cy="80" r="30" fill="#C4B5FD" fill-opacity="0.3"/>
-    <path d="M 124 80 L 154 50 L 184 80 L 164 80 L 164 120 L 144 120 L 144 80 Z" fill="#C4B5FD" fill-opacity="0.4"/>
-    <rect x="60" y="140" width="188" height="40" rx="8" fill="#1E293B" fill-opacity="0.6"/>
-    <text x="154" y="165" text-anchor="middle" fill="#C4B5FD" font-family="monospace" font-size="12" fill-opacity="0.7">二次元</text>
-    <rect x="16" y="224" width="308" height="20" rx="4" fill="#0F172A"/>
-    <text x="170" y="240" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="11">2018 · 插画</text>
+  <!-- Film strip at bottom -->
+  <rect x="0" y="780" width="1600" height="50" rx="4" fill="#4A148C" opacity="0.1"/>
+  <g fill="#4A148C" opacity="0.08">
+    <rect x="40" y="790" width="16" height="30" rx="3"/>
+    <rect x="68" y="790" width="16" height="30" rx="3"/>
+    <rect x="96" y="790" width="16" height="30" rx="3"/>
+    <rect x="124" y="790" width="16" height="30" rx="3"/>
+    <rect x="180" y="790" width="16" height="30" rx="3"/>
+    <rect x="208" y="790" width="16" height="30" rx="3"/>
+    <rect x="236" y="790" width="16" height="30" rx="3"/>
+    <rect x="264" y="790" width="16" height="30" rx="3"/>
   </g>
-
-  <g transform="translate(0,680)">
-    <rect x="0" y="0" width="1600" height="60" fill="#0D1B2A" fill-opacity="0.8"/>
-    <g fill="#5B8DB8" fill-opacity="0.4">
-      <rect x="40" y="10" width="20" height="40" rx="3"/>
-      <rect x="68" y="10" width="20" height="40" rx="3"/>
-      <rect x="96" y="10" width="20" height="40" rx="3"/>
-      <rect x="124" y="10" width="20" height="40" rx="3"/>
-      <rect x="180" y="10" width="20" height="40" rx="3"/>
-      <rect x="208" y="10" width="20" height="40" rx="3"/>
-      <rect x="236" y="10" width="20" height="40" rx="3"/>
-      <rect x="264" y="10" width="20" height="40" rx="3"/>
-      <rect x="320" y="10" width="20" height="40" rx="3"/>
-      <rect x="348" y="10" width="20" height="40" rx="3"/>
-      <rect x="376" y="10" width="20" height="40" rx="3"/>
-      <rect x="404" y="10" width="20" height="40" rx="3"/>
-    </g>
-    <line x1="152" y1="0" x2="152" y2="60" stroke="#5B8DB8" stroke-width="1" stroke-opacity="0.3"/>
-    <line x1="292" y1="0" x2="292" y2="60" stroke="#5B8DB8" stroke-width="1" stroke-opacity="0.3"/>
-  </g>
-
-  <g filter="url(#glow)" opacity="0.3">
-    <circle cx="800" cy="450" r="120" fill="#A8D8EA"/>
-  </g>
-
-  <text x="112" y="140" fill="#FFFFFF" fill-opacity="0.95" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="80" font-weight="700">相册 · 2016-2018</text>
-  <text x="118" y="210" fill="#FFFFFF" fill-opacity="0.75" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="28">那些年留下的光影碎片</text>
+  <!-- Floating particles -->
+  <circle cx="550" cy="180" r="4" fill="#E1BEE7" opacity="0.3"/>
+  <circle cx="1000" cy="150" r="3" fill="#B2EBF2" opacity="0.25"/>
+  <circle cx="150" cy="500" r="3.5" fill="#FFECB3" opacity="0.3"/>
+  <circle cx="1450" cy="500" r="4" fill="#E1BEE7" opacity="0.2"/>
+  <!-- Title -->
+  <text x="800" y="450" text-anchor="middle" fill="#4A148C" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">相册 · 2016-2018</text>
+  <text x="800" y="500" text-anchor="middle" fill="#4A148C" fill-opacity="0.55" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">那些年留下的光影碎片</text>
 </svg>

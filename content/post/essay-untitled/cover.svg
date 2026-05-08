@@ -1,52 +1,39 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="nightBg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0D1B2A"/>
-      <stop offset="0.45" stop-color="#1B4F72"/>
-      <stop offset="0.8" stop-color="#5B8DB8"/>
-      <stop offset="1" stop-color="#3A6A8A"/>
+    <linearGradient id="bg1" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBE9E7"/>
+      <stop offset="0.5" stop-color="#FFCCBC"/>
+      <stop offset="1" stop-color="#FFAB91"/>
     </linearGradient>
-    <radialGradient id="moonGlow" cx="1250" cy="160" r="200" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E8F0FF" stop-opacity="0.2"/>
-      <stop offset="1" stop-color="#0D1B2A" stop-opacity="0"/>
+    <radialGradient id="sunPatch" cx="900" cy="500" r="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8E1" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#FFAB91" stop-opacity="0"/>
     </radialGradient>
-    <filter id="blur"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="12"/></filter>
   </defs>
-  <rect width="1600" height="900" fill="url(#nightBg)"/>
-  <circle cx="1250" cy="160" r="200" fill="url(#moonGlow)"/>
-  <!-- Moon -->
-  <circle cx="1250" cy="160" r="44" fill="#EEF4FF" opacity="0.85"/>
-  <circle cx="1270" cy="150" r="44" fill="#0D1B2A" opacity="0.8"/>
-  <!-- Stars -->
-  <circle cx="90" cy="55" r="2" fill="white" opacity="0.6"/>
-  <circle cx="300" cy="35" r="1.5" fill="white" opacity="0.5"/>
-  <circle cx="540" cy="60" r="2" fill="white" opacity="0.55"/>
-  <circle cx="750" cy="40" r="1.5" fill="white" opacity="0.48"/>
-  <circle cx="980" cy="58" r="2" fill="white" opacity="0.52"/>
-  <circle cx="1450" cy="55" r="1.5" fill="white" opacity="0.55"/>
-  <!-- Floor -->
-  <path d="M0 740C400 720 900 728 1600 740V900H0Z" fill="#081420" opacity="0.9"/>
-  <!-- Bed/blanket mass -->
-  <path d="M200 520C350 500 700 490 1050 505C1200 510 1300 520 1350 530L1350 620L200 620Z" fill="#142840" opacity="0.85"/>
-  <!-- Blanket edge with soft folds -->
-  <path d="M200 520C350 500 700 490 1050 505C1200 510 1300 520 1350 530" stroke="#2A4F70" stroke-width="3" opacity="0.5"/>
-  <path d="M300 525C450 518 600 515 750 520" stroke="#2A4F70" stroke-width="1.5" opacity="0.3"/>
-  <!-- Feet peeking out from blanket edge -->
-  <path d="M850 510C880 505 910 507 930 514" stroke="#D4B8A0" stroke-width="22" stroke-linecap="round" opacity="0.6"/>
-  <ellipse cx="935" cy="514" rx="22" ry="13" fill="#D4B8A0" opacity="0.6"/>
-  <!-- Moonlight patch on blanket -->
-  <ellipse cx="900" cy="540" rx="150" ry="50" fill="#5B8DB8" opacity="0.05" filter="url(#blur)"/>
-  <!-- Moonlight beam -->
-  <path d="M1150 0L1350 0L1000 900L800 900Z" fill="white" opacity="0.018"/>
-  <!-- Bokeh -->
-  <circle cx="180" cy="350" r="50" fill="#4A6FA5" opacity="0.08" filter="url(#blur)"/>
-  <circle cx="1420" cy="360" r="55" fill="#4A6FA5" opacity="0.08" filter="url(#blur)"/>
-  <!-- Atmospheric particles -->
-  <circle cx="400" cy="320" r="1.5" fill="#A8D8EA" opacity="0.3"/>
-  <circle cx="700" cy="280" r="1" fill="#A8D8EA" opacity="0.25"/>
-  <circle cx="1050" cy="340" r="1.5" fill="#A8D8EA" opacity="0.28"/>
-  <circle cx="1300" cy="300" r="1" fill="#A8D8EA" opacity="0.22"/>
+  <rect width="1600" height="900" fill="url(#bg1)"/>
+  <!-- Sunlight patch -->
+  <ellipse cx="900" cy="520" rx="350" ry="200" fill="url(#sunPatch)"/>
+  <!-- Blanket edge - soft folds -->
+  <path d="M200 580C400 560 700 555 1000 565C1200 572 1400 585 1500 590" stroke="#FFAB91" stroke-width="3" opacity="0.5" fill="none"/>
+  <path d="M150 620C400 600 750 595 1100 605C1300 612 1450 625 1550 630" stroke="#FFAB91" stroke-width="2" opacity="0.35" fill="none"/>
+  <path d="M100 660C350 645 700 640 1050 648C1250 654 1400 665 1600 670" stroke="#BF360C" stroke-width="1.5" opacity="0.15" fill="none"/>
+  <!-- Soft blanket shape -->
+  <path d="M100 620C300 600 700 590 1100 600C1350 608 1500 620 1600 630V900H0V660Z" fill="#FFAB91" opacity="0.25"/>
+  <!-- Warm light glow -->
+  <circle cx="950" cy="400" r="180" fill="#FFF8E1" opacity="0.3" filter="url(#soft)"/>
+  <!-- Decorative circles -->
+  <circle cx="250" cy="200" r="80" fill="#FFAB91" opacity="0.15" filter="url(#soft)"/>
+  <circle cx="1350" cy="180" r="100" fill="#FBE9E7" opacity="0.4" filter="url(#soft)"/>
+  <circle cx="400" cy="700" r="60" fill="#BF360C" opacity="0.08" filter="url(#soft)"/>
+  <circle cx="1200" cy="650" r="90" fill="#FFCCBC" opacity="0.2" filter="url(#soft)"/>
+  <circle cx="700" cy="150" r="50" fill="#FFAB91" opacity="0.2"/>
+  <!-- Floating particles -->
+  <circle cx="500" cy="300" r="4" fill="#BF360C" opacity="0.15"/>
+  <circle cx="1100" cy="250" r="3" fill="#BF360C" opacity="0.12"/>
+  <circle cx="300" cy="450" r="3.5" fill="#FFAB91" opacity="0.2"/>
+  <circle cx="1300" cy="400" r="4" fill="#FFAB91" opacity="0.18"/>
   <!-- Title -->
-  <text x="112" y="126" fill="#FFFFFF" fill-opacity="0.95" font-family="'Noto Serif SC','Source Han Serif',Georgia,serif" font-size="80" font-weight="700">无题</text>
-  <text x="118" y="192" fill="#C8D8F0" fill-opacity="0.80" font-family="'Noto Serif SC','Source Han Serif',Georgia,serif" font-size="28">她的脚不喜欢被看见</text>
+  <text x="800" y="450" text-anchor="middle" fill="#BF360C" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">无题</text>
+  <text x="800" y="500" text-anchor="middle" fill="#BF360C" fill-opacity="0.65" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">她的脚不喜欢被看见</text>
 </svg>

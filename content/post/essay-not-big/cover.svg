@@ -1,63 +1,43 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="sky" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0D1B2A"/>
-      <stop offset="0.5" stop-color="#1B4F72"/>
-      <stop offset="1" stop-color="#5B8DB8"/>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3E5F5"/>
+      <stop offset="1" stop-color="#CE93D8"/>
     </linearGradient>
-    <radialGradient id="moonGlow" cx="1200" cy="200" r="200" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F5E6CA" stop-opacity="0.1"/>
-      <stop offset="1" stop-color="#0D1B2A" stop-opacity="0"/>
+    <radialGradient id="moonGlow" cx="1150" cy="200" r="250" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#F3E5F5" stop-opacity="0"/>
     </radialGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="12"/></filter>
   </defs>
-
-  <rect width="1600" height="900" fill="url(#sky)"/>
-  <circle cx="1200" cy="200" r="200" fill="url(#moonGlow)"/>
-
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1150" cy="200" r="250" fill="url(#moonGlow)"/>
   <!-- Moon -->
-  <circle cx="1200" cy="200" r="45" fill="#F5E6CA" opacity="0.12" filter="url(#glow)"/>
-  <circle cx="1200" cy="200" r="22" fill="#F5E6CA" opacity="0.5"/>
-
-  <!-- Window frame (bedroom) -->
-  <rect x="900" y="150" width="400" height="500" rx="3" stroke="#5B8DB8" stroke-width="1.5" fill="none" opacity="0.2"/>
-  <line x1="1100" y1="150" x2="1100" y2="650" stroke="#5B8DB8" stroke-width="1" opacity="0.15"/>
-  <line x1="900" y1="400" x2="1300" y2="400" stroke="#5B8DB8" stroke-width="1" opacity="0.15"/>
-
-  <!-- Moonlight through window -->
-  <path d="M920 170L1280 170L1200 850L840 850Z" fill="#F5E6CA" opacity="0.03"/>
-
-  <!-- Bed silhouette -->
-  <g opacity="0.35">
-    <path d="M300 650C350 640 500 635 700 640C900 645 1050 650 1100 655L1100 780L300 780Z" fill="#0A1220"/>
-    <path d="M300 650L300 680C350 670 450 665 550 668" stroke="#162D44" stroke-width="1" fill="none" opacity="0.5"/>
-    <ellipse cx="420" cy="630" rx="100" ry="30" fill="#0A1220"/>
-  </g>
-
-  <!-- Soft curves silhouette under blanket -->
-  <path d="M450 660C550 640 700 630 850 640C950 648 1000 655 1050 660" stroke="#2A4A6A" stroke-width="2" fill="none" opacity="0.4"/>
-  <path d="M500 670C600 655 750 648 880 655" stroke="#2A4A6A" stroke-width="1.5" fill="none" opacity="0.3"/>
-
-  <!-- Stars visible through window -->
-  <g fill="#FFFFFF">
-    <circle cx="950" cy="220" r="1.5" opacity="0.6"/>
-    <circle cx="1050" cy="280" r="1" opacity="0.5"/>
-    <circle cx="1250" cy="320" r="1.5" opacity="0.5"/>
-    <circle cx="1150" cy="250" r="1" opacity="0.4"/>
-  </g>
-
-  <!-- Atmospheric particles -->
-  <g fill="#7FBCD2" opacity="0.15" filter="url(#glow)">
-    <circle cx="500" cy="300" r="2.5"/>
-    <circle cx="300" cy="500" r="2"/>
-    <circle cx="700" cy="250" r="2"/>
-    <circle cx="200" cy="400" r="2.5"/>
-  </g>
-
-  <!-- Ground -->
-  <path d="M0 830C400 820 800 825 1600 830V900H0Z" fill="#081018" opacity="0.7"/>
-
+  <circle cx="1150" cy="200" r="60" fill="#FFFFFF" opacity="0.9"/>
+  <circle cx="1165" cy="190" r="55" fill="#F3E5F5" opacity="0.6"/>
+  <!-- Stars peeking in -->
+  <circle cx="1000" cy="120" r="4" fill="#CE93D8" opacity="0.6"/>
+  <circle cx="1300" cy="150" r="3" fill="#AB47BC" opacity="0.5"/>
+  <circle cx="1050" cy="280" r="3.5" fill="#CE93D8" opacity="0.5"/>
+  <circle cx="1350" cy="250" r="2.5" fill="#AB47BC" opacity="0.4"/>
+  <circle cx="900" cy="180" r="3" fill="#E1BEE7" opacity="0.6"/>
+  <!-- Window frame -->
+  <rect x="880" y="100" width="450" height="550" rx="20" stroke="#AB47BC" stroke-width="2" fill="none" opacity="0.3"/>
+  <line x1="1105" y1="100" x2="1105" y2="650" stroke="#AB47BC" stroke-width="1.5" opacity="0.2"/>
+  <line x1="880" y1="375" x2="1330" y2="375" stroke="#AB47BC" stroke-width="1.5" opacity="0.2"/>
+  <!-- Curtain curves -->
+  <path d="M880 100C860 250 870 400 850 550C840 650 860 750 880 650" stroke="#CE93D8" stroke-width="3" fill="none" opacity="0.4"/>
+  <path d="M1330 100C1350 250 1340 400 1360 550C1370 650 1350 750 1330 650" stroke="#CE93D8" stroke-width="3" fill="none" opacity="0.4"/>
+  <!-- Soft bedroom curves (blanket) -->
+  <path d="M200 700C400 680 700 670 1000 680C1200 688 1400 700 1500 710" stroke="#AB47BC" stroke-width="2.5" fill="none" opacity="0.25"/>
+  <path d="M250 720C450 705 700 698 950 705C1150 712 1350 720 1450 728" stroke="#CE93D8" stroke-width="2" fill="none" opacity="0.2"/>
+  <!-- Decorative circles (bokeh) -->
+  <circle cx="200" cy="300" r="80" fill="#E1BEE7" opacity="0.2" filter="url(#soft)"/>
+  <circle cx="400" cy="600" r="60" fill="#CE93D8" opacity="0.15" filter="url(#soft)"/>
+  <circle cx="1400" cy="700" r="70" fill="#E1BEE7" opacity="0.18" filter="url(#soft)"/>
+  <circle cx="650" cy="200" r="45" fill="#F3E5F5" opacity="0.3" filter="url(#soft)"/>
+  <circle cx="300" cy="750" r="55" fill="#CE93D8" opacity="0.12" filter="url(#soft)"/>
   <!-- Title -->
-  <text x="112" y="126" fill="#FFFFFF" fill-opacity="0.95" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="80" font-weight="700">不大</text>
-  <text x="118" y="172" fill="#FFFFFF" fill-opacity="0.78" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="28">不大和喜欢，是两件事</text>
+  <text x="800" y="450" text-anchor="middle" fill="#4A148C" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">不大</text>
+  <text x="800" y="500" text-anchor="middle" fill="#6A1B9A" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">不大和喜欢，是两件事</text>
 </svg>

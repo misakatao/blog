@@ -1,76 +1,48 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="sky" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0D1B2A"/>
-      <stop offset="0.5" stop-color="#1B4F72"/>
-      <stop offset="1" stop-color="#5B8DB8"/>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FCE4EC"/>
+      <stop offset="0.5" stop-color="#F8BBD0"/>
+      <stop offset="1" stop-color="#F48FB1"/>
     </linearGradient>
-    <radialGradient id="warmth" cx="800" cy="500" r="300" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E8A0B8" stop-opacity="0.08"/>
-      <stop offset="1" stop-color="#0D1B2A" stop-opacity="0"/>
+    <radialGradient id="glow" cx="800" cy="400" r="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#FCE4EC" stop-opacity="0"/>
     </radialGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="6"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
   </defs>
 
-  <rect width="1600" height="900" fill="url(#sky)"/>
-  <circle cx="800" cy="500" r="300" fill="url(#warmth)"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="800" cy="400" r="350" fill="url(#glow)"/>
 
-  <!-- Rain streaks -->
-  <g stroke="#7FBCD2" stroke-width="0.7" opacity="0.15">
-    <line x1="100" y1="0" x2="90" y2="900"/>
-    <line x1="250" y1="0" x2="240" y2="900"/>
-    <line x1="380" y1="0" x2="370" y2="900"/>
-    <line x1="520" y1="0" x2="510" y2="900"/>
-    <line x1="680" y1="0" x2="670" y2="900"/>
-    <line x1="820" y1="0" x2="810" y2="900"/>
-    <line x1="960" y1="0" x2="950" y2="900"/>
-    <line x1="1120" y1="0" x2="1110" y2="900"/>
-    <line x1="1280" y1="0" x2="1270" y2="900"/>
-    <line x1="1440" y1="0" x2="1430" y2="900"/>
-  </g>
+  <!-- Cherry blossom petals falling -->
+  <path d="M350 200C355 190 365 190 368 200C371 210 362 215 356 212C350 209 347 206 350 200Z" fill="#F48FB1" opacity="0.7"/>
+  <path d="M550 300C555 290 565 290 568 300C571 310 562 315 556 312C550 309 547 306 550 300Z" fill="#F8BBD0" opacity="0.6"/>
+  <path d="M250 450C255 440 265 440 268 450C271 460 262 465 256 462C250 459 247 456 250 450Z" fill="#F48FB1" opacity="0.5"/>
+  <path d="M1200 250C1205 240 1215 240 1218 250C1221 260 1212 265 1206 262C1200 259 1197 256 1200 250Z" fill="#F8BBD0" opacity="0.65"/>
+  <path d="M1350 400C1355 390 1365 390 1368 400C1371 410 1362 415 1356 412C1350 409 1347 406 1350 400Z" fill="#F48FB1" opacity="0.55"/>
+  <path d="M450 600C455 590 465 590 468 600C471 610 462 615 456 612C450 609 447 606 450 600Z" fill="#F8BBD0" opacity="0.5"/>
+  <path d="M1100 550C1105 540 1115 540 1118 550C1121 560 1112 565 1106 562C1100 559 1097 556 1100 550Z" fill="#F48FB1" opacity="0.6"/>
+  <path d="M700 150C705 140 715 140 718 150C721 160 712 165 706 162C700 159 697 156 700 150Z" fill="#F8BBD0" opacity="0.55"/>
 
-  <!-- Umbrella edge silhouette -->
-  <path d="M600 320C650 280 750 260 850 260C950 260 1050 280 1100 320C1100 325 1050 330 850 330C650 330 600 325 600 320Z" fill="#0A1220" opacity="0.6"/>
-  <line x1="850" y1="330" x2="850" y2="650" stroke="#0A1220" stroke-width="3" opacity="0.5"/>
+  <!-- Umbrella edge at top -->
+  <path d="M1050 100C1100 80 1200 70 1300 70C1400 70 1500 80 1550 100C1550 108 1500 112 1300 112C1100 112 1050 108 1050 100Z" fill="#880E4F" opacity="0.25"/>
 
-  <!-- Rain drops on umbrella edge -->
-  <circle cx="620" cy="322" r="2" fill="#7FBCD2" opacity="0.5"/>
-  <circle cx="620" cy="340" r="1.5" fill="#7FBCD2" opacity="0.35"/>
-  <circle cx="1080" cy="322" r="2" fill="#7FBCD2" opacity="0.5"/>
-  <circle cx="1080" cy="338" r="1.5" fill="#7FBCD2" opacity="0.3"/>
-  <circle cx="750" cy="325" r="1.5" fill="#7FBCD2" opacity="0.4"/>
-  <circle cx="950" cy="326" r="1.5" fill="#7FBCD2" opacity="0.4"/>
+  <!-- Decorative bokeh circles -->
+  <circle cx="200" cy="150" r="55" fill="#F48FB1" opacity="0.15"/>
+  <circle cx="1400" cy="200" r="45" fill="#FCE4EC" opacity="0.3"/>
+  <circle cx="150" cy="600" r="40" fill="#F8BBD0" opacity="0.2"/>
+  <circle cx="1450" cy="650" r="50" fill="#F48FB1" opacity="0.12"/>
+  <circle cx="800" cy="800" r="60" fill="#FCE4EC" opacity="0.25"/>
 
-  <!-- Two faces close together (silhouette) -->
-  <g opacity="0.55">
-    <ellipse cx="820" cy="450" rx="35" ry="40" fill="#0A1220"/>
-    <ellipse cx="880" cy="450" rx="35" ry="40" fill="#0A1220"/>
-    <path d="M820 480C830 490 840 495 850 495C860 495 870 490 880 480" stroke="#0A1220" stroke-width="3" fill="none"/>
-  </g>
-
-  <!-- Subtle lip highlight -->
-  <path d="M840 470C845 473 855 473 860 470" stroke="#E8A0B8" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
-
-  <!-- Rain splashes on ground -->
-  <g fill="none" stroke="#5B8DB8" stroke-width="0.5" opacity="0.2">
-    <ellipse cx="300" cy="800" rx="20" ry="3"/>
-    <ellipse cx="600" cy="820" rx="25" ry="3"/>
-    <ellipse cx="1100" cy="810" rx="22" ry="3"/>
-    <ellipse cx="1400" cy="830" rx="18" ry="3"/>
-  </g>
-
-  <!-- Ground -->
-  <path d="M0 820C400 810 800 815 1600 820V900H0Z" fill="#081018" opacity="0.75"/>
-
-  <!-- Atmospheric particles -->
-  <g fill="#7FBCD2" opacity="0.2" filter="url(#glow)">
-    <circle cx="400" cy="400" r="2"/>
-    <circle cx="1200" cy="350" r="2.5"/>
-    <circle cx="300" cy="600" r="2"/>
-    <circle cx="1300" cy="550" r="2"/>
-  </g>
+  <!-- Soft branch with blossoms -->
+  <path d="M100 700C200 650 350 620 500 640" stroke="#880E4F" stroke-width="2" fill="none" opacity="0.2"/>
+  <circle cx="200" cy="670" r="8" fill="#F48FB1" opacity="0.5"/>
+  <circle cx="300" cy="640" r="10" fill="#F8BBD0" opacity="0.45"/>
+  <circle cx="400" cy="635" r="7" fill="#F48FB1" opacity="0.5"/>
+  <circle cx="450" cy="638" r="9" fill="#FCE4EC" opacity="0.5"/>
 
   <!-- Title -->
-  <text x="112" y="126" fill="#FFFFFF" fill-opacity="0.95" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="80" font-weight="700">亲嘴</text>
-  <text x="118" y="172" fill="#FFFFFF" fill-opacity="0.78" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="28">她跟我亲嘴，多亲一会就湿了</text>
+  <text x="800" y="450" text-anchor="middle" fill="#880E4F" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">亲嘴</text>
+  <text x="800" y="500" text-anchor="middle" fill="#AD1457" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">她跟我亲嘴，多亲一会就湿了</text>
 </svg>

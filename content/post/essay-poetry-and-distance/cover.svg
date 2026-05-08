@@ -1,67 +1,39 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="sky" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0D1B2A"/>
-      <stop offset="0.5" stop-color="#1B4F72"/>
-      <stop offset="1" stop-color="#5B8DB8"/>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E1F5FE"/>
+      <stop offset="0.6" stop-color="#B3E5FC"/>
+      <stop offset="1" stop-color="#4FC3F7"/>
     </linearGradient>
-    <linearGradient id="mist" x1="800" y1="500" x2="800" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#5B8DB8" stop-opacity="0.1"/>
-      <stop offset="1" stop-color="#0D1B2A" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="8"/></filter>
+    <radialGradient id="sunGlow" cx="1200" cy="350" r="300" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD54F" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#E1F5FE" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="10"/></filter>
   </defs>
-
-  <rect width="1600" height="900" fill="url(#sky)"/>
-
-  <!-- Distant mountains layered -->
-  <path d="M0 600L150 480L350 530L550 420L750 490L950 380L1150 450L1350 400L1600 460L1600 900L0 900Z" fill="#162D44" opacity="0.5"/>
-  <path d="M0 680L200 580L400 620L600 540L800 590L1000 500L1200 560L1400 520L1600 570L1600 900L0 900Z" fill="#0A1220" opacity="0.6"/>
-
-  <!-- Road fading into mist -->
-  <path d="M700 900L750 600L800 500L850 600L900 900Z" fill="#162D44" opacity="0.35"/>
-  <line x1="780" y1="900" x2="795" y2="550" stroke="#5B8DB8" stroke-width="0.8" opacity="0.15" stroke-dasharray="8 12"/>
-  <line x1="820" y1="900" x2="805" y2="550" stroke="#5B8DB8" stroke-width="0.8" opacity="0.15" stroke-dasharray="8 12"/>
-
-  <!-- Mist layers -->
-  <ellipse cx="800" cy="550" rx="600" ry="80" fill="#5B8DB8" opacity="0.06" filter="url(#glow)"/>
-  <ellipse cx="800" cy="620" rx="700" ry="60" fill="#5B8DB8" opacity="0.05" filter="url(#glow)"/>
-
-  <!-- Moon -->
-  <circle cx="300" cy="180" r="50" fill="#F5E6CA" opacity="0.1" filter="url(#glow)"/>
-  <circle cx="300" cy="180" r="25" fill="#F5E6CA" opacity="0.45"/>
-
-  <!-- Stars -->
-  <g fill="#FFFFFF">
-    <circle cx="500" cy="80" r="1.5" opacity="0.7"/>
-    <circle cx="700" cy="120" r="1" opacity="0.5"/>
-    <circle cx="1000" cy="60" r="1.5" opacity="0.6"/>
-    <circle cx="1250" cy="100" r="1" opacity="0.5"/>
-    <circle cx="1400" cy="70" r="1.5" opacity="0.6"/>
-    <circle cx="200" cy="300" r="1" opacity="0.4"/>
-    <circle cx="1350" cy="250" r="1" opacity="0.4"/>
-  </g>
-
-  <!-- Atmospheric particles -->
-  <g fill="#7FBCD2" opacity="0.2" filter="url(#glow)">
-    <circle cx="600" cy="400" r="2.5"/>
-    <circle cx="1000" cy="350" r="2"/>
-    <circle cx="400" cy="500" r="2"/>
-    <circle cx="1200" cy="450" r="2.5"/>
-  </g>
-
-  <!-- Rain streaks (light) -->
-  <g stroke="#7FBCD2" stroke-width="0.5" opacity="0.08">
-    <line x1="150" y1="0" x2="145" y2="900"/>
-    <line x1="450" y1="0" x2="445" y2="900"/>
-    <line x1="1100" y1="0" x2="1095" y2="900"/>
-    <line x1="1400" y1="0" x2="1395" y2="900"/>
-  </g>
-
-  <!-- Ground -->
-  <path d="M0 830C400 820 800 825 1600 830V900H0Z" fill="#081018" opacity="0.7"/>
-
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1200" cy="350" r="300" fill="url(#sunGlow)"/>
+  <!-- Golden sun -->
+  <circle cx="1200" cy="320" r="70" fill="#FFD54F" opacity="0.85"/>
+  <circle cx="1200" cy="320" r="90" fill="#FF8F00" opacity="0.15" filter="url(#soft)"/>
+  <!-- Clouds -->
+  <ellipse cx="400" cy="180" rx="150" ry="50" fill="#FFFFFF" opacity="0.6"/>
+  <ellipse cx="350" cy="170" rx="100" ry="40" fill="#FFFFFF" opacity="0.7"/>
+  <ellipse cx="1000" cy="140" rx="120" ry="40" fill="#FFFFFF" opacity="0.5"/>
+  <ellipse cx="1050" cy="130" rx="80" ry="30" fill="#FFFFFF" opacity="0.6"/>
+  <!-- Distant mountains -->
+  <path d="M0 650L200 550L450 600L700 500L950 560L1200 480L1400 530L1600 490L1600 900L0 900Z" fill="#4FC3F7" opacity="0.3"/>
+  <path d="M0 720L250 640L500 680L750 600L1000 650L1250 580L1500 620L1600 600L1600 900L0 900Z" fill="#0288D1" opacity="0.2"/>
+  <!-- Open road -->
+  <path d="M700 900L770 600L800 500L830 600L900 900Z" fill="#B3E5FC" opacity="0.5"/>
+  <line x1="785" y1="900" x2="798" y2="530" stroke="#FF8F00" stroke-width="1.5" opacity="0.3" stroke-dasharray="10 15"/>
+  <!-- Decorative circles -->
+  <circle cx="250" cy="400" r="60" fill="#FFD54F" opacity="0.15" filter="url(#soft)"/>
+  <circle cx="600" cy="300" r="45" fill="#4FC3F7" opacity="0.2" filter="url(#soft)"/>
+  <circle cx="1400" cy="600" r="70" fill="#FF8F00" opacity="0.12" filter="url(#soft)"/>
+  <circle cx="150" cy="700" r="50" fill="#B3E5FC" opacity="0.25" filter="url(#soft)"/>
+  <circle cx="900" cy="150" r="35" fill="#FFD54F" opacity="0.2" filter="url(#soft)"/>
   <!-- Title -->
-  <text x="112" y="126" fill="#FFFFFF" fill-opacity="0.95" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="80" font-weight="700">谈诗和远方</text>
-  <text x="118" y="172" fill="#FFFFFF" fill-opacity="0.78" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="28">她就是我的远方</text>
+  <text x="800" y="450" text-anchor="middle" fill="#01579B" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">谈诗和远方</text>
+  <text x="800" y="500" text-anchor="middle" fill="#0277BD" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">她就是我的远方</text>
 </svg>

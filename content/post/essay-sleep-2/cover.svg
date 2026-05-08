@@ -1,48 +1,43 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="nightBg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0D1B2A"/>
-      <stop offset="0.45" stop-color="#1B4F72"/>
-      <stop offset="0.8" stop-color="#5B8DB8"/>
-      <stop offset="1" stop-color="#3A7090"/>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8F5E9"/>
+      <stop offset="0.6" stop-color="#C8E6C9"/>
+      <stop offset="1" stop-color="#A5D6A7"/>
     </linearGradient>
     <linearGradient id="water" x1="800" y1="550" x2="800" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1B4F72" stop-opacity="0.8"/>
-      <stop offset="1" stop-color="#0D1B2A" stop-opacity="0.9"/>
+      <stop stop-color="#A5D6A7" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#66BB6A" stop-opacity="0.4"/>
     </linearGradient>
-    <filter id="blur"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="12"/></filter>
   </defs>
-  <rect width="1600" height="900" fill="url(#nightBg)"/>
-  <!-- Stars -->
-  <circle cx="120" cy="55" r="2" fill="white" opacity="0.6"/>
-  <circle cx="350" cy="38" r="1.5" fill="white" opacity="0.5"/>
-  <circle cx="600" cy="50" r="2" fill="white" opacity="0.55"/>
-  <circle cx="880" cy="42" r="1.5" fill="white" opacity="0.48"/>
-  <circle cx="1150" cy="60" r="2" fill="white" opacity="0.52"/>
-  <circle cx="1420" cy="45" r="1.5" fill="white" opacity="0.55"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
   <!-- Wood grain texture (upper half) -->
-  <path d="M200 300C400 295 700 305 1000 298C1300 291 1500 300 1600 295" stroke="#8B6B4A" stroke-width="2" opacity="0.2"/>
-  <path d="M0 340C300 335 600 345 900 338C1200 331 1400 340 1600 335" stroke="#6B5030" stroke-width="1.5" opacity="0.18"/>
-  <path d="M100 380C400 375 700 385 1000 378C1300 371 1500 380 1600 375" stroke="#8B6B4A" stroke-width="1.5" opacity="0.15"/>
-  <path d="M0 420C350 415 650 425 950 418C1250 411 1500 420 1600 415" stroke="#6B5030" stroke-width="1" opacity="0.12"/>
-  <!-- Transition zone: wood dissolving into water -->
-  <path d="M0 500C200 490 500 510 800 495C1100 480 1400 505 1600 500V560C1400 555 1100 540 800 555C500 570 200 550 0 560Z" fill="#1B4F72" opacity="0.5"/>
+  <path d="M100 250C350 245 650 255 1000 248C1350 241 1500 250 1600 245" stroke="#8D6E63" stroke-width="2.5" opacity="0.15"/>
+  <path d="M0 300C300 295 600 305 900 298C1200 291 1450 300 1600 295" stroke="#6D4C41" stroke-width="2" opacity="0.12"/>
+  <path d="M50 350C400 345 700 355 1050 348C1350 341 1500 350 1600 345" stroke="#8D6E63" stroke-width="2" opacity="0.1"/>
+  <path d="M0 400C350 395 650 405 1000 398C1300 391 1500 400 1600 395" stroke="#6D4C41" stroke-width="1.5" opacity="0.08"/>
+  <!-- Transition: wood dissolving -->
+  <path d="M0 480C200 470 500 490 800 475C1100 460 1400 485 1600 480" stroke="#A5D6A7" stroke-width="3" opacity="0.3"/>
+  <path d="M0 520C250 510 550 525 850 515C1150 505 1400 520 1600 515" stroke="#81C784" stroke-width="2" opacity="0.25"/>
   <!-- Water surface -->
-  <path d="M0 550C300 540 600 555 900 545C1200 535 1500 550 1600 545V900H0Z" fill="url(#water)"/>
+  <path d="M0 560C300 550 600 565 900 555C1200 545 1500 560 1600 555V900H0Z" fill="url(#water)"/>
   <!-- Water ripples -->
-  <path d="M0 580C200 575 400 582 600 576C800 570 1000 578 1200 574" stroke="#5B8DB8" stroke-width="1.5" opacity="0.3"/>
-  <path d="M400 620C600 615 800 622 1000 616C1200 610 1400 618 1600 614" stroke="#5B8DB8" stroke-width="1" opacity="0.25"/>
-  <path d="M0 660C250 655 500 662 750 656C1000 650 1250 658 1500 654" stroke="#4A7A9A" stroke-width="1" opacity="0.2"/>
-  <path d="M200 700C450 695 700 702 950 696C1200 690 1450 698 1600 694" stroke="#4A7A9A" stroke-width="0.8" opacity="0.15"/>
-  <!-- Bokeh -->
-  <circle cx="250" cy="300" r="50" fill="#4A6FA5" opacity="0.08" filter="url(#blur)"/>
-  <circle cx="1350" cy="320" r="55" fill="#4A6FA5" opacity="0.08" filter="url(#blur)"/>
-  <!-- Atmospheric particles -->
-  <circle cx="300" cy="480" r="1.5" fill="#A8D8EA" opacity="0.3"/>
-  <circle cx="650" cy="520" r="1" fill="#A8D8EA" opacity="0.25"/>
-  <circle cx="1000" cy="490" r="1.5" fill="#A8D8EA" opacity="0.28"/>
-  <circle cx="1300" cy="530" r="1" fill="#A8D8EA" opacity="0.22"/>
+  <path d="M0 600C200 595 400 602 600 596C800 590 1000 598 1200 594C1400 590 1600 596 1600 596" stroke="#66BB6A" stroke-width="1.5" opacity="0.3" fill="none"/>
+  <path d="M200 650C450 645 700 652 950 646C1200 640 1450 648 1600 644" stroke="#4CAF50" stroke-width="1" opacity="0.25" fill="none"/>
+  <path d="M0 700C300 695 600 702 900 696C1200 690 1500 698 1600 694" stroke="#66BB6A" stroke-width="1" opacity="0.2" fill="none"/>
+  <path d="M100 750C400 745 700 752 1000 746C1300 740 1500 748 1600 744" stroke="#81C784" stroke-width="0.8" opacity="0.15" fill="none"/>
+  <!-- Decorative circles -->
+  <circle cx="250" cy="300" r="65" fill="#C8E6C9" opacity="0.25" filter="url(#soft)"/>
+  <circle cx="1350" cy="350" r="70" fill="#A5D6A7" opacity="0.2" filter="url(#soft)"/>
+  <circle cx="500" cy="650" r="55" fill="#81C784" opacity="0.15" filter="url(#soft)"/>
+  <circle cx="1100" cy="700" r="60" fill="#66BB6A" opacity="0.12" filter="url(#soft)"/>
+  <circle cx="700" cy="200" r="40" fill="#E8F5E9" opacity="0.35" filter="url(#soft)"/>
+  <!-- Leaf motifs -->
+  <ellipse cx="150" cy="500" rx="20" ry="8" fill="#4CAF50" opacity="0.15" transform="rotate(-30 150 500)"/>
+  <ellipse cx="1450" cy="480" rx="18" ry="7" fill="#66BB6A" opacity="0.12" transform="rotate(20 1450 480)"/>
+  <ellipse cx="350" cy="550" rx="15" ry="6" fill="#81C784" opacity="0.1" transform="rotate(-15 350 550)"/>
   <!-- Title -->
-  <text x="112" y="126" fill="#FFFFFF" fill-opacity="0.95" font-family="'Noto Serif SC','Source Han Serif',Georgia,serif" font-size="80" font-weight="700">睡（二）</text>
-  <text x="118" y="192" fill="#C8D8F0" fill-opacity="0.80" font-family="'Noto Serif SC','Source Han Serif',Georgia,serif" font-size="28">这是木头，遇见水之后的命</text>
+  <text x="800" y="450" text-anchor="middle" fill="#1B5E20" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">睡（二）</text>
+  <text x="800" y="500" text-anchor="middle" fill="#2E7D32" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">这是木头，遇见水之后的命</text>
 </svg>

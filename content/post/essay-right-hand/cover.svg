@@ -1,75 +1,44 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="sky" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0D1B2A"/>
-      <stop offset="0.5" stop-color="#1B4F72"/>
-      <stop offset="1" stop-color="#5B8DB8"/>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8E1"/>
+      <stop offset="0.7" stop-color="#FFE082"/>
+      <stop offset="1" stop-color="#FFD54F"/>
     </linearGradient>
-    <radialGradient id="moonGlow" cx="1100" cy="300" r="250" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F5E6CA" stop-opacity="0.12"/>
-      <stop offset="1" stop-color="#0D1B2A" stop-opacity="0"/>
+    <radialGradient id="sunGlow" cx="1250" cy="300" r="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8F00" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#FFF8E1" stop-opacity="0"/>
     </radialGradient>
-    <filter id="glow"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="12"/></filter>
   </defs>
-
-  <rect width="1600" height="900" fill="url(#sky)"/>
-  <circle cx="1100" cy="300" r="250" fill="url(#moonGlow)"/>
-
-  <!-- Window frame -->
-  <rect x="850" y="100" width="500" height="650" rx="3" stroke="#5B8DB8" stroke-width="2" fill="none" opacity="0.25"/>
-  <line x1="1100" y1="100" x2="1100" y2="750" stroke="#5B8DB8" stroke-width="1.5" opacity="0.18"/>
-  <line x1="850" y1="425" x2="1350" y2="425" stroke="#5B8DB8" stroke-width="1.5" opacity="0.18"/>
-
-  <!-- Moon visible through window -->
-  <circle cx="1100" cy="280" r="55" fill="#F5E6CA" opacity="0.1" filter="url(#glow)"/>
-  <circle cx="1100" cy="280" r="28" fill="#F5E6CA" opacity="0.5"/>
-  <circle cx="1108" cy="275" r="26" fill="#1B4F72" opacity="0.25"/>
-
-  <!-- Hand silhouette against moonlit window -->
-  <g transform="translate(1000, 350)" opacity="0.5">
-    <!-- Palm -->
-    <path d="M0 120C5 100 10 60 12 35C14 20 12 5 8 10C5 18 6 45 5 70
-             L0 70C2 42 0 10 -4 0C-7 -8 -12 -4 -10 5C-7 20 -2 48 0 70
-             L-5 70C-6 42 -12 10 -16 0C-20 -8 -24 -3 -22 6C-18 22 -10 50 -8 70
-             L-13 70C-15 48 -24 18 -28 8C-32 0 -36 4 -34 12C-30 28 -18 55 -15 75
-             L-20 75C-24 58 -36 32 -42 25C-46 18 -50 24 -47 32C-42 44 -28 68 -24 85
-             C-16 108 -10 130 0 120Z" fill="#0A1220"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1250" cy="300" r="350" fill="url(#sunGlow)"/>
+  <!-- Sunset window -->
+  <rect x="950" y="120" width="420" height="520" rx="15" stroke="#E65100" stroke-width="2.5" fill="none" opacity="0.3"/>
+  <line x1="1160" y1="120" x2="1160" y2="640" stroke="#E65100" stroke-width="1.5" opacity="0.2"/>
+  <line x1="950" y1="380" x2="1370" y2="380" stroke="#E65100" stroke-width="1.5" opacity="0.2"/>
+  <!-- Warm light through window -->
+  <path d="M970 140L1350 140L1250 800L870 800Z" fill="#FF8F00" opacity="0.06"/>
+  <!-- Hand shadow silhouette -->
+  <g transform="translate(1050, 380)" opacity="0.2">
+    <path d="M0 100C5 80 8 50 10 30C12 15 10 5 7 8C5 15 5 40 4 60
+             L0 60C2 35 0 8 -3 0C-6 -6 -10 -3 -8 5C-6 18 -2 42 0 60
+             L-5 60C-6 35 -10 8 -14 0C-17 -6 -20 -2 -18 5C-15 20 -9 45 -7 60
+             L-12 60C-14 42 -20 15 -24 7C-27 0 -30 4 -28 10C-25 24 -16 48 -13 65
+             L-18 65C-21 50 -30 28 -35 22C-38 16 -42 20 -40 27C-36 38 -24 58 -20 72
+             C-14 92 -8 110 0 100Z" fill="#E65100"/>
   </g>
-
-  <!-- Moonlight on windowsill -->
-  <rect x="860" y="740" width="480" height="12" fill="#F5E6CA" opacity="0.05"/>
-
-  <!-- Stars through window -->
-  <g fill="#FFFFFF">
-    <circle cx="920" cy="180" r="1.5" opacity="0.6"/>
-    <circle cx="1020" cy="220" r="1" opacity="0.5"/>
-    <circle cx="1250" cy="200" r="1.5" opacity="0.5"/>
-    <circle cx="1300" cy="350" r="1" opacity="0.4"/>
-    <circle cx="950" cy="380" r="1" opacity="0.4"/>
-  </g>
-
-  <!-- Rain streaks outside -->
-  <g stroke="#7FBCD2" stroke-width="0.6" opacity="0.1">
-    <line x1="100" y1="0" x2="95" y2="900"/>
-    <line x1="300" y1="0" x2="295" y2="900"/>
-    <line x1="500" y1="0" x2="495" y2="900"/>
-    <line x1="700" y1="0" x2="695" y2="900"/>
-    <line x1="1450" y1="0" x2="1445" y2="900"/>
-    <line x1="1550" y1="0" x2="1545" y2="900"/>
-  </g>
-
-  <!-- Atmospheric particles -->
-  <g fill="#7FBCD2" opacity="0.18" filter="url(#glow)">
-    <circle cx="300" cy="350" r="2.5"/>
-    <circle cx="600" cy="500" r="2"/>
-    <circle cx="200" cy="600" r="2"/>
-    <circle cx="500" cy="250" r="2.5"/>
-  </g>
-
-  <!-- Ground -->
-  <path d="M0 830C400 820 800 825 1600 830V900H0Z" fill="#081018" opacity="0.7"/>
-
+  <!-- Warm light rays -->
+  <line x1="1250" y1="300" x2="600" y2="500" stroke="#FF8F00" stroke-width="1" opacity="0.1"/>
+  <line x1="1250" y1="300" x2="500" y2="700" stroke="#FF8F00" stroke-width="1" opacity="0.08"/>
+  <line x1="1250" y1="300" x2="800" y2="800" stroke="#FFD54F" stroke-width="1" opacity="0.1"/>
+  <!-- Decorative circles -->
+  <circle cx="200" cy="250" r="70" fill="#FFD54F" opacity="0.2" filter="url(#soft)"/>
+  <circle cx="400" cy="650" r="55" fill="#FF8F00" opacity="0.12" filter="url(#soft)"/>
+  <circle cx="700" cy="180" r="50" fill="#FFF8E1" opacity="0.4" filter="url(#soft)"/>
+  <circle cx="150" cy="600" r="45" fill="#FFE082" opacity="0.2" filter="url(#soft)"/>
+  <circle cx="600" cy="750" r="65" fill="#FFD54F" opacity="0.15" filter="url(#soft)"/>
   <!-- Title -->
-  <text x="112" y="126" fill="#FFFFFF" fill-opacity="0.95" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="80" font-weight="700">我的右手像一头驴</text>
-  <text x="118" y="172" fill="#FFFFFF" fill-opacity="0.78" font-family="'Noto Serif SC', 'Source Han Serif', Georgia, serif" font-size="28">它什么都记得</text>
+  <text x="800" y="450" text-anchor="middle" fill="#E65100" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">我的右手像一头驴</text>
+  <text x="800" y="500" text-anchor="middle" fill="#BF360C" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">它什么都记得</text>
 </svg>

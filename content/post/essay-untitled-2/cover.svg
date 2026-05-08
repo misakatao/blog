@@ -1,52 +1,41 @@
 <svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="nightBg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0D1B2A"/>
-      <stop offset="0.45" stop-color="#1B4F72"/>
-      <stop offset="0.8" stop-color="#5B8DB8"/>
-      <stop offset="1" stop-color="#4A8AAA"/>
+    <linearGradient id="bg2" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDE7"/>
+      <stop offset="0.5" stop-color="#FFF9C4"/>
+      <stop offset="1" stop-color="#FFF59D"/>
     </linearGradient>
-    <radialGradient id="lightGap" cx="1100" cy="300" r="250" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#E8D8B0" stop-opacity="0.12"/>
-      <stop offset="1" stop-color="#1B4F72" stop-opacity="0"/>
+    <radialGradient id="sunGlow" cx="1100" cy="300" r="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#FFF59D" stop-opacity="0"/>
     </radialGradient>
-    <filter id="blur"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="soft2"><feGaussianBlur stdDeviation="10"/></filter>
   </defs>
-  <rect width="1600" height="900" fill="url(#nightBg)"/>
-  <circle cx="1100" cy="300" r="250" fill="url(#lightGap)"/>
-  <!-- Stars (faint, early morning) -->
-  <circle cx="100" cy="50" r="2" fill="white" opacity="0.45"/>
-  <circle cx="320" cy="35" r="1.5" fill="white" opacity="0.35"/>
-  <circle cx="550" cy="55" r="2" fill="white" opacity="0.4"/>
-  <circle cx="780" cy="30" r="1.5" fill="white" opacity="0.35"/>
-  <circle cx="1400" cy="45" r="1.5" fill="white" opacity="0.4"/>
-  <!-- Curtain with light gap -->
-  <path d="M1050 0C1045 200 1055 400 1040 600C1030 750 1035 900 1035 900L1600 900L1600 0Z" fill="#0A1520" opacity="0.55"/>
-  <path d="M1050 0L1050 900" stroke="#E8D8B0" stroke-width="3" opacity="0.15"/>
-  <!-- Sunlight shaft through gap -->
-  <path d="M1050 0L1100 0L1200 900L1150 900Z" fill="#E8D8B0" opacity="0.04"/>
-  <!-- Floor -->
-  <path d="M0 750C400 730 900 738 1600 750V900H0Z" fill="#081420" opacity="0.9"/>
-  <!-- Sofa silhouette -->
-  <path d="M200 550C200 520 220 500 260 500L850 500C890 500 910 520 910 550L910 650L200 650Z" fill="#142840" opacity="0.8"/>
-  <!-- Sofa back -->
-  <path d="M200 500C200 460 220 440 260 440L850 440C890 440 910 460 910 500" fill="#1A3050" opacity="0.75"/>
-  <!-- Sofa arm -->
-  <path d="M180 440C170 440 160 450 160 470L160 650L200 650L200 440Z" fill="#162C48" opacity="0.8"/>
-  <!-- Sunlight patch on sofa edge -->
-  <ellipse cx="800" cy="530" rx="100" ry="35" fill="#E8D8B0" opacity="0.08" filter="url(#blur)"/>
-  <ellipse cx="820" cy="535" rx="60" ry="20" fill="#F0E8C0" opacity="0.05"/>
-  <!-- Bokeh -->
-  <circle cx="200" cy="300" r="50" fill="#4A6FA5" opacity="0.08" filter="url(#blur)"/>
-  <circle cx="1400" cy="350" r="55" fill="#4A6FA5" opacity="0.08" filter="url(#blur)"/>
-  <!-- Atmospheric particles in light shaft -->
-  <circle cx="1080" cy="200" r="1.5" fill="#E8D8B0" opacity="0.3"/>
-  <circle cx="1100" cy="350" r="1" fill="#E8D8B0" opacity="0.25"/>
-  <circle cx="1120" cy="500" r="1.5" fill="#E8D8B0" opacity="0.2"/>
-  <circle cx="1090" cy="650" r="1" fill="#E8D8B0" opacity="0.18"/>
-  <circle cx="400" cy="300" r="1.5" fill="#A8D8EA" opacity="0.25"/>
-  <circle cx="650" cy="250" r="1" fill="#A8D8EA" opacity="0.2"/>
+  <rect width="1600" height="900" fill="url(#bg2)"/>
+  <!-- Afternoon sunlight glow -->
+  <ellipse cx="1100" cy="300" rx="400" ry="300" fill="url(#sunGlow)"/>
+  <!-- Curtain lines -->
+  <path d="M1200 0C1190 200 1195 400 1185 600C1180 750 1182 900 1182 900" stroke="#F57F17" stroke-width="2" opacity="0.15" fill="none"/>
+  <path d="M1250 0C1242 180 1248 380 1240 580C1236 740 1238 900 1238 900" stroke="#F57F17" stroke-width="1.5" opacity="0.12" fill="none"/>
+  <path d="M1300 0C1294 200 1298 400 1292 600C1288 750 1290 900 1290 900" stroke="#F57F17" stroke-width="1" opacity="0.1" fill="none"/>
+  <!-- Sofa corner -->
+  <path d="M100 600C100 570 130 550 180 550L700 550C740 550 760 570 760 600L760 750L100 750Z" fill="#F57F17" opacity="0.12"/>
+  <path d="M100 550C100 510 130 490 180 490L700 490C740 490 760 510 760 550" fill="#F57F17" opacity="0.08"/>
+  <!-- Golden dust motes -->
+  <circle cx="900" cy="200" r="3" fill="#F57F17" opacity="0.3"/>
+  <circle cx="1000" cy="350" r="2.5" fill="#F57F17" opacity="0.25"/>
+  <circle cx="850" cy="400" r="2" fill="#F57F17" opacity="0.2"/>
+  <circle cx="1050" cy="150" r="2" fill="#F57F17" opacity="0.28"/>
+  <circle cx="950" cy="500" r="3" fill="#F57F17" opacity="0.18"/>
+  <circle cx="1150" cy="250" r="2.5" fill="#F57F17" opacity="0.22"/>
+  <circle cx="750" cy="300" r="1.5" fill="#F57F17" opacity="0.2"/>
+  <!-- Decorative bokeh -->
+  <circle cx="200" cy="200" r="90" fill="#FFF59D" opacity="0.3" filter="url(#soft2)"/>
+  <circle cx="1400" cy="600" r="110" fill="#FFF59D" opacity="0.25" filter="url(#soft2)"/>
+  <circle cx="500" cy="750" r="70" fill="#F57F17" opacity="0.08" filter="url(#soft2)"/>
+  <circle cx="1300" cy="150" r="80" fill="#FFFFFF" opacity="0.3" filter="url(#soft2)"/>
+  <circle cx="350" cy="400" r="60" fill="#FFF9C4" opacity="0.35"/>
   <!-- Title -->
-  <text x="112" y="126" fill="#FFFFFF" fill-opacity="0.95" font-family="'Noto Serif SC','Source Han Serif',Georgia,serif" font-size="80" font-weight="700">无题（二）</text>
-  <text x="118" y="192" fill="#C8D8F0" fill-opacity="0.80" font-family="'Noto Serif SC','Source Han Serif',Georgia,serif" font-size="28">那双白棉袜裹过她的脚</text>
+  <text x="800" y="450" text-anchor="middle" fill="#F57F17" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">无题（二）</text>
+  <text x="800" y="500" text-anchor="middle" fill="#F57F17" fill-opacity="0.6" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">那双白棉袜裹过她的脚</text>
 </svg>
