@@ -5,7 +5,7 @@ date: 2026-05-07T11:00:00+08:00
 slug: tesla-ble-key
 image: "cover.svg"
 categories:
-    - iOS
+    - 技术
 tags:
     - Tesla
     - BLE

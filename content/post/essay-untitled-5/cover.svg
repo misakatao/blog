@@ -1,0 +1,58 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A1A2E"/>
+      <stop offset="0.5" stop-color="#16213E"/>
+      <stop offset="1" stop-color="#0F3460"/>
+    </linearGradient>
+    <radialGradient id="lampGlow" cx="300" cy="300" r="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF3E0" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#1A1A2E" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="8"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="14"/></filter>
+    <linearGradient id="silk" x1="600" y1="500" x2="1000" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2C2C2C" stop-opacity="0.9"/>
+      <stop offset="0.3" stop-color="#1A1A1A" stop-opacity="0.95"/>
+      <stop offset="0.6" stop-color="#3D3D3D" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#1A1A1A" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="650" y1="550" x2="950" y2="750" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.02"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.06"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <!-- Lamp glow -->
+  <ellipse cx="300" cy="300" rx="350" ry="300" fill="url(#lampGlow)"/>
+  <!-- Bed surface -->
+  <rect x="0" y="650" width="1600" height="250" rx="0" fill="#1E1E3A" opacity="0.6"/>
+  <!-- Bed sheet folds -->
+  <path d="M0 680C200 670 400 690 600 675C800 660 1000 685 1200 670C1400 655 1600 680 1600 680L1600 900L0 900Z" fill="#252547" opacity="0.5"/>
+  <path d="M0 720C300 710 500 730 800 715C1100 700 1300 725 1600 715L1600 900L0 900Z" fill="#1A1A3A" opacity="0.3"/>
+  <!-- Silk fabric draped -->
+  <path d="M550 580C600 560 700 570 780 590C860 610 920 600 980 580C1040 560 1080 575 1100 590L1080 780C1020 770 940 785 860 775C780 765 700 780 620 770C560 762 550 770 540 780Z" fill="url(#silk)"/>
+  <path d="M550 580C600 560 700 570 780 590C860 610 920 600 980 580C1040 560 1080 575 1100 590L1080 780C1020 770 940 785 860 775C780 765 700 780 620 770C560 762 550 770 540 780Z" fill="url(#sheen)"/>
+  <!-- Silk texture lines -->
+  <path d="M600 590C640 600 680 610 720 605C760 600 800 610 840 615" stroke="#4A4A4A" stroke-width="0.5" opacity="0.3" fill="none"/>
+  <path d="M650 640C700 645 750 650 800 648C850 646 900 650 950 645" stroke="#4A4A4A" stroke-width="0.5" opacity="0.25" fill="none"/>
+  <path d="M580 700C640 705 720 710 800 707C880 704 940 710 1020 705" stroke="#4A4A4A" stroke-width="0.5" opacity="0.2" fill="none"/>
+  <!-- Subtle light reflections on silk -->
+  <ellipse cx="750" cy="620" rx="40" ry="15" fill="#FFFFFF" opacity="0.04"/>
+  <ellipse cx="900" cy="680" rx="30" ry="10" fill="#FFFFFF" opacity="0.03"/>
+  <!-- Bedside lamp -->
+  <rect x="180" y="280" width="6" height="200" fill="#5C5C7A" opacity="0.4"/>
+  <ellipse cx="183" cy="280" rx="35" ry="25" fill="#FFF3E0" opacity="0.2"/>
+  <circle cx="183" cy="280" r="8" fill="#FFE0B2" opacity="0.5" filter="url(#glow)"/>
+  <!-- Floor -->
+  <rect x="0" y="850" width="1600" height="50" fill="#0D0D1A" opacity="0.4"/>
+  <!-- Ambient particles -->
+  <circle cx="500" cy="200" r="2" fill="#FFFFFF" opacity="0.06"/>
+  <circle cx="1100" cy="150" r="1.5" fill="#FFFFFF" opacity="0.05"/>
+  <circle cx="1300" cy="400" r="2" fill="#FFFFFF" opacity="0.04"/>
+  <circle cx="400" cy="500" r="1.5" fill="#FFFFFF" opacity="0.05"/>
+  <!-- Title -->
+  <text x="800" y="420" text-anchor="middle" fill="#E0E0E0" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="72" font-weight="700">无题（五）</text>
+  <text x="800" y="470" text-anchor="middle" fill="#E0E0E0" fill-opacity="0.5" font-family="'PingFang SC', 'Noto Serif SC', sans-serif" font-size="28">隔着一层黑色，她的脚趾变得不那么具体了</text>
+</svg>
