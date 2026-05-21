@@ -272,10 +272,10 @@ Tesla Phone Key 的核心技术栈可以概括为：
 
 ## 延伸阅读
 
-- BLE GATT 协议
-- CoreBluetooth 文档与后台运行指南
-- Apple Secure Enclave 与 `SecKey` API
-- ECC / P-256 曲线
-- UWB 精确测距与 Apple Nearby Interaction Framework
-- Tesla Vehicle Command Protocol
-- Relay Attack 原理与防御
+- [BLE GATT 协议](https://www.bluetooth.com/specifications/gatt/)
+- [CoreBluetooth 文档与后台运行指南](https://developer.apple.com/documentation/corebluetooth)
+- [Apple Secure Enclave 与 `SecKey` API](https://developer.apple.com/documentation/security/certificate_key_and_trust_services/keys/protecting_keys_with_the_secure_enclave)
+- [ECC / P-256 曲线](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-5.pdf)
+- [UWB 精确测距与 Apple Nearby Interaction Framework](https://developer.apple.com/documentation/nearbyinteraction)
+- [Tesla Vehicle Command Protocol](https://github.com/teslamotors/vehicle-command)
+- [Relay Attack 原理与防御](https://en.wikipedia.org/wiki/Relay_attack)

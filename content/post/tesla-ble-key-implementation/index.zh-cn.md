@@ -466,9 +466,9 @@ BLE + ECDH + AES-GCM + Challenge-Response
 
 ## 延伸阅读
 
-- Apple CoreBluetooth Programming Guide
-- Apple CryptoKit Documentation
-- Swift Concurrency（Actor / AsyncStream）
-- SwiftProtobuf
-- Tesla Vehicle Command Protocol
-- BLE Reverse Engineering
+- [Apple CoreBluetooth Programming Guide](https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/CoreBluetooth_concepts/AboutCoreBluetooth/Introduction.html)
+- [Apple CryptoKit Documentation](https://developer.apple.com/documentation/cryptokit)
+- [Swift Concurrency（Actor / AsyncStream）](https://docs.swift.org/swift-book/documentation/the-swift-programming-language/concurrency/)
+- [SwiftProtobuf](https://github.com/apple/swift-protobuf)
+- [Tesla Vehicle Command Protocol](https://github.com/teslamotors/vehicle-command)
+- [BLE Reverse Engineering](https://github.com/teslamotors/vehicle-command/blob/main/pkg/protocol/protocol.md)
