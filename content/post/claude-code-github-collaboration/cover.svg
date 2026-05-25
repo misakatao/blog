@@ -1,0 +1,102 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="0.5" stop-color="#1E293B"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="glow1" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#D4A574" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#D4A574" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glow2" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#6366F1" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#6366F1" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#1E293B"/>
+      <stop offset="1" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <circle cx="300" cy="200" r="300" fill="url(#glow1)"/>
+  <circle cx="1300" cy="700" r="350" fill="url(#glow2)"/>
+
+  <!-- GitHub logo area -->
+  <g transform="translate(200, 280)">
+    <rect x="0" y="0" width="440" height="340" rx="20" fill="url(#card)" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="220" cy="130" r="70" fill="none" stroke="#E2E8F0" stroke-width="3"/>
+    <path d="M220 80c-27.6 0-50 22.4-50 50 0 22.1 14.3 40.8 34.2 47.4 2.5.5 3.4-1.1 3.4-2.4 0-1.2 0-4.3-.1-8.5-13.9 3-16.8-6.7-16.8-6.7-2.3-5.8-5.6-7.3-5.6-7.3-4.5-3.1.3-3 .3-3 5 .4 7.7 5.2 7.7 5.2 4.5 7.7 11.8 5.5 14.6 4.2.5-3.3 1.8-5.5 3.2-6.7-11.1-1.3-22.8-5.6-22.8-24.7 0-5.5 1.9-9.9 5.1-13.4-.5-1.3-2.2-6.3.5-13.2 0 0 4.2-1.3 13.7 5.1 4-1.1 8.3-1.7 12.5-1.7 4.2 0 8.5.6 12.5 1.7 9.5-6.5 13.7-5.1 13.7-5.1 2.7 6.9 1 12 .5 13.2 3.2 3.5 5.1 8 5.1 13.4 0 19.2-11.7 23.4-22.8 24.6 1.8 1.5 3.4 4.6 3.4 9.3 0 6.7-.1 12.1-.1 13.7 0 1.3.9 2.9 3.4 2.4C255.7 220.8 270 202.1 270 180c0-27.6-22.4-50-50-50z" fill="#E2E8F0"/>
+    <rect x="60" y="230" width="320" height="14" rx="7" fill="#475569" fill-opacity="0.6"/>
+    <rect x="90" y="260" width="260" height="12" rx="6" fill="#475569" fill-opacity="0.4"/>
+    <rect x="110" y="288" width="220" height="12" rx="6" fill="#475569" fill-opacity="0.3"/>
+  </g>
+
+  <!-- Connection lines -->
+  <g stroke="#6366F1" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="8 6">
+    <line x1="640" y1="400" x2="760" y2="400"/>
+    <line x1="640" y1="440" x2="760" y2="440"/>
+    <line x1="640" y1="480" x2="760" y2="480"/>
+  </g>
+  <circle cx="700" cy="440" r="6" fill="#6366F1" fill-opacity="0.8"/>
+
+  <!-- Claude Code terminal -->
+  <g transform="translate(760, 240)">
+    <rect x="0" y="0" width="560" height="420" rx="20" fill="#0F172A" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.5"/>
+    <!-- Terminal header -->
+    <rect x="0" y="0" width="560" height="44" rx="20" fill="#1E293B"/>
+    <rect x="0" y="20" width="560" height="24" fill="#1E293B"/>
+    <circle cx="28" cy="22" r="7" fill="#EF4444" fill-opacity="0.8"/>
+    <circle cx="52" cy="22" r="7" fill="#F59E0B" fill-opacity="0.8"/>
+    <circle cx="76" cy="22" r="7" fill="#22C55E" fill-opacity="0.8"/>
+    <text x="280" y="28" text-anchor="middle" fill="#94A3B8" font-family="SF Mono, monospace" font-size="13">Claude Code</text>
+    <!-- Terminal content -->
+    <text x="30" y="80" fill="#D4A574" font-family="SF Mono, monospace" font-size="14">$</text>
+    <text x="50" y="80" fill="#E2E8F0" font-family="SF Mono, monospace" font-size="14">claude "Review this PR"</text>
+    <rect x="30" y="100" width="400" height="12" rx="6" fill="#6EE7B7" fill-opacity="0.6"/>
+    <rect x="30" y="124" width="340" height="12" rx="6" fill="#E2E8F0" fill-opacity="0.3"/>
+    <rect x="30" y="148" width="380" height="12" rx="6" fill="#E2E8F0" fill-opacity="0.3"/>
+    <text x="30" y="190" fill="#D4A574" font-family="SF Mono, monospace" font-size="14">$</text>
+    <text x="50" y="190" fill="#E2E8F0" font-family="SF Mono, monospace" font-size="14">git commit -m "feat: add auth"</text>
+    <rect x="30" y="210" width="280" height="12" rx="6" fill="#6EE7B7" fill-opacity="0.6"/>
+    <text x="30" y="260" fill="#D4A574" font-family="SF Mono, monospace" font-size="14">$</text>
+    <text x="50" y="260" fill="#E2E8F0" font-family="SF Mono, monospace" font-size="14">gh pr create --title "..."</text>
+    <rect x="30" y="280" width="320" height="12" rx="6" fill="#93C5FD" fill-opacity="0.6"/>
+    <rect x="30" y="304" width="260" height="12" rx="6" fill="#E2E8F0" fill-opacity="0.3"/>
+    <!-- Cursor -->
+    <rect x="30" y="340" width="10" height="18" fill="#D4A574" fill-opacity="0.8"/>
+  </g>
+
+  <!-- Flow arrows at bottom -->
+  <g transform="translate(200, 720)">
+    <rect x="0" y="0" width="140" height="44" rx="22" fill="#334155" stroke="#6366F1" stroke-width="1.5"/>
+    <text x="70" y="28" text-anchor="middle" fill="#E2E8F0" font-family="SF Pro, sans-serif" font-size="14" font-weight="500">Issue</text>
+
+    <path d="M155 22 L185 22" stroke="#6366F1" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <rect x="200" y="0" width="140" height="44" rx="22" fill="#334155" stroke="#6366F1" stroke-width="1.5"/>
+    <text x="270" y="28" text-anchor="middle" fill="#E2E8F0" font-family="SF Pro, sans-serif" font-size="14" font-weight="500">Branch</text>
+
+    <path d="M355 22 L385 22" stroke="#6366F1" stroke-width="1.5"/>
+
+    <rect x="400" y="0" width="140" height="44" rx="22" fill="#334155" stroke="#D4A574" stroke-width="1.5"/>
+    <text x="470" y="28" text-anchor="middle" fill="#D4A574" font-family="SF Pro, sans-serif" font-size="14" font-weight="500">Implement</text>
+
+    <path d="M555 22 L585 22" stroke="#6366F1" stroke-width="1.5"/>
+
+    <rect x="600" y="0" width="140" height="44" rx="22" fill="#334155" stroke="#6366F1" stroke-width="1.5"/>
+    <text x="670" y="28" text-anchor="middle" fill="#E2E8F0" font-family="SF Pro, sans-serif" font-size="14" font-weight="500">PR Review</text>
+
+    <path d="M755 22 L785 22" stroke="#6366F1" stroke-width="1.5"/>
+
+    <rect x="800" y="0" width="140" height="44" rx="22" fill="#334155" stroke="#22C55E" stroke-width="1.5"/>
+    <text x="870" y="28" text-anchor="middle" fill="#22C55E" font-family="SF Pro, sans-serif" font-size="14" font-weight="500">Merge</text>
+
+    <path d="M955 22 L985 22" stroke="#6366F1" stroke-width="1.5"/>
+
+    <rect x="1000" y="0" width="140" height="44" rx="22" fill="#334155" stroke="#6366F1" stroke-width="1.5"/>
+    <text x="1070" y="28" text-anchor="middle" fill="#E2E8F0" font-family="SF Pro, sans-serif" font-size="14" font-weight="500">Deploy</text>
+  </g>
+</svg>
