@@ -1,7 +1,7 @@
 ---
 title: "好看"
 description: "她那时候是真好看。现在想起来，还是好看"
-date: 2024-05-12T08:00:00+08:00
+date: 2026-04-06T08:00:00+08:00
 slug: essay-good-looking
 image: "cover.svg"
 categories:

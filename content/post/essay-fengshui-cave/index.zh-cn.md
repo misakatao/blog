@@ -1,7 +1,7 @@
 ---
 title: "游风水洞有感"
 description: "鞋子是干的，裤子是湿的"
-date: 2021-06-28T10:00:00+08:00
+date: 2026-03-12T10:00:00+08:00
 slug: essay-fengshui-cave
 image: "cover.svg"
 categories:

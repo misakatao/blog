@@ -1,7 +1,7 @@
 ---
 title: "睡（二）"
 description: "这是木头，遇见水之后的命"
-date: 2024-03-09T21:00:00+08:00
+date: 2026-04-01T21:00:00+08:00
 slug: essay-sleep-2
 image: "cover.svg"
 categories:
