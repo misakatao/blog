@@ -1,7 +1,7 @@
 ---
 title: "CocoaPods 大全"
 description: "CocoaPods 的安装、使用与常见问题解决"
-date: 2023-01-18T10:00:00+08:00
+date: 2018-09-10T10:00:00+08:00
 slug: cocoapods-guide
 image: "cover.svg"
 categories:

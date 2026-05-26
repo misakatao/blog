@@ -1,7 +1,7 @@
 ---
 title: "UI 触摸与手势"
 description: "iOS 开发中触摸事件与手势识别的使用"
-date: 2022-02-15T14:00:00+08:00
+date: 2016-03-20T14:00:00+08:00
 slug: ios-touch-gesture
 image: "cover.svg"
 categories:

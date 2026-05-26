@@ -1,7 +1,7 @@
 ---
 title: "谈诗和远方"
 description: "在我的诗和文里，她就是我的远方，门票不贵，可惜有效期太短"
-date: 2023-09-20T19:00:00+08:00
+date: 2021-01-10T19:00:00+08:00
 slug: essay-poetry-and-distance
 image: "cover.svg"
 categories:

@@ -1,7 +1,7 @@
 ---
 title: "我的右手像一头驴"
 description: "它什么都记得，而我的左手呢？左手至今还是处"
-date: 2023-08-05T21:00:00+08:00
+date: 2020-07-20T21:00:00+08:00
 slug: essay-right-hand
 image: "cover.svg"
 categories:

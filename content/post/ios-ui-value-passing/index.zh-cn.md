@@ -1,7 +1,7 @@
 ---
 title: "UI 界面传值"
 description: "iOS 开发中 UI 界面间传值的多种方式"
-date: 2022-04-10T10:00:00+08:00
+date: 2016-08-15T10:00:00+08:00
 slug: ios-ui-value-passing
 image: "cover.svg"
 categories:

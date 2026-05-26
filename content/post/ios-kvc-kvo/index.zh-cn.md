@@ -1,7 +1,7 @@
 ---
 title: "iOS 开发：KVC 与 KVO"
 description: "iOS 开发中 KVC 与 KVO 的原理与使用"
-date: 2023-03-15T10:00:00+08:00
+date: 2019-02-18T10:00:00+08:00
 slug: ios-kvc-kvo
 image: "cover.svg"
 categories:
