@@ -1,7 +1,7 @@
 ---
 title: "iOS开发：采用URI方式跳转到各类地图进行导航"
 description: "采用 URI 方式跳转到各类地图 App 进行导航"
-date: 2017-11-08T12:00:00+08:00
+date: 2017-06-21T12:18:07+08:00
 slug: ios-map-navigation-uri
 image: "cover.svg"
 categories:
