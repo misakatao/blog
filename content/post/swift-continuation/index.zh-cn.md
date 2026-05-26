@@ -1,7 +1,7 @@
 ---
 title: "Swift Concurrency 四种 Continuation 详解"
 description: "深入解析 Swift Concurrency 中 withUnsafeContinuation、withUnsafeThrowingContinuation、withCheckedContinuation、withCheckedThrowingContinuation 四种 Continuation 的作用、区别与最佳实践"
-date: 2026-05-07T11:30:00+08:00
+date: 2026-02-18T11:00:00+08:00
 slug: swift-continuation
 image: "cover.svg"
 categories:

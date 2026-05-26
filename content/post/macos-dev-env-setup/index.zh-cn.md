@@ -1,7 +1,7 @@
 ---
 title: "macOS 开发环境搭建指南"
 description: "在 macOS Apple Silicon 上从零搭建开发环境，将 Homebrew 安装到用户目录，并通过 rbenv、pyenv、nvm 管理多版本运行时"
-date: 2026-04-25T08:00:00+08:00
+date: 2024-10-05T08:00:00+08:00
 slug: macos-dev-env-setup
 image: "cover.svg"
 categories:

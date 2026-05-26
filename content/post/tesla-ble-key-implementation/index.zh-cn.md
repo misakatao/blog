@@ -1,7 +1,7 @@
 ---
 title: "使用 Swift 实现 Tesla BLE Key：从协议到工程落地"
 description: "基于 CoreBluetooth、CryptoKit、SwiftProtobuf 实现 Tesla 蓝牙车钥匙的完整技术路径，涵盖 ECDH 密钥交换、AES-GCM 加密、Session 管理、状态机设计与后台蓝牙"
-date: 2026-05-21T10:00:00+08:00
+date: 2026-04-15T10:00:00+08:00
 slug: tesla-ble-key-implementation
 image: "cover.svg"
 categories:

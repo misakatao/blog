@@ -1,7 +1,7 @@
 ---
 title: "不大"
 description: "不大和喜欢，是两件事"
-date: 2026-04-05T12:13:00+08:00
+date: 2024-01-20T12:00:00+08:00
 slug: essay-not-big
 image: "cover.svg"
 categories:

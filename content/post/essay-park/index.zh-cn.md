@@ -1,7 +1,7 @@
 ---
 title: "高教东公园"
 description: "我的心也痒，我没说"
-date: 2026-05-08T13:58:00+08:00
+date: 2025-10-25T13:00:00+08:00
 slug: essay-park
 image: "cover.svg"
 categories:

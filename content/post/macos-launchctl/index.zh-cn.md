@@ -1,7 +1,7 @@
 ---
 title: "macOS launchctl 详解：系统服务管理的核心工具"
 description: "深入介绍 macOS 上 launchd/launchctl 的背景、原理、plist 配置与日常使用，涵盖定时任务、开机启动、常见问题排查等实用场景"
-date: 2026-04-27T10:00:00+08:00
+date: 2024-11-20T10:00:00+08:00
 slug: macos-launchctl
 image: "cover.svg"
 categories:

@@ -1,7 +1,7 @@
 ---
 title: "睡（一）"
 description: "半夜伸手，摸到的是空的被窝"
-date: 2026-04-06T21:47:00+08:00
+date: 2024-03-08T21:00:00+08:00
 slug: essay-sleep-1
 image: "cover.svg"
 categories:

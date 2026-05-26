@@ -1,7 +1,7 @@
 ---
 title: "Tesla BLE Key 系统设计：配对流程、协议分层与安全模型"
 description: "从系统边界出发，分析 Tesla BLE Key 的配对授权机制、协议分层架构、密钥安全模型与 iOS 工程模块设计"
-date: 2026-05-25T10:00:00+08:00
+date: 2026-05-10T10:00:00+08:00
 slug: tesla-ble-key-architecture
 image: "cover.svg"
 categories:

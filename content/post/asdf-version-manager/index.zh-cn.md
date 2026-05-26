@@ -1,7 +1,7 @@
 ---
 title: "使用 asdf 统一管理开发语言版本"
 description: "在 macOS ARM64 环境下安装配置 asdf，统一管理 Ruby、Python、Node.js、Golang、Java 等多语言运行时版本"
-date: 2026-04-25T10:00:00+08:00
+date: 2025-12-08T10:00:00+08:00
 slug: asdf-version-manager
 image: "cover.svg"
 categories:
