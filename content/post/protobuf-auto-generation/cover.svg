@@ -1,0 +1,216 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="160" y1="40" x2="1440" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="0.5" stop-color="#1E293B"/>
+      <stop offset="1" stop-color="#0B1220"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#1E293B" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#0F172A" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="protoGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#6366F1"/>
+      <stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+    <linearGradient id="swiftGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#F97316"/>
+      <stop offset="1" stop-color="#EA580C"/>
+    </linearGradient>
+    <linearGradient id="goGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#06B6D4"/>
+      <stop offset="1" stop-color="#0891B2"/>
+    </linearGradient>
+    <linearGradient id="tsGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="ciGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#22C55E"/>
+      <stop offset="1" stop-color="#16A34A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop stop-color="#6366F1" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#6366F1" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="0" y="0" width="1600" height="900" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="30" flood-color="#020617" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <circle cx="1360" cy="90" r="90" fill="#6366F1" fill-opacity="0.15"/>
+  <circle cx="120" cy="140" r="70" fill="#38BDF8" fill-opacity="0.18"/>
+  <circle cx="1420" cy="800" r="100" fill="#F97316" fill-opacity="0.12"/>
+  <circle cx="160" cy="780" r="80" fill="#22D3EE" fill-opacity="0.1"/>
+  <circle cx="800" cy="450" r="200" fill="url(#glow)"/>
+
+  <g filter="url(#soft)">
+    <rect x="110" y="120" width="1380" height="660" rx="36" fill="url(#panel)" stroke="#334155" stroke-width="1"/>
+  </g>
+
+  <!-- Title -->
+  <text x="800" y="220" text-anchor="middle" fill="#F8FAFC" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif" font-size="58" font-weight="700">Protobuf Auto Generation</text>
+  <text x="800" y="268" text-anchor="middle" fill="#94A3B8" font-family="'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif" font-size="22">Proto 定义 · 多语言生成 · Buf 工具链 · CI 集成</text>
+
+  <!-- .proto source file -->
+  <g transform="translate(180,320)">
+    <rect x="0" y="0" width="300" height="340" rx="16" fill="url(#protoGrad)" stroke="#818CF8" stroke-width="1.5"/>
+    <!-- Title bar -->
+    <rect x="0" y="0" width="300" height="48" rx="16" fill="#4338CA"/>
+    <rect x="0" y="24" width="300" height="24" fill="#4338CA"/>
+    <circle cx="24" cy="24" r="6" fill="#EF4444" fill-opacity="0.8"/>
+    <circle cx="44" cy="24" r="6" fill="#EAB308" fill-opacity="0.8"/>
+    <circle cx="64" cy="24" r="6" fill="#22C55E" fill-opacity="0.8"/>
+    <text x="150" y="32" text-anchor="middle" fill="#C7D2FE" font-family="monospace" font-size="14" font-weight="600">vehicle_command.proto</text>
+
+    <!-- Proto content -->
+    <text x="20" y="80" fill="#A5B4FC" font-family="monospace" font-size="13" font-weight="600">syntax</text>
+    <text x="80" y="80" fill="#94A3B8" font-family="monospace" font-size="13"> = </text>
+    <text x="100" y="80" fill="#6EE7B7" font-family="monospace" font-size="13">"proto3"</text>
+    <text x="175" y="80" fill="#94A3B8" font-family="monospace" font-size="13">;</text>
+
+    <text x="20" y="110" fill="#A5B4FC" font-family="monospace" font-size="13" font-weight="600">package</text>
+    <text x="90" y="110" fill="#FDE68A" font-family="monospace" font-size="13"> vehicle.v1</text>
+    <text x="195" y="110" fill="#94A3B8" font-family="monospace" font-size="13">;</text>
+
+    <text x="20" y="148" fill="#F472B6" font-family="monospace" font-size="13" font-weight="600">message</text>
+    <text x="90" y="148" fill="#FFFFFF" font-family="monospace" font-size="13"> VehicleCommand {</text>
+
+    <text x="36" y="174" fill="#A5B4FC" font-family="monospace" font-size="12">string</text>
+    <text x="88" y="174" fill="#E2E8F0" font-family="monospace" font-size="12"> vehicle_id</text>
+    <text x="180" y="174" fill="#94A3B8" font-family="monospace" font-size="12"> = 1;</text>
+
+    <text x="36" y="198" fill="#A5B4FC" font-family="monospace" font-size="12">CommandType</text>
+    <text x="130" y="198" fill="#E2E8F0" font-family="monospace" font-size="12"> type</text>
+    <text x="170" y="198" fill="#94A3B8" font-family="monospace" font-size="12"> = 2;</text>
+
+    <text x="36" y="222" fill="#A5B4FC" font-family="monospace" font-size="12">bytes</text>
+    <text x="80" y="222" fill="#E2E8F0" font-family="monospace" font-size="12"> payload</text>
+    <text x="152" y="222" fill="#94A3B8" font-family="monospace" font-size="12"> = 3;</text>
+
+    <text x="20" y="248" fill="#FFFFFF" font-family="monospace" font-size="13">}</text>
+
+    <text x="20" y="282" fill="#F472B6" font-family="monospace" font-size="13" font-weight="600">enum</text>
+    <text x="52" y="282" fill="#FFFFFF" font-family="monospace" font-size="13"> CommandType {</text>
+    <text x="36" y="306" fill="#E2E8F0" font-family="monospace" font-size="12">UNSPECIFIED = 0;</text>
+    <text x="36" y="326" fill="#E2E8F0" font-family="monospace" font-size="12">LOCK = 1; UNLOCK = 2;</text>
+    <text x="20" y="340" fill="#FFFFFF" font-family="monospace" font-size="13">}</text>
+  </g>
+
+  <!-- Arrow: proto → generated -->
+  <g transform="translate(510,440)">
+    <!-- Central hub: buf / protoc -->
+    <rect x="0" y="0" width="160" height="80" rx="14" fill="#0F172A" stroke="#6366F1" stroke-width="2"/>
+    <text x="80" y="32" text-anchor="middle" fill="#A5B4FC" font-family="monospace" font-size="16" font-weight="700">buf generate</text>
+    <text x="80" y="56" text-anchor="middle" fill="#64748B" font-family="monospace" font-size="12">protoc · plugins</text>
+
+    <!-- Input arrow -->
+    <path d="M -30 40 L 0 40" stroke="#6366F1" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowPurple)"/>
+
+    <!-- Output arrows -->
+    <path d="M 160 20 L 220 -60" stroke="#F97316" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 160 40 L 220 40" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 160 60 L 220 140" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Arrow tips -->
+    <polygon points="220,-60 210,-54 212,-66" fill="#F97316"/>
+    <polygon points="220,40 210,34 210,46" fill="#06B6D4"/>
+    <polygon points="220,140 210,134 212,146" fill="#3B82F6"/>
+  </g>
+
+  <!-- Swift output -->
+  <g transform="translate(740,330)">
+    <rect x="0" y="0" width="240" height="100" rx="14" fill="url(#swiftGrad)" stroke="#FB923C" stroke-width="1.5"/>
+    <text x="120" y="32" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="18" font-weight="700">Swift</text>
+    <text x="120" y="56" text-anchor="middle" fill="#FED7AA" font-family="monospace" font-size="12">VehicleCommand.pb.swift</text>
+    <text x="120" y="78" text-anchor="middle" fill="#FFF7ED" font-family="monospace" font-size="11">struct VehicleCommand {</text>
+    <text x="120" y="94" text-anchor="middle" fill="#FFF7ED" font-family="monospace" font-size="11">  var vehicleID: String</text>
+  </g>
+
+  <!-- Go output -->
+  <g transform="translate(740,448)">
+    <rect x="0" y="0" width="240" height="100" rx="14" fill="url(#goGrad)" stroke="#22D3EE" stroke-width="1.5"/>
+    <text x="120" y="32" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="18" font-weight="700">Go</text>
+    <text x="120" y="56" text-anchor="middle" fill="#CFFAFE" font-family="monospace" font-size="12">vehicle_command.pb.go</text>
+    <text x="120" y="78" text-anchor="middle" fill="#ECFEFF" font-family="monospace" font-size="11">type VehicleCommand struct {</text>
+    <text x="120" y="94" text-anchor="middle" fill="#ECFEFF" font-family="monospace" font-size="11">  VehicleId string</text>
+  </g>
+
+  <!-- TypeScript output -->
+  <g transform="translate(740,566)">
+    <rect x="0" y="0" width="240" height="100" rx="14" fill="url(#tsGrad)" stroke="#60A5FA" stroke-width="1.5"/>
+    <text x="120" y="32" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="18" font-weight="700">TypeScript</text>
+    <text x="120" y="56" text-anchor="middle" fill="#BFDBFE" font-family="monospace" font-size="12">vehicle_command_pb.ts</text>
+    <text x="120" y="78" text-anchor="middle" fill="#EFF6FF" font-family="monospace" font-size="11">interface VehicleCommand {</text>
+    <text x="120" y="94" text-anchor="middle" fill="#EFF6FF" font-family="monospace" font-size="11">  vehicleId: string;</text>
+  </g>
+
+  <!-- CI Pipeline on the right -->
+  <g transform="translate(1060,330)">
+    <rect x="0" y="0" width="360" height="336" rx="16" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+    <text x="180" y="36" text-anchor="middle" fill="#FDE68A" font-family="monospace" font-size="14" font-weight="700">CI Pipeline</text>
+    <line x1="20" y1="52" x2="340" y2="52" stroke="#334155" stroke-width="1"/>
+
+    <!-- Step 1 -->
+    <circle cx="40" cy="84" r="12" fill="#22C55E" fill-opacity="0.2" stroke="#22C55E" stroke-width="1.5"/>
+    <text x="40" y="89" text-anchor="middle" fill="#22C55E" font-family="monospace" font-size="14" font-weight="700">✓</text>
+    <text x="64" y="89" fill="#E2E8F0" font-family="monospace" font-size="13">buf lint</text>
+
+    <!-- Connection line -->
+    <line x1="40" y1="96" x2="40" y2="116" stroke="#334155" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+    <!-- Step 2 -->
+    <circle cx="40" cy="132" r="12" fill="#22C55E" fill-opacity="0.2" stroke="#22C55E" stroke-width="1.5"/>
+    <text x="40" y="137" text-anchor="middle" fill="#22C55E" font-family="monospace" font-size="14" font-weight="700">✓</text>
+    <text x="64" y="137" fill="#E2E8F0" font-family="monospace" font-size="13">buf generate</text>
+
+    <line x1="40" y1="144" x2="40" y2="164" stroke="#334155" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+    <!-- Step 3 -->
+    <circle cx="40" cy="180" r="12" fill="#22C55E" fill-opacity="0.2" stroke="#22C55E" stroke-width="1.5"/>
+    <text x="40" y="185" text-anchor="middle" fill="#22C55E" font-family="monospace" font-size="14" font-weight="700">✓</text>
+    <text x="64" y="185" fill="#E2E8F0" font-family="monospace" font-size="13">git diff --exit-code</text>
+
+    <line x1="40" y1="192" x2="40" y2="212" stroke="#334155" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+    <!-- Step 4 -->
+    <circle cx="40" cy="228" r="12" fill="#22C55E" fill-opacity="0.2" stroke="#22C55E" stroke-width="1.5"/>
+    <text x="40" y="233" text-anchor="middle" fill="#22C55E" font-family="monospace" font-size="14" font-weight="700">✓</text>
+    <text x="64" y="233" fill="#E2E8F0" font-family="monospace" font-size="13">buf breaking</text>
+
+    <line x1="40" y1="240" x2="40" y2="260" stroke="#334155" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+    <!-- Step 5 -->
+    <circle cx="40" cy="276" r="12" fill="#22C55E" fill-opacity="0.2" stroke="#22C55E" stroke-width="1.5"/>
+    <text x="40" y="281" text-anchor="middle" fill="#22C55E" font-family="monospace" font-size="14" font-weight="700">✓</text>
+    <text x="64" y="281" fill="#E2E8F0" font-family="monospace" font-size="13">Build &amp; Test</text>
+
+    <!-- Status badge -->
+    <rect x="200" y="298" width="140" height="28" rx="14" fill="url(#ciGrad)"/>
+    <text x="270" y="318" text-anchor="middle" fill="#FFFFFF" font-family="monospace" font-size="13" font-weight="700">All checks passed</text>
+  </g>
+
+  <!-- Arrows from generated to CI -->
+  <path d="M 980 380 Q 1020 380 1060 380" stroke="#334155" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <path d="M 980 500 Q 1020 480 1060 460" stroke="#334155" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <path d="M 980 616 Q 1020 580 1060 540" stroke="#334155" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- Bottom status bar -->
+  <g transform="translate(110,720)">
+    <rect x="40" y="0" width="1300" height="44" rx="10" fill="#0F172A" fill-opacity="0.6" stroke="#334155" stroke-width="1"/>
+    <text x="72" y="30" fill="#A5B4FC" font-family="monospace" font-size="16" font-weight="600">.proto</text>
+    <text x="148" y="30" fill="#94A3B8" font-family="monospace" font-size="16">→</text>
+    <text x="176" y="30" fill="#6EE7B7" font-family="monospace" font-size="16" font-weight="600">buf generate</text>
+    <text x="330" y="30" fill="#94A3B8" font-family="monospace" font-size="16">→</text>
+    <text x="358" y="30" fill="#F97316" font-family="monospace" font-size="16" font-weight="600">Swift</text>
+    <text x="416" y="30" fill="#94A3B8" font-family="monospace" font-size="16">·</text>
+    <text x="436" y="30" fill="#06B6D4" font-family="monospace" font-size="16" font-weight="600">Go</text>
+    <text x="468" y="30" fill="#94A3B8" font-family="monospace" font-size="16">·</text>
+    <text x="488" y="30" fill="#3B82F6" font-family="monospace" font-size="16" font-weight="600">TypeScript</text>
+    <text x="620" y="30" fill="#94A3B8" font-family="monospace" font-size="16">→</text>
+    <text x="648" y="30" fill="#22C55E" font-family="monospace" font-size="16" font-weight="600">CI Check</text>
+    <text x="1120" y="30" fill="#475569" font-family="monospace" font-size="14">Buf · protoc · GitHub Actions</text>
+  </g>
+</svg>
